@@ -1,66 +1,608 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+
+<html dir="rtl" lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>ملف تدريب: المنطقة الحرة الإسكندرية</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rakkas&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Rakkas&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
 <style>
-:root{--navy:#0b1728;--navy2:#10233d;--paper:#f5f0e5;--card:#fffdf8;--ink:#182737;--muted:#667587;--brass:#c89b3c;--brassLight:#e5bf67;--teal:#2c7169;--line:rgba(24,39,55,.13);--shadow:0 10px 32px rgba(10,22,38,.07)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:55px}
-body{margin:0;background:var(--navy);color:var(--ink);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;line-height:1.9}
-a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}
-.topbar{position:sticky;top:0;z-index:50;background:rgba(11,23,40,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(245,240,229,.08);color:var(--paper)}
-.topbar-inner{max-width:1460px;margin:auto;padding:10px 22px;display:flex;justify-content:space-between;gap:16px}
-.brand{font:11px "IBM Plex Mono",monospace;letter-spacing:1.5px;color:var(--brassLight)}.topbar-note{font-size:12px;color:rgba(245,240,229,.56)}
-.layout{max-width:1460px;margin:auto;display:grid;grid-template-columns:300px minmax(0,1fr)}
-.sidebar{position:sticky;top:47px;height:calc(100vh - 47px);overflow:auto;background:var(--navy2);padding:25px 18px 40px}
-.sidebar::-webkit-scrollbar{width:6px}.sidebar::-webkit-scrollbar-thumb{background:rgba(245,240,229,.13);border-radius:99px}
-.sidebar-title{margin:0 8px 16px;color:var(--brassLight);font:11px "IBM Plex Mono",monospace;letter-spacing:1.4px}
-.toc-chapter{margin-bottom:8px}.toc-main{display:block;padding:8px 10px;border-radius:8px;color:rgba(245,240,229,.86);font-weight:600;font-size:13.3px}.toc-main:hover,.toc-main.active{background:rgba(200,155,60,.12);color:var(--brassLight);text-decoration:none}
-.toc-sub{display:grid;gap:2px;padding:2px 0 6px 12px;border-right:1px solid rgba(245,240,229,.07)}.toc-sub a{display:block;padding:5px 9px;color:rgba(245,240,229,.49);font-size:11.5px;line-height:1.55}.toc-sub a:hover{background:rgba(245,240,229,.045);color:var(--paper);text-decoration:none}
-.content{min-width:0;background:var(--paper)}
-.hero{background:radial-gradient(circle at 84% 18%,rgba(200,155,60,.18),transparent 32%),radial-gradient(circle at 8% 88%,rgba(107,198,184,.11),transparent 32%),var(--navy);color:var(--paper);padding:80px 7vw 72px;border-bottom:2px solid var(--brass)}
-.hero-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:1fr auto;gap:44px;align-items:start}.eyebrow{display:inline-flex;padding:6px 12px;border:1px dashed rgba(229,191,103,.5);border-radius:999px;color:var(--brassLight);font:11px "IBM Plex Mono",monospace;letter-spacing:1.7px}
-.hero h1{font-family:"Rakkas",serif;font-size:clamp(46px,6vw,78px);font-weight:400;line-height:1.08;margin:18px 0 14px}.hero-lead{font-size:17px;color:rgba(245,240,229,.72);max-width:720px;margin:0 0 26px}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:10px}.stat{border:1px solid rgba(245,240,229,.11);background:rgba(245,240,229,.045);border-radius:12px;padding:13px}.stat .v{font:600 21px "IBM Plex Mono",monospace;color:var(--brassLight)}.stat .l{font-size:11.5px;color:rgba(245,240,229,.57)}
-.hero-mark{width:160px;height:160px;border:1px solid rgba(229,191,103,.35);border-radius:50%;display:grid;place-items:center;position:relative;transform:rotate(-7deg)}.hero-mark:before,.hero-mark:after{content:"";position:absolute;border:1px dashed rgba(229,191,103,.4);border-radius:50%}.hero-mark:before{inset:11px}.hero-mark:after{inset:27px}.hero-mark span{font:20px "Rakkas",serif;text-align:center;color:var(--brassLight);line-height:1.25}.hero-mark small{display:block;font:9px "IBM Plex Mono",monospace;letter-spacing:1px;margin-top:6px}
-.chapter{padding:70px max(28px,7vw) 72px;border-bottom:1px solid var(--line);position:relative}.chapter:nth-child(even){background:#eef2ef}.chapter:before{content:attr(data-chapter);position:absolute;top:36px;left:max(24px,3vw);font:700 70px "IBM Plex Mono",monospace;color:rgba(200,155,60,.08)}
-.chapter h2{max-width:1120px;margin:0 auto 10px;font:400 clamp(31px,4vw,44px)/1.25 "Rakkas",serif}.chapter h2:after{content:"";display:block;width:72px;height:2px;background:var(--brass);margin-top:14px}.chapter h3{max-width:1120px;margin:42px auto 10px;padding-top:16px;border-top:1px solid var(--line);font-size:20px;line-height:1.4}.chapter h3:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-left:10px;vertical-align:middle}.chapter h4{max-width:1120px;margin:25px auto 7px;font-size:16px;line-height:1.5}
-.chapter p,.chapter ul,.chapter ol,.chapter blockquote,.chapter table{max-width:1120px;margin-left:auto;margin-right:auto}.chapter p{font-size:14.5px;color:var(--muted);margin-top:8px;margin-bottom:10px}.chapter strong{color:var(--ink)}
-.chapter h2 + p{font-size:15px;color:var(--muted);max-width:820px}
-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);margin-top:18px;margin-bottom:24px;font-size:13.4px}
-thead th{background:var(--navy);color:var(--paper);font-weight:600;text-align:right;padding:13px 15px}tbody td{padding:12px 15px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted)}tbody tr:last-child td{border-bottom:0}tbody td:first-child{color:var(--ink);font-weight:600}
-ul,ol{color:var(--muted);font-size:14px}.chapter ul{background:rgba(255,255,255,.48);border:1px solid var(--line);border-radius:12px;padding:14px 30px}
-blockquote{padding:14px 20px;border-right:3px solid var(--brass);background:rgba(200,155,60,.07);border-radius:0 10px 10px 0;color:var(--ink)}
-.phase-divider{display:flex;align-items:center;gap:12px;max-width:1120px!important;margin:40px auto 22px!important;color:#8c6218;font-weight:700}.phase-divider div{flex:0 0 auto}.phase-divider:before{content:"";display:block;width:32px;height:32px;border-radius:50%;background:var(--brass);}.phase-divider{position:relative}.phase-divider div{}
-.phase-divider:after{content:"";height:1px;background:var(--line);position:absolute;left:45px;right:0;top:16px}.phase-divider{padding-right:0}.phase-divider{display:block;padding-right:45px}.phase-divider>div{position:relative;z-index:1}
-.story-label{max-width:1120px!important;margin:18px auto 2px!important;display:table;padding:3px 10px;border-radius:999px;background:rgba(200,155,60,.1);color:#8c6218;font-size:12px;font-weight:700}
-.zone-label{max-width:1120px!important;margin:16px auto 8px!important;color:var(--teal);font-size:12px;font-weight:700}
-.mini-badge{display:inline-grid;place-items:center;min-width:34px;height:24px;padding:0 8px;margin:12px 4px;border-radius:999px;background:var(--navy);color:var(--brassLight);font:700 11px "IBM Plex Mono",monospace}
-footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padding:34px 18px;font-size:12px}footer strong{color:var(--brassLight)}
-@media(max-width:1050px){.layout{display:block}.sidebar{position:relative;top:auto;height:auto;max-height:360px;border-bottom:1px solid rgba(245,240,229,.07)}.hero-grid{grid-template-columns:1fr}.hero-mark{display:none}}
-@media(max-width:650px){.hero{padding:52px 20px 48px}.hero h1{font-size:48px}.stats{grid-template-columns:1fr 1fr}.chapter{padding:48px 18px 54px}.chapter:before{display:none}table{display:block;overflow-x:auto}thead th,tbody td{min-width:150px}}
-@media(print){.topbar,.sidebar{display:none!important}.layout{display:block}.chapter{background:white!important}.hero{padding:40px}.hero-mark{display:none}}
+  :root{
+    --navy:#101F35;
+    --navy-deep:#0A1626;
+    --paper:#F3EEE1;
+    --paper-deep:#E9E1CB;
+    --ink:#1B2A3A;
+    --ink-soft:#4B5C70;
+    --brass:#C89B3C;
+    --brass-text:#8C6218;
+    --brass-light:#E7C069;
+    --teal:#2C6E68;
+    --teal-light:#6FC9BE;
+    --line:rgba(27,42,58,0.15);
+    --line-navy:rgba(243,238,225,0.16);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--navy);
+    color:var(--ink);
+    font-family:'IBM Plex Sans Arabic', sans-serif;
+    line-height:1.9;
+  }
+  h1,h2,h3,.display{
+    font-family:'Rakkas', serif;
+    font-weight:400;
+    letter-spacing:0.5px;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace; direction:ltr; unicode-bidi:isolate; display:inline-block;}
+  a{color:inherit;}
+  section.dossier p a, section.dossier li a, section.dossier .example a, section.dossier .side-note a, table.fees td a{
+    color:var(--teal); text-decoration:none; border-bottom:1px dotted var(--teal);
+    transition:border-color .15s ease;
+  }
+  section.dossier p a:hover, section.dossier li a:hover, section.dossier .example a:hover, section.dossier .side-note a:hover, table.fees td a:hover{border-bottom-style:solid;}
+  img,svg{display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 28px;}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(circle at 85% 10%, rgba(200,155,60,0.10), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(111,201,190,0.08), transparent 40%),
+      var(--navy);
+    color:var(--paper);
+    padding:78px 0 60px;
+    overflow:hidden;
+    border-bottom:1px solid var(--line-navy);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line-navy) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-navy) 1px, transparent 1px);
+    background-size:42px 42px;
+    opacity:0.35;
+    mask-image:linear-gradient(to bottom, black, transparent 85%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; display:flex; gap:48px; align-items:flex-start; flex-wrap:wrap;}
+  .hero-text{flex:1 1 460px; min-width:280px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px; letter-spacing:2px; text-transform:uppercase;
+    color:var(--brass-light);
+    border:1px dashed rgba(231,192,105,0.55);
+    padding:6px 14px; border-radius:999px;
+    margin-bottom:22px;
+    direction:ltr;
+  }
+  .hero h1{
+    font-size:clamp(38px,5.5vw,62px);
+    margin:0 0 14px;
+    color:var(--paper);
+  }
+  .hero p.lead{
+    font-size:17.5px;
+    color:rgba(243,238,225,0.78);
+    max-width:540px;
+    margin:0 0 30px;
+  }
+  .hero-stats{display:flex; flex-wrap:wrap; gap:14px;}
+  .stat-chip{
+    background:rgba(243,238,225,0.05);
+    border:1px solid var(--line-navy);
+    border-radius:10px;
+    padding:14px 18px;
+    min-width:140px;
+  }
+  .stat-chip .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:22px; font-weight:600;
+    color:var(--brass-light);
+    direction:ltr; display:block;
+  }
+  .stat-chip .lbl{font-size:12.5px; color:rgba(243,238,225,0.65); margin-top:4px; display:block;}
+
+  .stamp{
+    flex:0 0 auto;
+    width:172px; height:172px;
+    position:relative;
+    color:var(--brass-light);
+    transform:rotate(-6deg);
+    opacity:0.92;
+  }
+  .stamp svg{width:100%; height:100%;}
+  .stamp .center-num{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    flex-direction:column;
+    font-family:'Rakkas', serif;
+    font-size:15px;
+    text-align:center;
+    line-height:1.3;
+  }
+  .stamp .center-num small{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:1px; opacity:0.85; margin-top:4px;}
+
+  /* ============ SIDEBAR NAV ============ */
+  .sidebar-toggle{
+    display:none;
+    position:fixed; top:16px; left:16px; z-index:60;
+    background:var(--navy-deep); color:var(--paper);
+    border:1px solid var(--line-navy); border-radius:10px;
+    padding:10px 14px; font-family:'IBM Plex Sans Arabic'; font-size:13.5px;
+    align-items:center; gap:8px; cursor:pointer;
+  }
+  .sidebar-backdrop{
+    display:none; position:fixed; inset:0; background:rgba(10,22,38,0.55); z-index:55;
+  }
+  .sidebar-backdrop.open{display:block;}
+  #sidebar{
+    position:fixed; top:0; right:0; height:100vh; width:280px;
+    background:var(--navy-deep); border-left:1px solid var(--line-navy);
+    overflow-y:auto; z-index:56;
+    padding:22px 18px 40px;
+    transition:transform .25s ease;
+  }
+  #sidebar::-webkit-scrollbar{width:6px;}
+  #sidebar::-webkit-scrollbar-thumb{background:rgba(243,238,225,0.15); border-radius:6px;}
+  .sidebar-brand{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:1.5px;
+    color:var(--brass-light); text-transform:uppercase; margin-bottom:18px; direction:ltr; text-align:right;
+  }
+  .sidebar-group{margin-bottom:6px;}
+  .sidebar-group-title{
+    display:flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:1px;
+    color:rgba(243,238,225,0.45); text-transform:uppercase;
+    padding:10px 8px 6px;
+  }
+  .sidebar-list{list-style:none; margin:0; padding:0;}
+  .sidebar-list a{
+    display:block; padding:7px 10px; margin:1px 0;
+    font-size:13.2px; color:rgba(243,238,225,0.68);
+    text-decoration:none; border-radius:7px;
+    border-right:2px solid transparent;
+    transition:background .15s ease, color .15s ease;
+  }
+  .sidebar-list a.sub{
+    font-size:12.2px; padding-right:20px; color:rgba(243,238,225,0.48);
+  }
+  .sidebar-list a:hover{background:rgba(243,238,225,0.06); color:var(--paper);}
+  .sidebar-list a.active{
+    background:rgba(200,155,60,0.12); color:var(--brass-light);
+    border-right-color:var(--brass);
+  }
+  #main{transition:padding .2s ease;}
+  .hero{transition:padding .2s ease;}
+  @media (min-width:1100px){
+    #main{padding-right:280px;}
+    .hero{padding-right:280px;}
+  }
+  @media (max-width:1099px){
+    #sidebar{transform:translateX(100%);}
+    #sidebar.open{transform:translateX(0);}
+    .sidebar-toggle{display:flex;}
+  }
+
+  /* ============ SECTIONS (paper) ============ */
+  section.dossier{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  /* subtle per-department tint — same lightness as paper, just a hint of hue so you know which chapter you're in */
+  section#research-licensing{background:#EDF2EF;}
+  section#procedures{background:#F5EFDD;}
+  section#post-approval{background:#EEF0F4;}
+  section.dossier .wrap{padding:64px 28px 58px;}
+  .sec-head{display:flex; align-items:flex-start; gap:18px; margin-bottom:34px;}
+  .sec-badge{
+    flex:0 0 auto;
+    width:56px; height:56px; border-radius:50%;
+    border:1.5px dashed var(--brass);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14px; color:var(--brass-text);
+    transform:rotate(-4deg);
+  }
+  .sec-head h2{font-size:clamp(26px,3.4vw,34px); margin:0 0 6px; color:var(--ink);}
+  .sec-head .sub{color:var(--ink-soft); font-size:15.5px; max-width:680px;}
+
+  .grid{display:grid; gap:18px;}
+  .grid-3{grid-template-columns:repeat(3,1fr);}
+  .grid-2{grid-template-columns:repeat(2,1fr);}
+  @media (max-width:820px){ .grid-3, .grid-2{grid-template-columns:1fr;} }
+
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px 22px;
+  }
+  .card h3{font-family:'IBM Plex Sans Arabic'; font-weight:700; font-size:17px; margin:0 0 10px; color:var(--ink);}
+  .card p{margin:0 0 8px; font-size:14.8px; color:var(--ink-soft);}
+  .card .example{
+    margin-top:12px;
+    background:var(--paper-deep);
+    border-radius:8px;
+    padding:10px 12px;
+    font-size:13.5px;
+    color:var(--ink);
+  }
+  .kicker{
+    display:block;
+    width:100%;
+    border-top:2px solid var(--brass);
+    padding-top:18px;
+    margin:44px 0 16px;
+  }
+  .kicker:first-child, .sec-head + .kicker{margin-top:0; border-top:none; padding-top:0;}
+  .kicker-label{
+    display:table;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
+    color:var(--teal);
+    background:rgba(44,110,104,0.08);
+    border-radius:5px;
+    padding:4px 10px;
+  }
+  .card .kicker{
+    display:block; width:auto; border-top:none; padding-top:0; margin:0 0 8px;
+  }
+  .card .kicker-label{font-size:11px; padding:3px 9px;}
+  .sec-head .kicker{
+    display:block; width:auto; border-top:none; padding-top:0; margin:0 0 4px;
+  }
+  .sec-head .kicker-label{
+    background:none; padding:0; font-size:11.5px; letter-spacing:1.5px; opacity:0.75;
+  }
+
+  .phase-divider{
+    display:flex; align-items:center; gap:14px;
+    margin:56px 0 30px;
+  }
+  .phase-divider .p-num{
+    font-family:'IBM Plex Mono', monospace; font-size:13px; font-weight:700;
+    color:var(--paper); background:var(--brass);
+    width:28px; height:28px; border-radius:50%; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .phase-divider .p-title{
+    font-size:15.5px; font-weight:700; color:var(--ink);
+    white-space:nowrap;
+  }
+  .phase-divider .p-line{flex:1; height:1px; background:var(--line);}
+  .phase-divider:first-of-type{margin-top:8px;}
+
+  .dept-card{display:block; text-decoration:none; transition:border-color .15s ease, transform .15s ease;}
+  .dept-card:hover{border-color:var(--teal); transform:translateY(-2px);}
+  .dept-card .go{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--teal);
+    direction:ltr; display:inline-block; margin-top:2px;
+  }
+
+  .ledger{
+    font-family:'IBM Plex Mono', monospace;
+    background:var(--navy-deep);
+    color:var(--paper);
+    border-radius:12px;
+    padding:24px 26px;
+    margin:22px 0;
+    direction:rtl;
+    border:1px solid rgba(243,238,225,0.1);
+  }
+  .ledger .lg-title{
+    font-family:'IBM Plex Sans Arabic'; font-weight:600; font-size:14.5px;
+    color:var(--brass-light); margin-bottom:16px; direction:rtl;
+  }
+  .ledger .row{
+    display:flex; justify-content:space-between; gap:12px;
+    padding:7px 0;
+    border-bottom:1px dashed rgba(243,238,225,0.14);
+    font-size:14px;
+    direction:ltr;
+  }
+  .ledger .row:last-child{border-bottom:none;}
+  .ledger .row .k{color:rgba(243,238,225,0.62); direction:rtl; text-align:right;}
+  .ledger .row .v{color:var(--paper); direction:ltr;}
+  .ledger .row.total .v{color:var(--brass-light); font-weight:600;}
+  .ledger .note{margin-top:14px; font-family:'IBM Plex Sans Arabic'; font-size:12.8px; color:rgba(243,238,225,0.55); direction:rtl;}
+
+  .flow{display:flex; flex-wrap:wrap; align-items:center; gap:0; margin:24px 0;}
+  .flow .step{
+    background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:12px 16px; font-size:13.6px; color:var(--ink); text-align:center;
+    min-width:130px; flex:1 1 130px;
+  }
+  .flow .arrow{
+    flex:0 0 auto; padding:0 8px; color:var(--brass-text); font-size:18px;
+  }
+
+  .list-check{list-style:none; margin:0; padding:0; display:grid; gap:12px;}
+  .list-check li{
+    display:flex; gap:12px; align-items:flex-start;
+    background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:14px 16px; font-size:14.8px; color:var(--ink-soft);
+  }
+  .list-check li b{color:var(--ink); font-weight:700;}
+  .list-check .ico{
+    flex:0 0 auto; width:26px; height:26px; border-radius:50%;
+    background:rgba(44,110,104,0.1); color:var(--teal);
+    display:flex; align-items:center; justify-content:center;
+    font-size:12px; font-weight:700; font-family:'IBM Plex Mono',monospace;
+  }
+  .list-check.on-dark li{background:rgba(243,238,225,0.04); border-color:var(--line-navy); color:rgba(243,238,225,0.7);}
+  .list-check.on-dark li b{color:var(--paper);}
+  .list-check.on-dark .ico{background:rgba(231,192,105,0.12); color:var(--brass-light);}
+
+  .toc-group h3{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; font-size:15.5px;}
+  .toc-en{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:.03em; color:var(--teal); direction:ltr;}
+  .toc-list{list-style:none; margin:12px 0 0; padding:0; display:grid; gap:5px;}
+  .toc-list li a{
+    display:block; font-size:13.6px; color:var(--ink-soft); text-decoration:none;
+    padding:7px 10px; border-radius:7px; transition:background .15s ease, color .15s ease;
+  }
+  .toc-list li a:hover{background:var(--paper-deep); color:var(--ink);}
+
+  .committee{display:flex; gap:16px; flex-wrap:wrap; margin:20px 0;}
+  .committee .member{
+    flex:1 1 160px;
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    padding:18px; text-align:center;
+  }
+  .committee .member .circle{
+    width:44px; height:44px; margin:0 auto 10px;
+    border-radius:50%; background:var(--navy); color:var(--brass-light);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono',monospace; font-size:13px;
+  }
+  .committee .member h4{margin:0 0 4px; font-size:14.5px; color:var(--ink);}
+  .committee .member p{margin:0; font-size:12.8px; color:var(--ink-soft);}
+
+  /* ===== Timeline (investor journey) ===== */
+  .timeline{position:relative; margin:22px 0 8px;}
+  .timeline::before{content:''; position:absolute; right:9px; top:6px; bottom:6px; width:2px; background:var(--line);}
+  .timeline-item{position:relative; padding-right:34px; padding-bottom:20px;}
+  .timeline-item:last-child{padding-bottom:0;}
+  .timeline-item::before{
+    content:''; position:absolute; right:4px; top:3px; width:12px; height:12px;
+    border-radius:50%; background:var(--teal); border:2px solid var(--paper); z-index:1;
+  }
+  .timeline-item.muted::before{background:var(--line); border-color:var(--paper);}
+  .timeline-item .t-title{font-weight:700; color:var(--ink); font-size:14.6px; margin-bottom:5px;}
+  .timeline-item .t-meta{display:flex; gap:6px; flex-wrap:wrap;}
+  .t-tag{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:10.8px;
+    padding:2px 9px; border-radius:999px; white-space:nowrap;
+  }
+  .t-tag.dept{background:rgba(44,110,104,0.1); color:var(--teal);}
+  .t-tag.fee{background:rgba(200,155,60,0.14); color:var(--brass-text);}
+  .t-tag.actor{background:var(--paper-deep); color:var(--ink-soft);}
+
+  /* ===== Org chart (sector / departments) ===== */
+  .orgchart{margin:24px 0 6px; text-align:center;}
+  .org-root{
+    display:inline-block; background:var(--navy); color:var(--paper);
+    padding:10px 20px; border-radius:10px; font-size:14px; font-weight:700;
+  }
+  .org-stem{width:2px; height:18px; background:var(--line); margin:0 auto;}
+  .org-row{display:flex; justify-content:center; gap:14px; position:relative; padding-top:18px; flex-wrap:wrap;}
+  .org-row::before{content:''; position:absolute; top:0; left:8%; right:8%; height:2px; background:var(--line);}
+  .org-branch{position:relative; flex:1 1 140px; max-width:180px; display:flex; flex-direction:column; align-items:center;}
+  .org-branch::before{content:''; position:absolute; top:-18px; right:50%; width:2px; height:18px; background:var(--line);}
+  .org-node{
+    background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:10px 12px; font-size:12.6px; color:var(--ink); text-align:center; width:100%;
+  }
+  .org-node.active{border-color:var(--teal); box-shadow:inset 0 0 0 1px var(--teal);}
+  .org-node.soon{opacity:.6; border-style:dashed;}
+  .org-node b{display:block; font-size:13px; margin-bottom:2px;}
+  .org-node span{font-size:10.8px; color:var(--ink-soft);}
+
+  /* ===== Mini flow (project types) ===== */
+  .mini-flow{display:flex; align-items:stretch; gap:6px; margin-top:14px; flex-wrap:wrap;}
+  .mini-flow .node{
+    background:var(--paper-deep); border-radius:8px; padding:7px 10px;
+    font-size:11.6px; color:var(--ink); text-align:center; flex:1 1 auto;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .mini-flow .arrow{color:var(--brass-text); font-size:13px; flex:0 0 auto; display:flex; align-items:center;}
+
+  /* ===== Bar compare (مقابل الخدمات) ===== */
+  .bar-compare{margin:16px 0 6px; display:grid; gap:10px;}
+  .bar-row{display:grid; grid-template-columns:132px 1fr auto; align-items:center; gap:10px;}
+  @media (max-width:560px){ .bar-row{grid-template-columns:96px 1fr auto; font-size:12px;} }
+  .bar-row .bar-label{font-size:13px; color:var(--ink-soft);}
+  .bar-row .bar-track{background:var(--paper-deep); border-radius:6px; height:22px; overflow:hidden;}
+  .bar-row .bar-fill{height:100%; border-radius:6px; background:var(--line);}
+  .bar-row.due .bar-fill{background:var(--teal);}
+  .bar-row .bar-value{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink); direction:ltr; text-align:left; white-space:nowrap;}
+  .bar-row.due .bar-label, .bar-row.due .bar-value{color:var(--teal); font-weight:700;}
+
+  /* ===== Spectrum (legal forms) ===== */
+  .spectrum{margin:22px 0 6px;}
+  .spectrum-ends{
+    display:flex; justify-content:space-between; font-size:11px; color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .spectrum-track{position:relative; height:2px; background:var(--line); margin:0 6px;}
+  .spectrum-items{display:flex; justify-content:space-between; margin-top:0;}
+  .spectrum-item{position:relative; flex:1; text-align:center; padding-top:16px;}
+  .spectrum-item::before{
+    content:''; position:absolute; top:-1px; left:50%; transform:translate(-50%,-50%);
+    width:11px; height:11px; border-radius:50%; background:var(--teal); border:2px solid var(--paper);
+  }
+  .spectrum-item .s-name{font-size:12px; font-weight:700; color:var(--ink); margin-bottom:2px;}
+  .spectrum-item .s-hint{font-size:10.3px; color:var(--ink-soft); line-height:1.4;}
+
+  .quote-block{
+    border-right:3px solid var(--brass);
+    padding:6px 20px;
+    margin:22px 0;
+    color:var(--ink-soft);
+    font-size:15px;
+  }
+
+  .side-note{
+    background:rgba(44,110,104,0.06);
+    border:1px dashed rgba(44,110,104,0.35);
+    border-radius:10px;
+    padding:12px 16px;
+    font-size:13.6px;
+    color:var(--ink-soft);
+    margin-top:14px;
+  }
+  .side-note b{color:var(--teal);}
+  .zone-meta{font-size:12.5px; color:var(--teal); margin:6px 0 4px;}
+
+  /* dark context section */
+  section#context{background:var(--navy-deep); color:var(--paper);}
+  section#context .sec-head h2{color:var(--paper);}
+  section#context .sec-head .sub{color:rgba(243,238,225,0.62);}
+  section#context .sec-badge{border-color:var(--brass-light); color:var(--brass-light);}
+  section#context .card{
+    background:rgba(243,238,225,0.04);
+    border-color:var(--line-navy);
+  }
+  section#context .card h3{color:var(--paper);}
+  section#context .card p{color:rgba(243,238,225,0.68);}
+  section#context .card .example{background:rgba(243,238,225,0.06); color:var(--paper);}
+  section#context .kicker{border-top-color:var(--brass-light);}
+  section#context .kicker-label{color:var(--teal-light); background:rgba(111,201,190,0.1);}
+
+  .supply-chain{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    flex-wrap:wrap; margin:26px 0; padding:26px;
+    background:rgba(243,238,225,0.03);
+    border:1px solid var(--line-navy);
+    border-radius:14px;
+  }
+  .supply-chain .node{
+    background:var(--navy); border:1px solid var(--brass-light);
+    color:var(--paper);
+    border-radius:10px; padding:16px 22px; text-align:center;
+    font-size:14.5px; min-width:120px;
+  }
+  .supply-chain .node span{display:block; font-size:11.5px; color:var(--brass-light); margin-top:4px; font-family:'IBM Plex Mono',monospace;}
+  .supply-chain .connector{color:var(--brass-light); font-size:20px;}
+
+  .stat-row{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:26px 0;}
+  @media (max-width:820px){.stat-row{grid-template-columns:repeat(2,1fr);}}
+  .stat-row .box{
+    background:rgba(243,238,225,0.04); border:1px solid var(--line-navy);
+    border-radius:10px; padding:16px; text-align:center;
+  }
+  .stat-row .box .n{font-family:'IBM Plex Mono',monospace; font-size:22px; color:var(--brass-light); direction:ltr;}
+  .stat-row .box .l{font-size:12.3px; color:rgba(243,238,225,0.6); margin-top:4px;}
+
+  /* table */
+  table.fees{
+    width:100%; border-collapse:collapse;
+    background:#fff; border-radius:12px; overflow:hidden;
+    box-shadow:0 1px 0 var(--line);
+    font-size:14px;
+  }
+  table.fees thead th{
+    background:var(--navy); color:var(--paper);
+    font-weight:600; text-align:right; padding:14px 16px;
+    font-size:13px;
+  }
+  table.fees tbody td{
+    padding:14px 16px; border-bottom:1px solid var(--line);
+    color:var(--ink-soft); vertical-align:top;
+  }
+  table.fees tbody td:first-child{color:var(--ink); font-weight:600;}
+  table.fees tbody tr:last-child td{border-bottom:none;}
+  table.fees tbody tr:hover{background:var(--paper-deep);}
+  .table-scroll{overflow-x:auto; border-radius:12px; margin-bottom:14px;}
+  .table-caption{font-size:12.5px; color:var(--ink-soft); margin:0 0 26px;}
+
+  footer{
+    background:var(--navy-deep); color:rgba(243,238,225,0.5);
+    text-align:center; padding:34px 20px; font-size:13px;
+  }
+  footer .brand{color:var(--brass-light); font-family:'IBM Plex Mono',monospace; font-size:12px; margin-bottom:6px;}
+
+  @media print{
+    #sidebar, .sidebar-toggle, .sidebar-backdrop{display:none !important;}
+    #main{padding-right:0 !important;}
+    section.dossier, .hero{background:#fff !important; color:#000 !important;}
+  }
+
+/* Content hierarchy refinements: same original visual system, only clearer levels */
+.chapter-subhead{
+  font-family:'IBM Plex Sans Arabic',sans-serif;
+  font-weight:700;
+  font-size:17px;
+  color:var(--ink);
+  margin:28px 0 10px;
+}
+.chapter-minorhead{
+  font-family:'IBM Plex Sans Arabic',sans-serif;
+  font-weight:600;
+  font-size:14.5px;
+  color:var(--ink);
+  margin:20px 0 6px;
+}
+.toc-list a.sub2{padding-right:30px;font-size:11.5px;color:rgba(243,238,225,0.40);}
+.toc-list a.sub2:hover{color:var(--paper);}
+.toc-list .toc-chapter-link{font-weight:600;color:rgba(243,238,225,0.78);}
+.toc-list .toc-subgroup{margin-top:2px;}
+.dossier .kicker-label{font-weight:600;}
+.dossier .plain-subhead{
+  display:block;
+  margin:22px 0 8px;
+  font-weight:700;
+  font-size:16px;
+  color:var(--ink);
+}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="topbar-inner"><div class="brand">GAFI · ALEXANDRIA FREE ZONE · TRAINING FILE</div><div class="topbar-note">ملف تدريب · الإسكندرية · 2026</div></div></header>
-<section class="hero"><div class="hero-grid"><div><div class="eyebrow">GAFI · ALEXANDRIA FREE ZONE · TRAINING FILE</div>
-<h1>ملف تدريب<br>المنطقة الحرة</h1>
-<p class="hero-lead">دليل تدريب المنطقة الحرة بالإسكندرية، مقسم حسب الإدارات، وبيتابع خطوات المشروع بالترتيب: من الفكرة، لكل إدارة بتتعامل معاه، لحد الرسوم والقانون اللي بيحكمه.</p>
-<p class="hero-lead" style="font-size:13.5px;max-width:760px;margin-top:-10px">لو قابلت مصطلح مش فاهمه أثناء القراءة، في <a href="#table-glossary" style="color:var(--brassLight);border-bottom:1px dotted rgba(229,191,103,.6)">مسرد مصطلحات كامل</a> في آخر الملف ترجعله في أي وقت.</p>
-<div class="stats"><div class="stat"><div class="v">416</div><div class="l">مشروعًا في المنطقة الحرة العامة بالإسكندرية</div></div><div class="stat"><div class="v">$14.7B</div><div class="l">إجمالي الاستثمارات</div></div><div class="stat"><div class="v">$5.3B</div><div class="l">صادرات في 2025</div></div><div class="stat"><div class="v">#1</div><div class="l">الأعلى في قيمة الصادرات بين المناطق الحرة المصرية</div></div></div>
-<p class="hero-lead" style="font-size:12px;margin-top:16px;opacity:.66">الأرقام من تقرير وزارة الاستثمار والتجارة الخارجية عن أداء المنطقة الحرة العامة بالإسكندرية (العامرية)، يونيو 2026.</p>
-<p class="hero-lead" style="font-size:13px;max-width:760px;margin-top:8px;color:rgba(245,240,229,.63)"><strong style="color:var(--paper)">وليه الأرقام دي مهمة؟</strong> المناطق الحرة في مصر تساهم بحوالي <strong style="color:var(--brassLight)">22% من إجمالي الصادرات السلعية المصرية</strong>، لذلك المنطقة الحرة ليست مجرد مكان لمشروعات منفصلة، بل جزء من منظومة التصدير والاستثمار في مصر.</p>
-</div><div class="hero-mark"><span>ملف<br>تدريب<small>ALEX · 2026</small></span></div></div></section>
-<div class="layout"><aside class="sidebar"><div class="sidebar-title">CONTENTS · الفهرس</div><nav class="toc" aria-label="فهرس الملف"><div class="toc-chapter"><a class="toc-main" href="#الأساسيات-الهيئة-ونظام-المنطقة-الحرة">الأساسيات: الهيئة ونظام المنطقة الحرة</a><div class="toc-sub"><a href="#basics-gafi">الهيئة العامة للاستثمار (GAFI)</a><a href="#الهيئة-مقابل-الشركات">الهيئة مقابل الشركات</a><a href="#basics-what-is-it">يعني إيه منطقة حرة؟</a><a href="#3-أنواع-مشروعات-فقط">3 أنواع مشروعات فقط</a><a href="#مشروع-صناعي">مشروع صناعي</a><a href="#مشروع-تخزيني">مشروع تخزيني</a><a href="#مشروع-خدمي">مشروع خدمي</a><a href="#صناعي-مقابل-تخزيني-إيه-الفرق-فعلاً؟">صناعي مقابل تخزيني: إيه الفرق فعلاً؟</a><a href="#ليه-الفرق-ده-مهم؟">ليه الفرق ده مهم؟</a><a href="#الأنشطة-المسموحة-والممنوعة">الأنشطة المسموحة والممنوعة</a><a href="#ممنوعة-نهائيًا">ممنوعة نهائيًا</a><a href="#مسموحة-بموافقة-خاصة-بعد-تعديل-2023">مسموحة بموافقة خاصة (بعد تعديل 2023)</a><a href="#ليه-الشركات-تدخل-منطقة-حرة؟">ليه الشركات تدخل منطقة حرة؟</a><a href="#basics-review-qa">خلاصة سريعة: أسئلة ومراجعة</a></div></div><div class="toc-chapter"><a class="toc-main" href="#الإدارات">الإدارات</a><div class="toc-sub"><a href="#departments-journey">رحلة المستثمر من الفكرة للتشغيل</a><a href="#قطاع-المناطق-الحرة">قطاع المناطق الحرة</a><a href="#قطاع-المناطق-الحرة-2">قطاع المناطق الحرة</a><a href="#البحوث-والتراخيص">البحوث والتراخيص</a><a href="#التنفيذ">التنفيذ</a><a href="#المتابعة-المالية">المتابعة المالية</a></div></div><div class="toc-chapter"><a class="toc-main" href="#إدارة-البحوث-والتراخيص">إدارة البحوث والتراخيص</a><div class="toc-sub"><a href="#research-feasibility-study">دراسة الجدوى (Feasibility Study)</a><a href="#رأس-المال-مقابل-التكاليف-الاستثمارية">رأس المال مقابل التكاليف الاستثمارية</a><a href="#الحصة-النقدية-مقابل-العينية">الحصة النقدية مقابل العينية</a><a href="#الأشكال-القانونية-للشركات">الأشكال القانونية للشركات</a><a href="#المستندات-المطلوبة">المستندات المطلوبة</a><a href="#مرحلتا-الموافقة-على-المشروع">مرحلتا الموافقة على المشروع</a><a href="#الموافقة-المبدئية">الموافقة المبدئية</a><a href="#الموافقة-النهائية-final-approval">الموافقة النهائية (Final Approval)</a><a href="#اللجنة-الفنية-technical-committee">اللجنة الفنية (Technical Committee)</a><a href="#ليه-ممكن-المشروع-يترفض-أو-يتأخر؟">ليه ممكن المشروع يترفض أو يتأخر؟</a><a href="#مراجعة-الطلب-application-قبل-اللجنة">مراجعة الطلب (Application) قبل اللجنة</a><a href="#دور-فرع-الهيئة-بالإسكندرية">دور فرع الهيئة بالإسكندرية</a><a href="#research-amendments">تعديل بيانات المشروع (Project Amendments)</a><a href="#امتى-يتعدل-قرار-المزاولة-فقط؟">امتى يتعدل قرار المزاولة فقط؟</a><a href="#امتى-يتعدل-عقد-التأسيس-كمان؟">امتى يتعدل عقد التأسيس كمان؟</a><a href="#research-liquidation">تصفية المشروع (Project Liquidation)</a><a href="#براءات-الذمة-clearance-certificates">براءات الذمة (Clearance Certificates)</a><a href="#دور-المصفي-القانوني-legal-liquidator">دور المصفي القانوني (Legal Liquidator)</a><a href="#أهم-الأخطاء-الشائعة-بعد-الموافقة">أهم الأخطاء الشائعة (بعد الموافقة)</a></div></div><div class="toc-chapter"><a class="toc-main" href="#إدارة-التنفيذ">إدارة التنفيذ</a><div class="toc-sub"><a href="#أنواع-الوارد">أنواع الوارد</a><a href="#من-خارج-مصر">من خارج مصر</a><a href="#من-منطقة-حرة-أخرى">من منطقة حرة أخرى</a><a href="#من-السوق-المحلي">من السوق المحلي</a><a href="#أنواع-الصادر-بنفس-المنطق">أنواع الصادر (بنفس المنطق)</a><a href="#تصدير-للخارج">تصدير للخارج</a><a href="#تحويل-لمنطقة-حرة-أخرى">تحويل لمنطقة حرة أخرى</a><a href="#بيع-في-السوق-المحلي">بيع في السوق المحلي</a><a href="#مسار-الاستيراد-وارد-أجنبي">مسار الاستيراد (وارد أجنبي)</a><a href="#بوليصة-الشحن-bill-of-lading،-إيه-هي-بالظبط؟">بوليصة الشحن (Bill of Lading)، إيه هي بالظبط؟</a><a href="#ليه-هي-أول-خطوة-في-المسار؟">ليه هي أول خطوة في المسار؟</a><a href="#تأمين-النقل-البري-وثيقة-التأمين">تأمين النقل البري (وثيقة التأمين)</a><a href="#الوارد-المحلي-أسهل-حالة">الوارد المحلي: أسهل حالة</a><a href="#الرصيد-لدى-الهيئة">الرصيد لدى الهيئة</a><a href="#المعاينة-الثلاثية">المعاينة الثلاثية</a><a href="#procedures-incoterms">مصطلحات التجارة الدولية: FOB وCIF</a><a href="#مصطلحات-تانية-هتقابلها-في-المستندات">مصطلحات تانية هتقابلها في المستندات</a><a href="#procedures-qiz">اتفاقية الكويز (QIZ)</a><a href="#تقديم-بيان-الإيرادات">تقديم بيان الإيرادات</a><a href="#الوكيل-الحصري-exclusive-agent">الوكيل الحصري (Exclusive Agent)</a><a href="#procedures-waste">الهالك: نسبة الفقد الطبيعي أثناء التصنيع</a><a href="#مين-بيحدد-النسبة؟">مين بيحدد النسبة؟</a><a href="#ليه-الهيئة-بتتابعها؟">ليه الهيئة بتتابعها؟</a><a href="#procedures-mistakes">أهم الأخطاء الشائعة</a></div></div><div class="toc-chapter"><a class="toc-main" href="#إدارة-المتابعة-المالية">إدارة المتابعة المالية</a><div class="toc-sub"><a href="#خروج-المعدات-من-المنطقة-الحرة">خروج المعدات من المنطقة الحرة</a><a href="#الحالة-العادية">الحالة العادية</a><a href="#امتى-محتاج-موافقة-خاصة؟">امتى محتاج موافقة خاصة؟</a><a href="#متابعة-الصادرات-والواردات">متابعة الصادرات والواردات</a><a href="#الالتزام-بنسبة-التصدير">الالتزام بنسبة التصدير</a><a href="#التقييم-الدوري-للمشروع">التقييم الدوري للمشروع</a><a href="#post-violations">المخالفات: من الاكتشاف إلى الإجراء القانوني</a><a href="#procedures-mistakes">أهم الأخطاء الشائعة</a></div></div><div class="toc-chapter"><a class="toc-main" href="#الرسوم-والمقابل-المالي">الرسوم والمقابل المالي</a><div class="toc-sub"><a href="#fees-usufruct">مقابل الانتفاع (Usufruct Fee)</a><a href="#fees-guarantee-fee">مقابل الضمان (Guarantee Fee)</a><a href="#مقابل-الخدمات-السنوي-annual-service-fee">مقابل الخدمات السنوي (Annual Service Fee)</a><a href="#لو-المستثمر-اتأخر-في-السداد">لو المستثمر اتأخر في السداد</a><a href="#الاسترداد">الاسترداد</a><a href="#fees-revenue-sources">مصادر إيرادات الهيئة</a><a href="#ليه-الهيئة-بتحصّل-الرسوم-دي؟">ليه الهيئة بتحصّل الرسوم دي؟</a><a href="#أهم-الفروق-اللي-لازم-متتلخبطش-فيها">أهم الفروق اللي لازم متتلخبطش فيها</a></div></div><div class="toc-chapter"><a class="toc-main" href="#الإطار-القانوني-وأنواع-المناطق-الحرة">الإطار القانوني وأنواع المناطق الحرة</a><div class="toc-sub"><a href="#قصة-الفكرة-من-الميناء-الحر-إلى-المنطقة-الحرة-الحديثة">قصة الفكرة: من الميناء الحر إلى المنطقة الحرة الحديثة</a><a href="#1959-شانون،-أيرلندا">1959 · شانون، أيرلندا</a><a href="#ومصر-دخلت-القصة-إمتى؟">ومصر دخلت القصة إمتى؟</a><a href="#legal-history">قبل قانون 72: كان الأساس القانوني إيه؟</a><a href="#أهم-الفروق-بين-81997-و722017">أهم الفروق بين 8/1997 و72/2017</a><a href="#الشركات-القديمة-إيه-اللي-بيحصلها؟">الشركات القديمة إيه اللي بيحصلها؟</a><a href="#نوعان-من-المناطق-الحرة">نوعان من المناطق الحرة</a><a href="#مناطق-حرة-عامة">مناطق حرة عامة</a><a href="#legal-private-zones">مناطق حرة خاصة</a><a href="#فرع-منطقة-حرة-خاصة-لشركة-عامة">فرع منطقة حرة خاصة لشركة عامة</a><a href="#الأرض-من-غير-تحويل-مش-معفاة">الأرض من غير تحويل مش معفاة</a><a href="#أولًا-نقارنهم-على-نفس-الأساس">أولًا: نقارنهم على نفس الأساس</a></div></div><div class="toc-chapter"><a class="toc-main" href="#1-الإسكندرية-العامرية">1 · الإسكندرية (العامرية)</a></div><div class="toc-chapter"><a class="toc-main" href="#2-القاهرة-مدينة-نصر">2 · القاهرة (مدينة نصر)</a></div><div class="toc-chapter"><a class="toc-main" href="#3-بورسعيد">3 · بورسعيد</a></div><div class="toc-chapter"><a class="toc-main" href="#4-السويس-ثلاث-مناطق-في-منطقة-واحدة">4 · السويس: ثلاث مناطق في منطقة واحدة</a></div><div class="toc-chapter"><a class="toc-main" href="#5-الإسماعيلية">5 · الإسماعيلية</a></div><div class="toc-chapter"><a class="toc-main" href="#6-دمياط">6 · دمياط</a></div><div class="toc-chapter"><a class="toc-main" href="#7-شبين-الكوم">7 · شبين الكوم</a></div><div class="toc-chapter"><a class="toc-main" href="#8-المنطقة-الحرة-الإعلامية-في-مدينة-الإنتاج-الإعلامي">8 · المنطقة الحرة الإعلامية في مدينة الإنتاج الإعلامي</a></div><div class="toc-chapter"><a class="toc-main" href="#9-قنا-قفط">9 · قنا (قفط)</a><div class="toc-sub"><a href="#إيه-اللي-مشترك-بين-المناطق-التسع؟">إيه اللي مشترك بين المناطق التسع؟</a><a href="#الخلاصة">الخلاصة</a><a href="#مصادر-تحديث-هذا-الجزء">مصادر تحديث هذا الجزء</a><a href="#الإعفاءات-الممنوحة-للمشروع">الإعفاءات الممنوحة للمشروع</a><a href="#الضمانات-القانونية-للمشروع">الضمانات القانونية للمشروع</a><a href="#ميزة-الجهة-الإدارية-الواحدة">ميزة الجهة الإدارية الواحدة</a><a href="#legal-environment">البيئة شرط أساسي، مش إجراء شكلي</a></div></div><div class="toc-chapter"><a class="toc-main" href="#السياق-الاقتصادي-والاستراتيجي">السياق الاقتصادي والاستراتيجي</a><div class="toc-sub"><a href="#ليه-بعض-الرسوم-زادت-بعد-قانون-72؟">ليه بعض الرسوم زادت بعد قانون 72؟</a><a href="#context">ليه الدولة لسه متمسكة بالمناطق الحرة؟</a></div></div><div class="toc-chapter"><a class="toc-main" href="#مصادر-العملة-الأجنبية-في-مصر">مصادر العملة الأجنبية في مصر</a><div class="toc-sub"><a href="#طب-وقناة-السويس-فين؟">طب وقناة السويس فين؟</a><a href="#طيب-المناطق-الحرة-مكانها-فين؟">طيب المناطق الحرة مكانها فين؟</a><a href="#ليه-المناطق-الحرة-مش-بتظهر-عادةً-ضمن-مصادر-الدولار؟">ليه المناطق الحرة مش بتظهر عادةً ضمن &quot;مصادر الدولار&quot;؟</a><a href="#المناطق-الحرة-والصادرات">المناطق الحرة والصادرات</a><a href="#مثال-سريع">مثال سريع</a><a href="#أهمية-المنطقة-الحرة-بالإسكندرية">أهمية المنطقة الحرة بالإسكندرية</a></div></div><div class="toc-chapter"><a class="toc-main" href="#cases">حالات عملية</a></div><div class="toc-chapter"><a class="toc-main" href="#المرجع-السريع">المرجع السريع</a></div></nav></aside><div class="content"><main><section class="chapter chapter-1" data-chapter="1"><h2 class="chapter-title" id="الأساسيات-الهيئة-ونظام-المنطقة-الحرة">الأساسيات: الهيئة ونظام المنطقة الحرة</h2>
+<!-- ============ HERO ============ -->
+<div class="hero">
+<div class="wrap hero-inner">
+<div class="hero-text">
+<div class="eyebrow">GAFI · ALEXANDRIA FREE ZONE · TRAINING FILE</div>
+<h1>ملف تدريب<br/>المنطقة الحرة</h1>
+<p class="lead">دليل تدريب المنطقة الحرة بالإسكندرية، مقسم حسب الإدارات، وبيتابع خطوات المشروع بالترتيب: من الفكرة، لكل إدارة بتتعامل معاه، لحد الرسوم والقانون اللي بيحكمه.</p>
+<p class="lead" style="font-size:14.5px; opacity:0.85;">لو قابلت مصطلح مش فاهمه أثناء القراءة، في <a href="#table-glossary" style="color:inherit; text-decoration:underline;">مسرد مصطلحات كامل</a> في آخر الملف ترجعله في أي وقت.</p>
+<div class="hero-stats">
+<div class="stat-chip"><span class="num">416</span><span class="lbl">مشروعًا في المنطقة الحرة العامة بالإسكندرية</span></div>
+<div class="stat-chip"><span class="num">$14.7B</span><span class="lbl">إجمالي الاستثمارات</span></div>
+<div class="stat-chip"><span class="num">$5.3B</span><span class="lbl">صادرات في 2025</span></div>
+<div class="stat-chip"><span class="num">#1</span><span class="lbl">الأعلى في قيمة الصادرات بين المناطق الحرة المصرية</span></div>
+</div>
+<p style="font-size:11.5px; color:var(--ink-soft); opacity:0.7; margin-top:10px; max-width:520px;">الأرقام من تقرير وزارة الاستثمار والتجارة الخارجية عن أداء المنطقة الحرة العامة بالإسكندرية (العامرية)، يونيو 2026.</p>
+</div>
+<div class="stamp">
+<svg viewbox="0 0 160 160">
+<circle cx="80" cy="80" fill="none" r="70" stroke="currentColor" stroke-dasharray="3 4" stroke-width="1.4"></circle>
+<circle cx="80" cy="80" fill="none" r="56" stroke="currentColor" stroke-width="1"></circle>
+<path d="M 80,80 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" fill="none" id="curve"></path>
+<text fill="currentColor" font-size="9.5" letter-spacing="2.5">
+<textpath href="#curve" startoffset="2%">الهيئة العامة للاستثمار والمناطق الحرة</textpath>
+</text>
+</svg>
+<div class="center-num">ملف<br/>تدريب<small>ALEX · 2026</small></div>
+</div>
+</div>
+</div>
+<!-- ============ SIDEBAR NAV ============ -->
+<button aria-label="فتح الفهرس" class="sidebar-toggle" id="sidebarToggle">☰ الفهرس</button>
+<div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+<nav id="sidebar"><div class="sidebar-brand">GAFI · ALEX 2026</div><div class="sidebar-group"><div class="sidebar-group-title">01 · الأساسيات: الهيئة ونظام المنطقة الحرة</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#الأساسيات-الهيئة-ونظام-المنطقة-الحرة">فتح القسم</a></li><li><a href="#مشروع-صناعي">مشروع صناعي</a></li><li><a href="#مشروع-تخزيني">مشروع تخزيني</a></li><li><a href="#مشروع-خدمي">مشروع خدمي</a></li><li><a href="#صناعي-مقابل-تخزيني-إيه-الفرق-فعلاً؟">صناعي مقابل تخزيني: إيه الفرق فعلاً؟</a></li><li><a href="#ليه-الفرق-ده-مهم؟">ليه الفرق ده مهم؟</a></li><li><a href="#ممنوعة-نهائيًا">ممنوعة نهائيًا</a></li><li><a href="#مسموحة-بموافقة-خاصة-بعد-تعديل-2023">مسموحة بموافقة خاصة (بعد تعديل 2023)</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">02 · الإدارات</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#الإدارات">فتح القسم</a></li><li><a href="#البحوث-والتراخيص">البحوث والتراخيص</a></li><li><a href="#التنفيذ">التنفيذ</a></li><li><a href="#المتابعة-المالية">المتابعة المالية</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">03 · إدارة البحوث والتراخيص</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#إدارة-البحوث-والتراخيص">فتح القسم</a></li><li><a href="#رأس-المال-مقابل-التكاليف-الاستثمارية">رأس المال مقابل التكاليف الاستثمارية</a></li><li><a href="#الحصة-النقدية-مقابل-العينية">الحصة النقدية مقابل العينية</a></li><li><a href="#الموافقة-المبدئية">الموافقة المبدئية</a></li><li><a href="#الموافقة-النهائية-final-approval">الموافقة النهائية (Final Approval)</a></li><li><a href="#مراجعة-الطلب-application-قبل-اللجنة">مراجعة الطلب (Application) قبل اللجنة</a></li><li><a href="#دور-فرع-الهيئة-بالإسكندرية">دور فرع الهيئة بالإسكندرية</a></li><li><a href="#امتى-يتعدل-قرار-المزاولة-فقط؟">امتى يتعدل قرار المزاولة فقط؟</a></li><li><a href="#امتى-يتعدل-عقد-التأسيس-كمان؟">امتى يتعدل عقد التأسيس كمان؟</a></li><li><a href="#براءات-الذمة-clearance-certificates">براءات الذمة (Clearance Certificates)</a></li><li><a href="#دور-المصفي-القانوني-legal-liquidator">دور المصفي القانوني (Legal Liquidator)</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">04 · إدارة التنفيذ</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#إدارة-التنفيذ">فتح القسم</a></li><li><a href="#من-خارج-مصر">من خارج مصر</a></li><li><a href="#من-منطقة-حرة-أخرى">من منطقة حرة أخرى</a></li><li><a href="#من-السوق-المحلي">من السوق المحلي</a></li><li><a href="#تصدير-للخارج">تصدير للخارج</a></li><li><a href="#تحويل-لمنطقة-حرة-أخرى">تحويل لمنطقة حرة أخرى</a></li><li><a href="#بيع-في-السوق-المحلي">بيع في السوق المحلي</a></li><li><a href="#بوليصة-الشحن-bill-of-lading،-إيه-هي-بالظبط؟">بوليصة الشحن (Bill of Lading)، إيه هي بالظبط؟</a></li><li><a href="#ليه-هي-أول-خطوة-في-المسار؟">ليه هي أول خطوة في المسار؟</a></li><li><a href="#تأمين-النقل-البري-وثيقة-التأمين">تأمين النقل البري (وثيقة التأمين)</a></li><li><a href="#الوارد-المحلي-أسهل-حالة">الوارد المحلي: أسهل حالة</a></li><li><a href="#الرصيد-لدى-الهيئة">الرصيد لدى الهيئة</a></li><li><a class="sub" href="#موظف-إدارة-التنفيذ">موظف إدارة التنفيذ</a></li><li><a class="sub" href="#موظف-مصلحة-الجمارك">موظف مصلحة الجمارك</a></li><li><a class="sub" href="#مندوب-الشركة">مندوب الشركة</a></li><li><a href="#مصطلحات-تانية-هتقابلها-في-المستندات">مصطلحات تانية هتقابلها في المستندات</a></li><li><a href="#تقديم-بيان-الإيرادات">تقديم بيان الإيرادات</a></li><li><a href="#الوكيل-الحصري-exclusive-agent">الوكيل الحصري (Exclusive Agent)</a></li><li><a href="#مين-بيحدد-النسبة؟">مين بيحدد النسبة؟</a></li><li><a href="#ليه-الهيئة-بتتابعها؟">ليه الهيئة بتتابعها؟</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">05 · إدارة المتابعة المالية</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#إدارة-المتابعة-المالية">فتح القسم</a></li><li><a href="#الحالة-العادية">الحالة العادية</a></li><li><a href="#امتى-محتاج-موافقة-خاصة؟">امتى محتاج موافقة خاصة؟</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">06 · الرسوم والمقابل المالي</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#الرسوم-والمقابل-المالي">فتح القسم</a></li><li><a href="#fees-usufruct">مقابل الانتفاع (Usufruct Fee)</a></li><li><a href="#fees-guarantee-fee">مقابل الضمان (Guarantee Fee)</a></li><li><a href="#مقابل-الخدمات-السنوي-annual-service-fee">مقابل الخدمات السنوي (Annual Service Fee)</a></li><li><a href="#لو-المستثمر-اتأخر-في-السداد">لو المستثمر اتأخر في السداد</a></li><li><a href="#الاسترداد">الاسترداد</a></li><li><a href="#ليه-الهيئة-بتحصّل-الرسوم-دي؟">ليه الهيئة بتحصّل الرسوم دي؟</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">07 · الإطار القانوني وأنواع المناطق الحرة</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#الإطار-القانوني-وأنواع-المناطق-الحرة">فتح القسم</a></li><li><a href="#قصة-الفكرة-من-الميناء-الحر-إلى-المنطقة-الحرة-الحديثة">قصة الفكرة: من الميناء الحر إلى المنطقة الحرة الحديثة</a></li><li><a href="#1959-شانون،-أيرلندا">1959 · شانون، أيرلندا</a></li><li><a href="#ومصر-دخلت-القصة-إمتى؟">ومصر دخلت القصة إمتى؟</a></li><li><a href="#أهم-الفروق-بين-81997-و722017">أهم الفروق بين 8/1997 و72/2017</a></li><li><a href="#الشركات-القديمة-إيه-اللي-بيحصلها؟">الشركات القديمة إيه اللي بيحصلها؟</a></li><li><a href="#مناطق-حرة-عامة">مناطق حرة عامة</a></li><li><a href="#legal-private-zones">مناطق حرة خاصة</a></li><li><a href="#فرع-منطقة-حرة-خاصة-لشركة-عامة">فرع منطقة حرة خاصة لشركة عامة</a></li><li><a href="#الأرض-من-غير-تحويل-مش-معفاة">الأرض من غير تحويل مش معفاة</a></li><li><a href="#أولًا-نقارنهم-على-نفس-الأساس">أولًا: نقارنهم على نفس الأساس</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">08 · 1 · الإسكندرية (العامرية)</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#1-الإسكندرية-العامرية">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">09 · 2 · القاهرة (مدينة نصر)</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#2-القاهرة-مدينة-نصر">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">10 · 3 · بورسعيد</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#3-بورسعيد">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">11 · 4 · السويس: ثلاث مناطق في منطقة واحدة</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#4-السويس-ثلاث-مناطق-في-منطقة-واحدة">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">12 · 5 · الإسماعيلية</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#5-الإسماعيلية">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">13 · 6 · دمياط</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#6-دمياط">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">14 · 7 · شبين الكوم</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#7-شبين-الكوم">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">15 · 8 · المنطقة الحرة الإعلامية في مدينة الإنتاج الإعلامي</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#8-المنطقة-الحرة-الإعلامية-في-مدينة-الإنتاج-الإعلامي">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">16 · 9 · قنا (قفط)</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#9-قنا-قفط">فتح القسم</a></li><li><a href="#إيه-اللي-مشترك-بين-المناطق-التسع؟">إيه اللي مشترك بين المناطق التسع؟</a></li><li><a href="#الخلاصة">الخلاصة</a></li><li><a href="#مصادر-تحديث-هذا-الجزء">مصادر تحديث هذا الجزء</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">17 · السياق الاقتصادي والاستراتيجي</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#السياق-الاقتصادي-والاستراتيجي">فتح القسم</a></li><li><a href="#ليه-بعض-الرسوم-زادت-بعد-قانون-72؟">ليه بعض الرسوم زادت بعد قانون 72؟</a></li><li><a href="#context">ليه الدولة لسه متمسكة بالمناطق الحرة؟</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">18 · مصادر العملة الأجنبية في مصر</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#مصادر-العملة-الأجنبية-في-مصر">فتح القسم</a></li><li><a href="#طب-وقناة-السويس-فين؟">طب وقناة السويس فين؟</a></li><li><a href="#طيب-المناطق-الحرة-مكانها-فين؟">طيب المناطق الحرة مكانها فين؟</a></li><li><a href="#ليه-المناطق-الحرة-مش-بتظهر-عادةً-ضمن-مصادر-الدولار؟">ليه المناطق الحرة مش بتظهر عادةً ضمن "مصادر الدولار"؟</a></li><li><a href="#المناطق-الحرة-والصادرات">المناطق الحرة والصادرات</a></li><li><a href="#مثال-سريع">مثال سريع</a></li><li><a href="#أهمية-المنطقة-الحرة-بالإسكندرية">أهمية المنطقة الحرة بالإسكندرية</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">19 · حالات عملية</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#cases">فتح القسم</a></li></ul></div><div class="sidebar-group"><div class="sidebar-group-title">20 · المرجع السريع</div><ul class="sidebar-list"><li><a class="toc-chapter-link" href="#المرجع-السريع">فتح القسم</a></li></ul></div></nav>
+<div id="main"><section class="dossier" id="الأساسيات-الهيئة-ونظام-المنطقة-الحرة"><div class="wrap"><div class="sec-head"><div class="sec-badge">01</div><div><h2 class="chapter-md-title" id="الأساسيات-الهيئة-ونظام-المنطقة-الحرة">الأساسيات: الهيئة ونظام المنطقة الحرة</h2></div></div>
 <p>مين الهيئة العامة للاستثمار، وإيه المقصود بالمنطقة الحرة، قبل أي تفاصيل تانية.</p>
-<h3 class="sub-title" id="basics-gafi">الهيئة العامة للاستثمار (GAFI)</h3>
+<p><strong>الهيئة العامة للاستثمار (GAFI)</strong></p>
 <p>الهيئة العامة للاستثمار والمناطق الحرة (GAFI) هي الجهة الحكومية المسؤولة عن تنظيم وتشجيع الاستثمار في مصر، وتتبع الدولة في جذب المستثمرين المحليين والأجانب، وتشرف على تطبيق قانون الاستثمار رقم 72 لسنة 2017 داخل المناطق الحرة وغيرها من الأنظمة الاستثمارية. من أهم أهدافها: جذب الاستثمارات المحلية والأجنبية، زيادة الصادرات، توفير فرص عمل، إدخال عملة أجنبية، تبسيط إجراءات تأسيس المشروعات، وتوفير بيئة استثمارية مناسبة للمستثمر.</p>
-<h3 class="sub-title" id="الهيئة-مقابل-الشركات">الهيئة مقابل الشركات</h3>
+<p><strong>الهيئة مقابل الشركات</strong></p>
 <p>الفرق الأساسي اللي هيوضح كل حاجة بعد كده: الهيئة جهة خدمية وتنظيمية، دورها يقتصر على استقبال المستثمر، مراجعة المشروع، إصدار الموافقات، الرقابة، ومتابعة تنفيذ القوانين , مش طرف منتج ولا تاجر في السوق.</p>
 <table>
 <thead>
@@ -88,12 +630,12 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<h3 class="sub-title" id="basics-what-is-it">يعني إيه منطقة حرة؟</h3>
+<p><strong>يعني إيه منطقة حرة؟</strong></p>
 <p>تعريف الهيئة الرسمي: جزء من إقليم الدولة يدخل ضمن حدودها ويخضع لسلطتها الإدارية، ويُعامَل وفقًا لأحكام ضريبية وجمركية ونقدية خاصة.</p>
 <p>بمعنى عملي: الشركة جوه المنطقة الحرة تقدر تستورد خامات من أي دولة من غير ما تدفع الجمارك المعتادة، تصنّع أو تخزّن أو تقدّم خدمة، وبعدين تصدّر للخارج. الهدف من النظام ده بالنسبة للدولة أربع حاجات: زيادة الصادرات، جذب الاستثمار الأجنبي، توفير فرص عمل، وإدخال عملة صعبة (دولار أو يورو) لمصر.</p>
 <p>وبما إن الشركة معفاة من الجمارك العادية، تكلفة الإنتاج بتقل، وده اللي بيخليها تنافس بقوة أكبر في السوق العالمي.</p>
-<h3 class="sub-title" id="3-أنواع-مشروعات-فقط">3 أنواع مشروعات فقط</h3>
-<h3 class="sub-title" id="مشروع-صناعي">مشروع صناعي</h3>
+<p><strong>3 أنواع مشروعات فقط</strong></p>
+<h3 class="chapter-subhead" id="مشروع-صناعي">مشروع صناعي</h3>
 <p>مصنع كامل: يستورد خامات، يصنّعها، ثم يصدّر منتج جديد بالكامل.</p>
 <p>مواد خام</p>
 <p>←</p>
@@ -101,7 +643,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>←</p>
 <p>تصدير منتج جديد</p>
 <p>مثال: مصنع ملابس، مصنع بلاستيك، مصنع مواد غذائية.</p>
-<h3 class="sub-title" id="مشروع-تخزيني">مشروع تخزيني</h3>
+<h3 class="chapter-subhead" id="مشروع-تخزيني">مشروع تخزيني</h3>
 <p>لا يصنّع ولا يغيّر في المنتج، فقط يستورد بضاعة جاهزة، يخزّنها، ثم يعيد تصديرها.</p>
 <p>بضاعة جاهزة</p>
 <p>←</p>
@@ -109,7 +651,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>←</p>
 <p>إعادة تصدير</p>
 <p>مثال: شركة تستورد 500 سيارة، تخزنها شهرين، ثم توزّع 100 لمصر و200 لليبيا و200 لتونس.</p>
-<h3 class="sub-title" id="مشروع-خدمي">مشروع خدمي</h3>
+<h3 class="chapter-subhead" id="مشروع-خدمي">مشروع خدمي</h3>
 <p>مفيش سلعة أصلًا؛ المنتج نفسه هو الخدمة المقدَّمة.</p>
 <p>طلب العميل</p>
 <p>←</p>
@@ -117,20 +659,20 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>←</p>
 <p>تسليم لعميل خارجي</p>
 <p>مثال: استشارات هندسية، تأجير معدات وحفارات، توفير مهندسين لشركات بترول.</p>
-<h3 class="sub-title" id="صناعي-مقابل-تخزيني-إيه-الفرق-فعلاً؟">صناعي مقابل تخزيني: إيه الفرق فعلاً؟</h3>
+<h3 class="chapter-subhead" id="صناعي-مقابل-تخزيني-إيه-الفرق-فعلاً؟">صناعي مقابل تخزيني: إيه الفرق فعلاً؟</h3>
 <p><strong>الصناعي</strong> بيضيف قيمة للمنتج (بيصنّع منتج جديد)، وده بيديه مزايا أكبر، ودوره يشجّع التصدير.</p>
 <p><strong>التخزيني</strong> مايضيفش قيمة كبيرة (بيخزّن ويعيد التصدير بس)، مزاياه أقل، ودوره يعتمد على التخزين وإعادة التعبئة.</p>
-<h3 class="sub-title" id="ليه-الفرق-ده-مهم؟">ليه الفرق ده مهم؟</h3>
+<h3 class="chapter-subhead" id="ليه-الفرق-ده-مهم؟">ليه الفرق ده مهم؟</h3>
 <p>لأن نوع النشاط بيأثر على فئة الرسوم والمعاملة اللي المشروع بياخدها من الهيئة , راجع فصل "النظام المالي" للتفاصيل.</p>
-<h3 class="sub-title" id="الأنشطة-المسموحة-والممنوعة">الأنشطة المسموحة والممنوعة</h3>
+<p><strong>الأنشطة المسموحة والممنوعة</strong></p>
 <p>الهيئة تسمح بكل الأنشطة الموجهة أساسًا للتصدير للخارج، حسب سياستها، باستثناء بعض الأنشطة المحظورة كليًا أو المقيدة بموافقة خاصة.</p>
-<h3 class="sub-title" id="ممنوعة-نهائيًا">ممنوعة نهائيًا</h3>
+<h3 class="chapter-subhead" id="ممنوعة-نهائيًا">ممنوعة نهائيًا</h3>
 <p>صناعات الخمور والمواد الكحولية، وصناعات الأسلحة والذخائر والمتفجرات وما يرتبط بالأمن القومي.</p>
-<h3 class="sub-title" id="مسموحة-بموافقة-خاصة-بعد-تعديل-2023">مسموحة بموافقة خاصة (بعد تعديل 2023)</h3>
+<h3 class="chapter-subhead" id="مسموحة-بموافقة-خاصة-بعد-تعديل-2023">مسموحة بموافقة خاصة (بعد تعديل 2023)</h3>
 <p>تصنيع البترول، صناعة الأسمدة، الحديد والصلب، تسييل ونقل الغاز الطبيعي، والصناعات كثيفة استخدام الطاقة، كانت ممنوعة تمامًا وأصبحت جائزة بموافقة المجلس الأعلى للطاقة بعد القانون رقم 160 لسنة 2023.</p>
-<h3 class="sub-title" id="ليه-الشركات-تدخل-منطقة-حرة؟">ليه الشركات تدخل منطقة حرة؟</h3>
+<p><strong>ليه الشركات تدخل منطقة حرة؟</strong></p>
 <p>تقليل تكلفة الاستيراد بدون جمارك عادية، يعني تكلفة إنتاج أقل، ومنافسة أقوى في السوق العالمي. بالإضافة لضمانات قانونية وحوافز تفصيلية موجودة في قسم "الإطار القانوني" بالأسفل.</p>
-<h3 class="sub-title" id="basics-review-qa">خلاصة سريعة: أسئلة ومراجعة</h3>
+<p><strong>خلاصة سريعة: أسئلة ومراجعة</strong></p>
 <table>
 <thead>
 <tr>
@@ -162,9 +704,9 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tbody>
 </table>
 <p>02</p>
-</section><section class="chapter chapter-2" data-chapter="2"><h2 class="chapter-title" id="الإدارات">الإدارات</h2>
+</div></section><section class="dossier" id="الإدارات"><div class="wrap"><div class="sec-head"><div class="sec-badge">02</div><div><h2 class="chapter-md-title" id="الإدارات">الإدارات</h2></div></div>
 <p>Departments · من هنا الملف بيتقسم بالإدارة نفسها مش بالموضوع. كل إدارة معاها دورها، ورحلة العمل من أولها لآخرها، جوه فصل واحد متكامل.</p>
-<h3 class="sub-title" id="departments-journey">رحلة المستثمر من الفكرة للتشغيل</h3>
+<p><strong>رحلة المستثمر من الفكرة للتشغيل</strong></p>
 <p>كل مرحلة معاها مين مسؤول عنها، وفين بتظهر الرسوم على الطريق. الخريطة دي نظرة عامة بس. هتلاقي المصطلحات الأساسية بتتشرح عند أول ظهور ليها، والتفاصيل الكاملة موجودة في أماكنها، فلو قابلت مصطلح عايز ترجعله بعد كده، تقدر تلاقيه بسهولة في المسرد آخر الملف. (<a href="https://heshvm101.github.io/GAFI/#fees-usufruct">مقابل الانتفاع</a>، <a href="https://heshvm101.github.io/GAFI/#fees-guarantee-fee">مقابل الضمان</a>، <a href="https://heshvm101.github.io/GAFI/#procedures-fees">الرسم الجاري</a>، إلخ) هيتشرح بالتفصيل في مكانه بعد كده، فلو قابلت كلمة مش فاهمها دلوقتي، دوس عليها على طول أو كمّل قراءة عادي وهتوصلها.</p>
 <p><strong>فكرة المشروع + دراسة الجدوى</strong></p>
 <p>المستثمر</p>
@@ -185,11 +727,11 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>2.2 التنفيذمقابل الخدمات السنوي</p>
 <p><strong>المتابعة والرقابة المستمرة</strong></p>
 <p>2.3 المتابعة المالية</p>
-<h3 class="sub-title" id="قطاع-المناطق-الحرة">قطاع المناطق الحرة</h3>
+<p><strong>قطاع المناطق الحرة</strong></p>
 <p>قطاع المناطق الحرة من أهم قطاعات الهيئة، ويتولى: استقبال المستثمرين، تخصيص الأراضي، مراجعة المشروعات، متابعة الشركات، تحصيل الرسوم، الرقابة على تنفيذ النشاط، ومتابعة الصادرات والواردات. الإدارات التلاتة اللي جاية هي أقسام جوه القطاع ده.</p>
 <p>الهيئة كمان مش بتستنى المستثمرين بس , فيه <strong>قطاع الترويج للاستثمار</strong> بيحضر المعارض الدولية والمؤتمرات، بيقابل المستثمرين، وبيسوّق للفرص الاستثمارية جوه مصر وبرا، بالإضافة للخريطة الاستثمارية اللي بتعرض الفرص إلكترونياً. القطاع ده رسميًا واحد من المحاور الاستراتيجية الخمسة للهيئة (جنب إدارة المناطق الحرة وتنمية المناطق الاستثمارية، تطوير خدمات الاستثمار، دعم المشروعات الصغيرة والمتوسطة وريادة الأعمال، والتطوير المؤسسي الداعم). تفاصيل سير العمل اليومي جواه (زي إدارة الأقسام التانية بالضبط) لسه مش موثقة هنا، هتتضاف لما تتوفر.</p>
 <p><strong>تطور حديث (مايو 2026):</strong> رئيس الهيئة وجّه القطاع بالتحول من "الترويج العام" لـ"الاستهداف المباشر" , يعني بدل ما يكتفي بالترويج الواسع، بقى فيه آلية متابعة منظمة لكل شركة أو مستثمر مستهدف بالاسم، مع محتوى ترويجي مبني على بيانات ومؤشرات اقتصادية فعلية، لحد ما الفرصة تتحول لاستثمار فعلي على الأرض.</p>
-<h3 class="sub-title" id="قطاع-المناطق-الحرة-2">قطاع المناطق الحرة</h3>
+<p><strong>قطاع المناطق الحرة</strong></p>
 <p><strong>2.1</strong>البحوث والتراخيص</p>
 <p><strong>2.2</strong>التنفيذ</p>
 <p><strong>2.3</strong>المتابعة المالية</p>
@@ -199,20 +741,20 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>**,**القانوني
 مراجعة الشكل القانوني والعقود</p>
 <p><a href="https://heshvm101.github.io/GAFI/#research-licensing"><strong>2.1</strong></a></p>
-<h3 class="sub-title" id="البحوث-والتراخيص"><a href="https://heshvm101.github.io/GAFI/#research-licensing">البحوث والتراخيص</a></h3>
+<h3 class="chapter-subhead" id="البحوث-والتراخيص"><a href="https://heshvm101.github.io/GAFI/#research-licensing">البحوث والتراخيص</a></h3>
 <p><a href="https://heshvm101.github.io/GAFI/#research-licensing">استقبال المستثمر، مرحلتا الموافقة، اللجنة الفنية، دور فرع الإسكندرية.</a></p>
 <p><a href="https://heshvm101.github.io/GAFI/#research-licensing">افتح القسم ←</a></p>
 <p><a href="https://heshvm101.github.io/GAFI/#procedures"><strong>2.2</strong></a></p>
-<h3 class="sub-title" id="التنفيذ"><a href="https://heshvm101.github.io/GAFI/#procedures">التنفيذ</a></h3>
+<h3 class="chapter-subhead" id="التنفيذ"><a href="https://heshvm101.github.io/GAFI/#procedures">التنفيذ</a></h3>
 <p><a href="https://heshvm101.github.io/GAFI/#procedures">مسار الاستيراد، المعاينة الثلاثية، الرسم الجاري حسب نوع المشروع.</a></p>
 <p><a href="https://heshvm101.github.io/GAFI/#procedures">افتح القسم ←</a></p>
 <p><a href="https://heshvm101.github.io/GAFI/#post-approval"><strong>2.3</strong></a></p>
-<h3 class="sub-title" id="المتابعة-المالية"><a href="https://heshvm101.github.io/GAFI/#post-approval">المتابعة المالية</a></h3>
+<h3 class="chapter-subhead" id="المتابعة-المالية"><a href="https://heshvm101.github.io/GAFI/#post-approval">المتابعة المالية</a></h3>
 <p><a href="https://heshvm101.github.io/GAFI/#post-approval">خروج المعدات، الصادرات والواردات، نسبة التصدير، المخالفات.</a></p>
 <p><a href="https://heshvm101.github.io/GAFI/#post-approval">افتح القسم ←</a></p>
 <p>2.1</p>
 <p><strong>الفصل الثاني · الإدارات  /  1 من 3</strong></p>
-</section><section class="chapter chapter-3" data-chapter="3"><h2 class="chapter-title" id="إدارة-البحوث-والتراخيص">إدارة البحوث والتراخيص</h2>
+</div></section><section class="dossier" id="إدارة-البحوث-والتراخيص"><div class="wrap"><div class="sec-head"><div class="sec-badge">03</div><div><h2 class="chapter-md-title" id="إدارة-البحوث-والتراخيص">إدارة البحوث والتراخيص</h2></div></div>
 <p>Research &amp; Licensing Department · أول إدارة يقابلها المستثمر، ومسؤولة عن الملف من فكرة المشروع وحتى الموافقة النهائية.</p>
 <table>
 <thead>
@@ -248,10 +790,8 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<p>:::phase
-1قبل الموافقة
-:::</p>
-<h3 class="sub-title" id="research-feasibility-study">دراسة الجدوى (Feasibility Study)</h3>
+<p><strong>1قبل الموافقة</strong></p>
+<p><strong>دراسة الجدوى (Feasibility Study)</strong></p>
 <p>بعد ما المستثمر يقدّم الطلب، أول حاجة الإدارة بتراجعها هي دراسة الجدوى , من أهم المستندات اللي تراجعها الإدارة قبل عرض المشروع على اللجنة الفنية، وبتتكون من 5 أجزاء:</p>
 <table>
 <thead>
@@ -283,13 +823,13 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<h3 class="sub-title" id="رأس-المال-مقابل-التكاليف-الاستثمارية">رأس المال مقابل التكاليف الاستثمارية</h3>
+<h3 class="chapter-subhead" id="رأس-المال-مقابل-التكاليف-الاستثمارية">رأس المال مقابل التكاليف الاستثمارية</h3>
 <p><strong>رأس المال:</strong> الأموال اللي المستثمر نفسه بيمتلكها، وهي جزء من المشروع بس.</p>
 <p><strong>التكاليف الاستثمارية:</strong> كل الأموال اللازمة لتشغيل المشروع، بتشمل رأس المال + القروض والتسهيلات وغيرها.</p>
-<h3 class="sub-title" id="الحصة-النقدية-مقابل-العينية">الحصة النقدية مقابل العينية</h3>
+<h3 class="chapter-subhead" id="الحصة-النقدية-مقابل-العينية">الحصة النقدية مقابل العينية</h3>
 <p><strong>نقدية:</strong> أموال، ومش محتاجة تقييم خاص.</p>
 <p><strong>عينية:</strong> معدات أو أصول أو خبرة أو حقوق معنوية، ولازم تتقيّم من خبراء.</p>
-<h3 class="sub-title" id="الأشكال-القانونية-للشركات">الأشكال القانونية للشركات</h3>
+<p><strong>الأشكال القانونية للشركات</strong></p>
 <p>الشكل القانوني اللي المستثمر بيختاره جزء من الدراسة القانونية جوه دراسة الجدوى، وبيأثر على المسؤولية والإدارة. الاختيار عمومًا بين المرونة والحماية:</p>
 <p>أسهل وأسرعأكتر حماية وتنظيم</p>
 <p><strong>منشأة فردية</strong></p>
@@ -339,7 +879,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<h3 class="sub-title" id="المستندات-المطلوبة">المستندات المطلوبة</h3>
+<p><strong>المستندات المطلوبة</strong></p>
 <p>وبعد ما يتحدد الشكل القانوني، الإدارة بتطلب من المستثمر مجموعة مستندات رسمية تثبت كل اللي اتقال في دراسة الجدوى:</p>
 <table>
 <thead>
@@ -396,7 +936,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tbody>
 </table>
 <p><strong>ملحوظة:</strong> شهادة عدم الالتباس بتحجز اسم الشركة لمدة 15 يوم، وده بيتفق مع مدة سريانها في السجل التجاري؛ لو المدة خلصت من غير ما يكمل المستثمر إجراءات التأسيس، لازم يستخرج شهادة جديدة.</p>
-<h3 class="sub-title" id="مرحلتا-الموافقة-على-المشروع">مرحلتا الموافقة على المشروع</h3>
+<p><strong>مرحلتا الموافقة على المشروع</strong></p>
 <p>بمجرد ما المستندات تكتمل، الملف يدخل رسميًا في مسار الموافقة اللي بيمر بمرحلتين:</p>
 <p>مراجعة الطلب (Application)</p>
 <p>←</p>
@@ -409,18 +949,14 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>استكمال الشروط</p>
 <p>←</p>
 <p>الموافقة النهائية</p>
-<p>:::badge
-01
-:::</p>
-<h3 class="sub-title" id="الموافقة-المبدئية">الموافقة المبدئية</h3>
+<p><strong>01</strong></p>
+<h3 class="chapter-subhead" id="الموافقة-المبدئية">الموافقة المبدئية</h3>
 <p>مراجعة الطلب والمستندات، دراسة المشروع، ثم عرض الملف على اللجنة الفنية.</p>
-<p>:::badge
-02
-:::</p>
-<h3 class="sub-title" id="الموافقة-النهائية-final-approval">الموافقة النهائية (Final Approval)</h3>
+<p><strong>02</strong></p>
+<h3 class="chapter-subhead" id="الموافقة-النهائية-final-approval">الموافقة النهائية (Final Approval)</h3>
 <p>بتصدر لو اللجنة الفنية وافقت والمستثمر استوفى كل الشروط، وبعدها تُستكمل إجراءات إقامة المشروع. المستند الرسمي اللي بيصدر بيها هو نفسه <strong>"قرار المزاولة"</strong> , الاسمين بيتقالوا على نفس الحاجة.</p>
 <p><strong>الصلاحية:</strong> الموافقة النهائية (قرار المزاولة) صلاحيتها 6 شهور , لازم المشروع يستوفي شروطها خلال المدة دي، وإلا يُطلب منه تجديدها.</p>
-<h3 class="sub-title" id="اللجنة-الفنية-technical-committee">اللجنة الفنية (Technical Committee)</h3>
+<p><strong>اللجنة الفنية (Technical Committee)</strong></p>
 <p>اللجنة الفنية هي الجهة اللي بتراجع طلبات المشروعات وتدرس مدى استيفائها للشروط، ثم ترفع توصيتها بالموافقة أو الرفض أو طلب استكمال المستندات قبل استكمال إجراءات الموافقة. وبتجتمع بشكل دوري لدراسة طلبات المستثمرين.</p>
 <ul>
 <li><p><strong>✓</strong></p>
@@ -436,7 +972,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>إصدار توصية: بالموافقة، أو الرفض، أو طلب استكمال مستندات.</p>
 </li>
 </ul>
-<h3 class="sub-title" id="ليه-ممكن-المشروع-يترفض-أو-يتأخر؟">ليه ممكن المشروع يترفض أو يتأخر؟</h3>
+<p><strong>ليه ممكن المشروع يترفض أو يتأخر؟</strong></p>
 <p>مش كل الطلبات بتعدي بسلاسة من اللجنة، أهم أسباب الرفض أو التأخير:</p>
 <ul>
 <li><p><strong>✓</strong></p>
@@ -461,16 +997,14 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>البيانات المقدَّمة غير منطقية.</p>
 </li>
 </ul>
-<h3 class="sub-title" id="مراجعة-الطلب-application-قبل-اللجنة">مراجعة الطلب (Application) قبل اللجنة</h3>
+<h3 class="chapter-subhead" id="مراجعة-الطلب-application-قبل-اللجنة">مراجعة الطلب (Application) قبل اللجنة</h3>
 <p>قبل عرض المشروع على اللجنة، يراجع الموظف المختص: استكمال المستندات، صحة البيانات، ومطابقة النشاط.</p>
 <p><strong>ملحوظة:</strong> كتابة اسم المشروع بالعربية والإنجليزية معاً أصبحت من المتطلبات الأساسية للطلب.</p>
-<h3 class="sub-title" id="دور-فرع-الهيئة-بالإسكندرية">دور فرع الهيئة بالإسكندرية</h3>
+<h3 class="chapter-subhead" id="دور-فرع-الهيئة-بالإسكندرية">دور فرع الهيئة بالإسكندرية</h3>
 <p>لا يخصص الأراضي بنفسه، وإنما يراجع الطلبات ويُعِدّها، ويجمع موقف الشركة الكامل (الالتزام، السداد، الجرد السنوي) من الإدارات المختلفة قبل عرضها على الجهات المختصة.</p>
 <p><strong>Practical Note · التفويض لرئيس المنطقة:</strong> الموافقة النهائية أصلًا بتصدر من مجلس إدارة الهيئة، والمجلس ده بيجتمع نادرًا (مرتين تلاتة في السنة). من 2013، الإسكندرية هي المنطقة الوحيدة اللي أخدت تفويضًا من المجلس لرئيس المنطقة يوقّع الموافقة النهائية مباشرة , فبدل ما القرار ياخد شهر أو شهرين لحد ما ينعقد المجلس، بقى بيطلع في يوم واحد.</p>
-<p>:::phase
-2بعد الموافقة
-:::</p>
-<h3 class="sub-title" id="research-amendments">تعديل بيانات المشروع (Project Amendments)</h3>
+<p><strong>2بعد الموافقة</strong></p>
+<p><strong>تعديل بيانات المشروع (Project Amendments)</strong></p>
 <p>لحد هنا المشروع لسه بيتأسس. لكن بمجرد ما بدأ التشغيل الفعلي، أي تعديل في بياناته لازم يرجع للهيئة , مش المستثمر يعدّل لوحده , لأن بيانات المشروع بقت جزء من قرار المزاولة والملفات الرسمية. المستثمر بيقدّم طلب تعديل بمستنداته (زي جدول بيانات التوسع لو بيوسّع)، والإدارة بتراجعه، وبتاخد رأي إدارات تانية لو النشاط مش نمطي، وبيتعرض على اللجنة الفنية تاني لو استدعى الأمر، وبعد استيفاء المستندات تصدر الموافقة.</p>
 <p><strong>أول سنتين:</strong> في الفترة دي عادةً ما بيُنصح المستثمر بعدم تعديل البيانات الأساسية للمشروع، لحد ما يثبت استقرار نشاطه.</p>
 <table>
@@ -495,7 +1029,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<h3 class="sub-title" id="امتى-يتعدل-قرار-المزاولة-فقط؟">امتى يتعدل قرار المزاولة فقط؟</h3>
+<h3 class="chapter-subhead" id="امتى-يتعدل-قرار-المزاولة-فقط؟">امتى يتعدل قرار المزاولة فقط؟</h3>
 <ul>
 <li>زيادة مساحة المشروع.</li>
 <li>تقليل مساحة المشروع.</li>
@@ -503,7 +1037,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <li>التوسعات داخل المنطقة الحرة.</li>
 </ul>
 <p>لأن البيانات دي تخص الهيئة فقط، ومش موجودة في عقد التأسيس أصلًا.</p>
-<h3 class="sub-title" id="امتى-يتعدل-عقد-التأسيس-كمان؟">امتى يتعدل عقد التأسيس كمان؟</h3>
+<h3 class="chapter-subhead" id="امتى-يتعدل-عقد-التأسيس-كمان؟">امتى يتعدل عقد التأسيس كمان؟</h3>
 <ul>
 <li>تغيير الممثل القانوني.</li>
 <li>دخول شريك جديد.</li>
@@ -521,7 +1055,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>الموافقة</p>
 <p>←</p>
 <p>تعديل قرار المزاولة و/أو عقد التأسيس</p>
-<h3 class="sub-title" id="research-liquidation">تصفية المشروع (Project Liquidation)</h3>
+<p><strong>تصفية المشروع (Project Liquidation)</strong></p>
 <p>لو التعديل مش كفاية والمستثمر قرر ينهي نشاطه تمامًا، بيدخل في مسار مختلف تمامًا. إنهاء نشاط المشروع مش مجرد إقفال المصنع أو ترك الموقع , لازم تصفية كاملة وفق إجراءات الهيئة لحد ما تنتهي كل الالتزامات القانونية والمالية. التصفية نوعين: <strong>اختيارية</strong> (المستثمر نفسه بيطلبها، والهيئة بتسأله الأول هل السبب حاجة تقدر تحلّها)، أو <strong>إجبارية</strong> (المشروع مش ملتزم رغم المتابعة والإنذارات، فتُعرض حالته على اللجنة الفنية).</p>
 <p><strong>طلب التصفية</strong></p>
 <p>المستثمر أو الهيئة</p>
@@ -541,12 +1075,12 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>السجل التجاري</p>
 <p><strong>استرداد خطاب الضمان</strong></p>
 <p>خطاب الضمان</p>
-<h3 class="sub-title" id="براءات-الذمة-clearance-certificates">براءات الذمة (Clearance Certificates)</h3>
+<h3 class="chapter-subhead" id="براءات-الذمة-clearance-certificates">براءات الذمة (Clearance Certificates)</h3>
 <p>قبل إنهاء المشروع، لازم يثبت عدم وجود أي التزامات على الشركة تجاه: الهيئة، الجمارك، الضرائب، الكهرباء، المياه، والجهات الحكومية الأخرى. المصفي القانوني كمان بيقدّم إقرار يتحمّل فيه مسؤولية أي مستحقات تظهر لاحقًا.</p>
-<h3 class="sub-title" id="دور-المصفي-القانوني-legal-liquidator">دور المصفي القانوني (Legal Liquidator)</h3>
+<h3 class="chapter-subhead" id="دور-المصفي-القانوني-legal-liquidator">دور المصفي القانوني (Legal Liquidator)</h3>
 <p>بمجرد تعيينه في محضر جمعية الشركاء، بيبقى هو الوحيد اللي الهيئة بتتعامل معاه , مش الشركاء ولا الممثل القانوني. مسؤول عن تصفية حسابات الشركة، بيع أصولها، وسداد كل ديونها.</p>
 <p><strong>مدة التصفية:</strong> ست شهور قانونًا، وممكن تُمدّ بمبررات , لكن المد نفسه لازم يمشي في نفس مسار الموافقة المبدئية والنهائية تاني.</p>
-<h3 class="sub-title" id="أهم-الأخطاء-الشائعة-بعد-الموافقة">أهم الأخطاء الشائعة (بعد الموافقة)</h3>
+<p><strong>أهم الأخطاء الشائعة (بعد الموافقة)</strong></p>
 <ul>
 <li><p><strong>1</strong></p>
 <p><strong>تعديل بيانات المشروع من غير الرجوع للهيئة:</strong> أي تغيير (توسعة، تغيير أرض، دخول شريك) لازم يعدّي على الإدارة أولًا، مش يتنفذ على الأرض ثم يُبلَّغ.</p>
@@ -563,7 +1097,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </ul>
 <p>2.2</p>
 <p><strong>الفصل الثاني · الإدارات  /  2 من 3</strong></p>
-</section><section class="chapter chapter-4" data-chapter="4"><h2 class="chapter-title" id="إدارة-التنفيذ">إدارة التنفيذ</h2>
+</div></section><section class="dossier" id="إدارة-التنفيذ"><div class="wrap"><div class="sec-head"><div class="sec-badge">04</div><div><h2 class="chapter-md-title" id="إدارة-التنفيذ">إدارة التنفيذ</h2></div></div>
 <p>Execution Department · من لحظة وصول البضاعة للميناء لحد دخولها المنطقة الحرة، في مستندات ولجان لازم تتحقق.</p>
 <table>
 <thead>
@@ -591,25 +1125,23 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<p>:::phase
-1حركة البضاعة
-:::</p>
-<h3 class="sub-title" id="أنواع-الوارد">أنواع الوارد</h3>
+<p><strong>1حركة البضاعة</strong></p>
+<p><strong>أنواع الوارد</strong></p>
 <p>أول ما <a href="https://heshvm101.github.io/GAFI/#research-approval-stages">قرار المزاولة</a> يصدر والمشروع يبدأ نشاطه، أول حاجة الإدارة بتتابعها هي حركة البضاعة الداخلة والخارجة. الوارد مش دايمًا جاي من مصدر واحد، والإجراءات بتختلف حسب المصدر:</p>
-<h3 class="sub-title" id="من-خارج-مصر">من خارج مصر</h3>
+<h3 class="chapter-subhead" id="من-خارج-مصر">من خارج مصر</h3>
 <p>زي شركة بتستورد خامات من الصين , يحتاج بوليصة شحن وتأمين نقل بري.</p>
-<h3 class="sub-title" id="من-منطقة-حرة-أخرى">من منطقة حرة أخرى</h3>
+<h3 class="chapter-subhead" id="من-منطقة-حرة-أخرى">من منطقة حرة أخرى</h3>
 <p>زي شركة ببورسعيد بترسل خامات لشركة في الإسكندرية , إجراءات مختلفة عن الوارد الأجنبي والمحلي.</p>
-<h3 class="sub-title" id="من-السوق-المحلي">من السوق المحلي</h3>
+<h3 class="chapter-subhead" id="من-السوق-المحلي">من السوق المحلي</h3>
 <p>زي مصنع في القاهرة بيبيع خامات لمصنع في المنطقة الحرة , أسهل الحالات، مفيش تأمين نقل مطلوب.</p>
-<h3 class="sub-title" id="أنواع-الصادر-بنفس-المنطق">أنواع الصادر (بنفس المنطق)</h3>
-<h3 class="sub-title" id="تصدير-للخارج">تصدير للخارج</h3>
+<p><strong>أنواع الصادر (بنفس المنطق)</strong></p>
+<h3 class="chapter-subhead" id="تصدير-للخارج">تصدير للخارج</h3>
 <p>الأصل والهدف الأساسي للمنطقة الحرة , المنتج بيخرج بره مصر بالكامل.</p>
-<h3 class="sub-title" id="تحويل-لمنطقة-حرة-أخرى">تحويل لمنطقة حرة أخرى</h3>
+<h3 class="chapter-subhead" id="تحويل-لمنطقة-حرة-أخرى">تحويل لمنطقة حرة أخرى</h3>
 <p>نفس منطق الوارد بين المناطق، لكن بالعكس , بضاعة أو منتج نصف مصنّع بيتحرك لمشروع في منطقة حرة تانية.</p>
-<h3 class="sub-title" id="بيع-في-السوق-المحلي">بيع في السوق المحلي</h3>
+<h3 class="chapter-subhead" id="بيع-في-السوق-المحلي">بيع في السوق المحلي</h3>
 <p>استثناء، مش الأصل , يحتاج موافقات وسداد الرسوم الجمركية والضرائب المستحقة (تفاصيله في فصل المتابعة المالية).</p>
-<h3 class="sub-title" id="مسار-الاستيراد-وارد-أجنبي">مسار الاستيراد (وارد أجنبي)</h3>
+<p><strong>مسار الاستيراد (وارد أجنبي)</strong></p>
 <p>أعقد حالات الوارد هي الوارد الأجنبي، وهي اللي بتوضح المسار الكامل من أول مستند لحد دخول البضاعة فعليًا:</p>
 <p>بوليصة الشحن</p>
 <p>←</p>
@@ -625,37 +1157,35 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>←</p>
 <p>دخول المنطقة الحرة</p>
 <p><strong>إقرار الوارد (Import Declaration)</strong> هو أهم مستند في العملية كلها , إعلان رسمي من الشركة بالأصناف والكميات والغرض من استخدامها والنشاط المرتبط بيها. إدارة التنفيذ بتراجع كل بند فيه مقابل قرار مزاولة النشاط: هل الصنف ده أصلًا مسموح للشركة تتعامل فيه؟ هل هي هتستخدمه فعلًا في نشاطها ولا الهدف بيعه في السوق المحلي بدون ضرائب؟</p>
-<h3 class="sub-title" id="بوليصة-الشحن-bill-of-lading،-إيه-هي-بالظبط؟">بوليصة الشحن (Bill of Lading)، إيه هي بالظبط؟</h3>
+<h3 class="chapter-subhead" id="بوليصة-الشحن-bill-of-lading،-إيه-هي-بالظبط؟">بوليصة الشحن (Bill of Lading)، إيه هي بالظبط؟</h3>
 <p>وثيقة قانونية بتصدرها شركة الشحن (الناقل) للمُصدِّر لما تستلم البضاعة عشان تنقلها. بتلعب 3 أدوار في نفس الوقت: <strong>إيصال استلام</strong> (إثبات إن الناقل فعلًا استلم البضاعة)، <strong>عقد نقل</strong> (شروط النقل والوجهة والأجرة)، و<strong>وثيقة ملكية قابلة للتداول</strong> , يعني اللي معاه البوليصة الأصلية هو اللي له حق استلام البضاعة، حتى لو مش هو المُصدِّر الأصلي.</p>
-<h3 class="sub-title" id="ليه-هي-أول-خطوة-في-المسار؟">ليه هي أول خطوة في المسار؟</h3>
+<h3 class="chapter-subhead" id="ليه-هي-أول-خطوة-في-المسار؟">ليه هي أول خطوة في المسار؟</h3>
 <p>لأن من غيرها مفيش إثبات إن البضاعة اتشحنت أصلًا. الشركة الناقلة بتصدرها فور استلام البضاعة، وبعدين باقي المستندات (فاتورة البيع، وثيقة التأمين، إقرار الوارد) بتُبنى على البيانات المذكورة فيها: نوع البضاعة، الكمية، ميناء الشحن، ميناء الوصول، ووسيلة النقل.</p>
 <p><strong>أنواعها حسب وسيلة النقل:</strong> بحرية (الأكثر شيوعًا، وثيقة قابلة للتداول)، جوية (Air Waybill، غير قابلة للتداول، مجرد عقد نقل)، وبرية (للشحن بين الدول المتجاورة). كل نوع نفس الوظيفة القانونية، يختلف بس شكل المستند حسب وسيلة النقل.</p>
 <p><strong>تحديث حديث من الهيئة:</strong> بدل ختم فواتير الاستيراد والتصدير بشكل دوري مع كل عملية، أصبحت الهيئة تصدر شهادة استيراد وشهادة تصدير سارية لمدة 3 سنوات لكل منهما، لتقليل الإجراءات المتكررة على الشركات.</p>
-<h3 class="sub-title" id="تأمين-النقل-البري-وثيقة-التأمين">تأمين النقل البري (وثيقة التأمين)</h3>
+<h3 class="chapter-subhead" id="تأمين-النقل-البري-وثيقة-التأمين">تأمين النقل البري (وثيقة التأمين)</h3>
 <p>مطلوب بس للوارد الأجنبي. و<strong>الدائرة الجمركية</strong> هنا هي المكان اللي بتتم فيه الإجراءات الجمركية على البضاعة قبل انتقالها إلى المنطقة الحرة. الهيئة بتضمن للجمارك إن البضاعة هتوصل من الدائرة الجمركية للمنطقة الحرة سليمة، لو حصل فقد أو سرقة أو تصرف غير قانوني، الهيئة هي اللي مسؤولة أمام الجمارك. قيمة الوثيقة = قيمة الجمارك والضرائب المستحقة، مش القيمة الكاملة للبضاعة.</p>
 <p>بضاعة قيمتها $100,000، الجمارك المستحقة عليها $20,000 ← وثيقة التأمين تُحرَّر بقيمة $20,000 فقط. الرسم المقابل لخدمة الضمان دي هو نفسه <a href="https://heshvm101.github.io/GAFI/#fees-guarantee-fee">مقابل الضمان</a> (1‰) في فصل النظام المالي.</p>
-<h3 class="sub-title" id="الوارد-المحلي-أسهل-حالة">الوارد المحلي: أسهل حالة</h3>
+<h3 class="chapter-subhead" id="الوارد-المحلي-أسهل-حالة">الوارد المحلي: أسهل حالة</h3>
 <p>المقصود بالوارد المحلي هنا إن البضاعة موجودة أصلًا داخل مصر قبل دخولها إلى المنطقة الحرة، لذلك بتكون الإجراءات أبسط من الوارد الأجنبي.</p>
 <p>لو البضاعة أصلًا داخل مصر، الإجراءات أبسط بكتير: إقرار وارد ← مراجعة ← توقيع ← ختم شعار الجمهورية ← يرسل للجمارك ← تفتح شهادة ← تدخل البضاعة. مفيش تأمين نقل بري ولا بوليصة شحن خارجية، لأن البضاعة أصلًا مش خارجة من دائرة جمركية.</p>
-<h3 class="sub-title" id="الرصيد-لدى-الهيئة">الرصيد لدى الهيئة</h3>
+<h3 class="chapter-subhead" id="الرصيد-لدى-الهيئة">الرصيد لدى الهيئة</h3>
 <p>مش بس مرتبط بالتأمين , نفس الفكرة دي بتتطبق على أي رسم بيتكرر مع كل عملية استيراد أو تصدير (زي مقابل الضمان أو رسوم الإقرارات). بدل ما الشركة تدفع كل مرة لوحدها، بتحط مبلغ مقدّم كرصيد لديها، والهيئة تخصم الرسوم منه أول بأول مع كل عملية.</p>
 <p>مثال شائع: إيداع $10,000 كرصيد يُخصم منه تباعًا.</p>
-<h3 class="sub-title" id="المعاينة-الثلاثية">المعاينة الثلاثية</h3>
+<p><strong>المعاينة الثلاثية</strong></p>
 <p>قبل دخول أو خروج أي بضاعة، لازم لجنة من 3 أطراف تتأكد إن البضاعة المتحركة فعليًا مطابقة تمامًا للمستندات المقدَّمة.</p>
 <p>01</p>
-<h4 class="minor-title" id="موظف-إدارة-التنفيذ">موظف إدارة التنفيذ</h4>
+<h4 class="chapter-minorhead" id="موظف-إدارة-التنفيذ">موظف إدارة التنفيذ</h4>
 <p>ممثل الهيئة</p>
 <p>02</p>
-<h4 class="minor-title" id="موظف-مصلحة-الجمارك">موظف مصلحة الجمارك</h4>
+<h4 class="chapter-minorhead" id="موظف-مصلحة-الجمارك">موظف مصلحة الجمارك</h4>
 <p>الجهة الرقابية</p>
 <p>03</p>
-<h4 class="minor-title" id="مندوب-الشركة">مندوب الشركة</h4>
+<h4 class="chapter-minorhead" id="مندوب-الشركة">مندوب الشركة</h4>
 <p>صاحب البضاعة</p>
 <p><strong>القاعدة اللي بيشتغل بيها كل موظف تنفيذ:</strong> مايراجعش مستند واحد لوحده أبدًا، دايمًا بيقارن 3 عناصر مع بعض , المستندات، والبضاعة الموجودة فعليًا، والبيانات المسجلة على النظام. لو الثلاثة متطابقين، الإجراءات بتكمل عادي. لو فيه اختلاف في أي عنصر، الإجراءات بتوقف لحد ما يتعرف السبب.</p>
-<p>:::phase
-2الحساب والرسوم
-:::</p>
-<h3 class="sub-title" id="procedures-incoterms">مصطلحات التجارة الدولية: FOB وCIF</h3>
+<p><strong>2الحساب والرسوم</strong></p>
+<p><strong>مصطلحات التجارة الدولية: FOB وCIF</strong></p>
 <p>لحد هنا الكلام كله عن حركة البضاعة نفسها. لكن كل عملية استيراد أو تصدير محتاجة كمان يتحدد مين بيدفع الشحن والتأمين ومتى تنتقل المسؤولية من البائع للمشتري , وده اللي بيبني عليه حساب الرسوم بعد شوية. الإجابة موجودة في قواعد <strong>Incoterms</strong> الصادرة عن غرفة التجارة الدولية، وأكتر مصطلحين مستخدمين في شغل المنطقة الحرة هما FOB وCIF.</p>
 <table>
 <thead>
@@ -690,7 +1220,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </table>
 <p><strong>قاعدة سهلة للحفظ:</strong> FOB = "البائع يوصّل البضاعة للسفينة بس". CIF = "البائع يوصّل، ويؤمّن، ويدفع الشحن كمان".</p>
 <p>وده اللي بيربطها بالرسم الجاري (تحت): المشروع الصناعي بيتحاسب على أساس FOB لأنه صنّع منتج جديد فعلًا، والمشروع التخزيني بيتحاسب على أساس CIF لأنه بيتعامل مع البضاعة زي ما وصلت للميناء بالظبط.</p>
-<h3 class="sub-title" id="مصطلحات-تانية-هتقابلها-في-المستندات">مصطلحات تانية هتقابلها في المستندات</h3>
+<h3 class="chapter-subhead" id="مصطلحات-تانية-هتقابلها-في-المستندات">مصطلحات تانية هتقابلها في المستندات</h3>
 <ul>
 <li><strong>Consignor / Shipper:</strong> الشاحن أو المصدّر</li>
 <li><strong>Consignee:</strong> المستورد المستلم</li>
@@ -700,7 +1230,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <li><strong>Manifest:</strong> بيان الشحنة كاملة</li>
 <li><strong>Transit:</strong> مرور البضاعة عبر دولة من غير دخولها للاستهلاك المحلي</li>
 </ul>
-<h3 class="sub-title" id="procedures-qiz">اتفاقية الكويز (QIZ)</h3>
+<p><strong>اتفاقية الكويز (QIZ)</strong></p>
 <p><strong>مصطلح إضافي هتقابله في سياق التصدير: اتفاقية الكويز.</strong> بعد ما فهمنا حركة البضاعة وحساب الرسوم، فيه مسار تفضيلي منفصل ممكن يرتبط ببعض الصادرات المصرية إلى السوق الأمريكي، وهو اتفاقية الكويز. اتفاقية "المناطق الصناعية المؤهلة" (Qualifying Industrial Zones) وقّعتها مصر مع أمريكا وإسرائيل في ديسمبر 2004. بتسمح لمنتجات مصرية معينة (غالبًا ملابس ومنسوجات) تدخل السوق الأمريكي بدون جمارك ومن غير سقف كمية (كوتا)، بشرط إن نسبة معينة من مكونات المنتج مصدرها إسرائيل (كانت 11.7% وقت التوقيع، وقلّت بعد تعديلات لاحقة لحد حوالي 8.5%). عدد المناطق المؤهلة وصل لأكتر من 27 منطقة في 14 محافظة.</p>
 <p><strong>مهم تفهمها صح:</strong> الكويز مش نفس نظام المنطقة الحرة العادي , هي مسار تفضيلي منفصل خاص بالتصدير لأمريكا تحديدًا، وشركة ممكن تكون داخل منطقة حرة عادية وتستفيد بمزايا الكويز كمان لو نشاطها وموقعها مؤهلين، مش بديل عن نظام المناطق الحرة.</p>
 <p><strong>الرسم الجاري (Running Fee)، حسب نوع المشروع</strong></p>
@@ -717,18 +1247,18 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>خصم مُقدَّم للعميل$20,000</p>
 <p>المبلغ الذي دفعه العميل فعليًا$80,000</p>
 <p>أساس حساب الرسم لدى الهيئة**$100,000**</p>
-<h3 class="sub-title" id="تقديم-بيان-الإيرادات">تقديم بيان الإيرادات</h3>
+<h3 class="chapter-subhead" id="تقديم-بيان-الإيرادات">تقديم بيان الإيرادات</h3>
 <p>الشركات الخدمية تقدّم بيان الإيرادات مرتين في السنة، مرفق معاه الفواتير والشيك المستحق. التأخير في التقديم يترتب عليه غرامات تأخير.</p>
-<h3 class="sub-title" id="الوكيل-الحصري-exclusive-agent">الوكيل الحصري (Exclusive Agent)</h3>
+<h3 class="chapter-subhead" id="الوكيل-الحصري-exclusive-agent">الوكيل الحصري (Exclusive Agent)</h3>
 <p>كتير من شركات المنطقة الحرة مش بالضرورة هي المصنّعة، وإنما وكيل توزيع حصري لمنتج معين في أكتر من سوق: مصر، شمال أفريقيا، أوروبا، غرب آسيا.</p>
-<h3 class="sub-title" id="procedures-waste">الهالك: نسبة الفقد الطبيعي أثناء التصنيع</h3>
+<p><strong>الهالك: نسبة الفقد الطبيعي أثناء التصنيع</strong></p>
 <p>وطالما بنتكلم عن حساب الرسوم بدقة، فيه عنصر تاني بيأثر في الحساب لازم تعرفه: أي عملية تصنيع بتفقد جزء من الخامة الأصلية بشكل طبيعي (خامة بتتحول لمخلفات مش منتج نهائي) , النسبة دي اسمها "الهالك"، وهي مش نفس "الأخطاء" أو "التلاعب"، لكنها لازم تكون ضمن حدود منطقية ومقبولة فنيًا.</p>
-<h3 class="sub-title" id="مين-بيحدد-النسبة؟">مين بيحدد النسبة؟</h3>
+<h3 class="chapter-subhead" id="مين-بيحدد-النسبة؟">مين بيحدد النسبة؟</h3>
 <p>الجهات الرقابية المختصة (زي الجهاز المسؤول عن كل صناعة) بتحدد "معامل هالك" ثابت لكل نشاط، بناءً على طبيعة المنتج والعملية الصناعية نفسها , مش رقم عشوائي ولا بيتحدد من الشركة.</p>
-<h3 class="sub-title" id="ليه-الهيئة-بتتابعها؟">ليه الهيئة بتتابعها؟</h3>
+<h3 class="chapter-subhead" id="ليه-الهيئة-بتتابعها؟">ليه الهيئة بتتابعها؟</h3>
 <p>معامل الهالك ده هو الأساس اللي بيتحسب عليه الجمرك المستحق أو المسترد على الخامة المستوردة. لو الشركة استوردت 100 طن خامة وصنّعت منتج بوزن أقل من المتوقع حسب المعامل، الفرق ده لازم يتفسر , وإلا يبقى فيه شبهة إن جزء من الخامة اتباع في السوق المحلي بدون ما يتصنّع أو يتصدّر.</p>
 <p><strong>لما النسبة تتعدّى الحد المسموح:</strong> الهيئة بتطلب تفسير من الشركة، وممكن تراجع العملية كاملة (زي ما هو موضح في "الأخطاء الشائعة" تحت) , لأن تجاوز الهالك المتكرر بيبقى مؤشر على مخالفة، مش مجرد فقد طبيعي.</p>
-<h3 class="sub-title" id="procedures-mistakes">أهم الأخطاء الشائعة</h3>
+<p><strong>أهم الأخطاء الشائعة</strong></p>
 <ul>
 <li><p><strong>1</strong></p>
 <p><strong>اختلاف بيانات المستندات:</strong> اختلاف الكميات أو الوصف أو أرقام الحاويات , بيوقف الإجراءات فورًا لحد ما يتصحح.</p>
@@ -750,7 +1280,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p><strong>ملحوظة عامة على الإدارة الهندسية والقانونية:</strong> الدور العام بتاعهم معروف (اعتماد تراخيص البناء فور تقديم الرسومات الهندسية / مراجعة الشكل القانوني والعقود، زي الموضح في جدول الإدارات فوق) لكن تفاصيل سير العمل اليومي جواهم لسه مش موثقة في أي مصدر عام، خصوصًا الإدارة القانونية، ومحتاجة معلومة من جوه الهيئة نفسها.</p>
 <p>2.3</p>
 <p><strong>الفصل الثاني · الإدارات  /  3 من 3</strong></p>
-</section><section class="chapter chapter-5" data-chapter="5"><h2 class="chapter-title" id="إدارة-المتابعة-المالية">إدارة المتابعة المالية</h2>
+</div></section><section class="dossier" id="إدارة-المتابعة-المالية"><div class="wrap"><div class="sec-head"><div class="sec-badge">05</div><div><h2 class="chapter-md-title" id="إدارة-المتابعة-المالية">إدارة المتابعة المالية</h2></div></div>
 <p>Financial Follow-up Department · دور الهيئة مش بيخلص بمجرد الموافقة على المشروع، دور المتابعة والرقابة بيبدأ بعد كده.</p>
 <p>الهدف من المتابعة إنها تتأكد إن المستثمر بينفذ اللي اتعهد بيه، وملتزم بقوانين المناطق الحرة، وبيستخدم الأرض والمعدات في النشاط المصرح بيه بس.</p>
 <table>
@@ -779,15 +1309,15 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<h3 class="sub-title" id="خروج-المعدات-من-المنطقة-الحرة">خروج المعدات من المنطقة الحرة</h3>
-<h3 class="sub-title" id="الحالة-العادية">الحالة العادية</h3>
+<p><strong>خروج المعدات من المنطقة الحرة</strong></p>
+<h3 class="chapter-subhead" id="الحالة-العادية">الحالة العادية</h3>
 <p>المعدات جوه المنطقة الحرة مايجوزش تتخرج بحرية. لو المستثمر محتاج يخرج ماكينة للصيانة أو الإصلاح، لازم يقدّم طلب رسمي للهيئة الأول.</p>
-<h3 class="sub-title" id="امتى-محتاج-موافقة-خاصة؟">امتى محتاج موافقة خاصة؟</h3>
+<h3 class="chapter-subhead" id="امتى-محتاج-موافقة-خاصة؟">امتى محتاج موافقة خاصة؟</h3>
 <p>لو التغيير كبير , زي إخراج عدد كبير من المعدات، أو استبدال خط إنتاج كامل، أو إحلال وتجديد المعدات.</p>
 <p>مبررات مقبولة: حريق، تلف في المعدات، أو استبدالها بمعدات أحدث. والهيئة بتحدد مدة زمنية لإحضار المعدات البديلة.</p>
-<h3 class="sub-title" id="متابعة-الصادرات-والواردات">متابعة الصادرات والواردات</h3>
+<p><strong>متابعة الصادرات والواردات</strong></p>
 <p>المشروع بيقدّم بيانات دورية توضح قيمة الواردات والصادرات وكميات البضائع، والبيانات دي بتتستخدم لإعداد الإحصائيات ومتابعة أداء المشروع.</p>
-<h3 class="sub-title" id="الالتزام-بنسبة-التصدير">الالتزام بنسبة التصدير</h3>
+<p><strong>الالتزام بنسبة التصدير</strong></p>
 <p>لو المشروع اتوافق عليه أصلًا كمشروع تصديري، لازم يلتزم بالنسبة المقررة (بعض المشروعات، حسب الضوابط، مسموح لها تبيع نسبة محدودة في السوق المحلي , 20% مثلًا). لو المشروع مايحققش نسبة التصدير المطلوبة، ممكن يحصل:</p>
 <ul>
 <li><p><strong>1</strong></p>
@@ -800,9 +1330,9 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>تقديم مستندات تبرر الوضع.</p>
 </li>
 </ul>
-<h3 class="sub-title" id="التقييم-الدوري-للمشروع">التقييم الدوري للمشروع</h3>
+<p><strong>التقييم الدوري للمشروع</strong></p>
 <p>المشروعات مش بتتسيب بعد ما تبدأ التشغيل , بتتقيّم بشكل دوري (سنويًا غالبًا، أو حسب طبيعة المشروع)، والتقييم بيشمل: مدى الالتزام بالنشاط، تنفيذ الخطة، الالتزام بالقوانين، واستمرار الإنتاج.</p>
-<h3 class="sub-title" id="post-violations">المخالفات: من الاكتشاف إلى الإجراء القانوني</h3>
+<p><strong>المخالفات: من الاكتشاف إلى الإجراء القانوني</strong></p>
 <p>اكتشاف مخالفة</p>
 <p>←</p>
 <p>طلب توفيق الأوضاع</p>
@@ -812,7 +1342,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>إنذار (عند عدم الالتزام)</p>
 <p>←</p>
 <p>إجراءات قانونية / إدارية (لو استمرت المخالفة)</p>
-<h3 class="sub-title" id="procedures-mistakes">أهم الأخطاء الشائعة</h3>
+<p><strong>أهم الأخطاء الشائعة</strong></p>
 <ul>
 <li><p><strong>1</strong></p>
 <p><strong>إخراج معدات من غير تصريح رسمي:</strong> حتى لو للصيانة، لازم طلب مسبق للهيئة , إخراج أي معدة بدون موافقة بيُحسب كمخالفة مباشرة.</p>
@@ -828,24 +1358,18 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </li>
 </ul>
 <p>03</p>
-</section><section class="chapter chapter-6" data-chapter="6"><h2 class="chapter-title" id="الرسوم-والمقابل-المالي">الرسوم والمقابل المالي</h2>
+</div></section><section class="dossier" id="الرسوم-والمقابل-المالي"><div class="wrap"><div class="sec-head"><div class="sec-badge">06</div><div><h2 class="chapter-md-title" id="الرسوم-والمقابل-المالي">الرسوم والمقابل المالي</h2></div></div>
 <p>الرسوم والضمانات المالية اللي بتحصل من المشروع، وكل واحد ليه توقيت وطريقة حساب مختلفة.</p>
-<p>:::badge
-01
-:::</p>
-<h3 class="sub-title" id="fees-usufruct">مقابل الانتفاع (Usufruct Fee)</h3>
+<p><strong>01</strong></p>
+<h3 class="chapter-subhead" id="fees-usufruct">مقابل الانتفاع (Usufruct Fee)</h3>
 <p>إيجار الأرض أو المبنى، يُحسب سنويًا بسعر ثابت لكل متر مربع من المساحة المخصصة للمشروع. مجلس إدارة الهيئة هو المنوط بتحديد فئات هذا السعر، وتختلف الفئة حسب نوع النشاط (صناعي / تخزيني / خدمي).</p>
 <p><strong>الأساس القانوني:</strong> المادة 11 من قرار وزيرة الاستثمار رقم 39 لسنة 2019.</p>
-<p>:::badge
-03
-:::</p>
-<h3 class="sub-title" id="fees-guarantee-fee">مقابل الضمان (Guarantee Fee)</h3>
+<p><strong>03</strong></p>
+<h3 class="chapter-subhead" id="fees-guarantee-fee">مقابل الضمان (Guarantee Fee)</h3>
 <p>1 بالألف من قيمة وثيقة التأمين (مش من قيمة البضاعة نفسها).</p>
 <p>مثال: وثيقة تأمين قيمتها $20,000 ← مقابل الضمان = $20</p>
-<p>:::badge
-02
-:::</p>
-<h3 class="sub-title" id="مقابل-الخدمات-السنوي-annual-service-fee">مقابل الخدمات السنوي (Annual Service Fee)</h3>
+<p><strong>02</strong></p>
+<h3 class="chapter-subhead" id="مقابل-الخدمات-السنوي-annual-service-fee">مقابل الخدمات السنوي (Annual Service Fee)</h3>
 <p>يستحق بمجرد صدور قرار مزاولة النشاط، وبيتحسب سنويًا بعد كده، وفقًا لما تطبّقه الهيئة حاليًا.</p>
 <ul>
 <li><strong>0.5 بالألف</strong> من رأس المال المصدر، للمشروع الصناعي.</li>
@@ -888,11 +1412,11 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<h3 class="sub-title" id="لو-المستثمر-اتأخر-في-السداد">لو المستثمر اتأخر في السداد</h3>
+<h3 class="chapter-subhead" id="لو-المستثمر-اتأخر-في-السداد">لو المستثمر اتأخر في السداد</h3>
 <p>الهيئة بتخصم من خطاب الضمان (مقابل الانتفاع، أو مقابل الخدمات، أو أي رسوم مستحقة)، وفورًا بتطالب المستثمر يكمّل قيمة الضمان لحد ما ترجع لقيمتها الأصلية , النظام صارم في النقطة دي ومايسمحش إن الضمان يفضل ناقص.</p>
-<h3 class="sub-title" id="الاسترداد">الاسترداد</h3>
+<h3 class="chapter-subhead" id="الاسترداد">الاسترداد</h3>
 <p>بيترد للمستثمر في آخر خطوة من إجراءات التصفية، بعد شطب الشركة من السجل التجاري مباشرة , وده أحد أهم الأسباب اللي بتخلي حتى الشركات المتعثرة تكمّل إجراءات التصفية بدل ما تسيبها.</p>
-<h3 class="sub-title" id="fees-revenue-sources">مصادر إيرادات الهيئة</h3>
+<p><strong>مصادر إيرادات الهيئة</strong></p>
 <p>غير الرسوم الأساسية اللي فوق، عند الهيئة مصادر إيرادات تانية أصغر بس منتشرة على كل تعاملات المشروع:</p>
 <table>
 <thead>
@@ -924,7 +1448,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<h3 class="sub-title" id="ليه-الهيئة-بتحصّل-الرسوم-دي؟">ليه الهيئة بتحصّل الرسوم دي؟</h3>
+<h3 class="chapter-subhead" id="ليه-الهيئة-بتحصّل-الرسوم-دي؟">ليه الهيئة بتحصّل الرسوم دي؟</h3>
 <p>الرسوم دي بترتبط بالخدمات والإجراءات اللي بيقدمها النظام للمستثمر، ومن أمثلتها:</p>
 <ul>
 <li><p><strong>✓</strong></p>
@@ -943,7 +1467,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>متابعة المشروع طوال فترة تشغيله.</p>
 </li>
 </ul>
-<h3 class="sub-title" id="أهم-الفروق-اللي-لازم-متتلخبطش-فيها">أهم الفروق اللي لازم متتلخبطش فيها</h3>
+<p><strong>أهم الفروق اللي لازم متتلخبطش فيها</strong></p>
 <ul>
 <li><p><strong>1</strong></p>
 <p><strong>مقابل الضمان ≠ خطاب الضمان:</strong> الأول رسم صغير (1‰ من قيمة وثيقة التأمين) بيتحصّل ويخلص، والتاني ضمان مالي كامل فاضل طول عمر المشروع ومش بيتحصّل كرسم.</p>
@@ -959,13 +1483,13 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </li>
 </ul>
 <p>04</p>
-</section><section class="chapter chapter-7" data-chapter="7"><h2 class="chapter-title" id="الإطار-القانوني-وأنواع-المناطق-الحرة">الإطار القانوني وأنواع المناطق الحرة</h2>
+</div></section><section class="dossier" id="الإطار-القانوني-وأنواع-المناطق-الحرة"><div class="wrap"><div class="sec-head"><div class="sec-badge">07</div><div><h2 class="chapter-md-title" id="الإطار-القانوني-وأنواع-المناطق-الحرة">الإطار القانوني وأنواع المناطق الحرة</h2></div></div>
 <p>الأساس القانوني اللي بينظم شغل المنطقة الحرة، والفرق بين المناطق العامة والخاصة، والحوافز اللي بتضمنها الدولة للمشروع.</p>
 <p>المناطق الحرة في مصر تخضع لقانون الاستثمار رقم 72 لسنة 2017 ولائحته التنفيذية وتعديلاتهما، بالإضافة إلى لائحة نظام إدارة المناطق الحرة الصادرة بقرار وزيرة الاستثمار رقم 39 لسنة 2019. وتشرف على تطبيق كل ده الهيئة العامة للاستثمار والمناطق الحرة (GAFI).</p>
-<h3 class="sub-title" id="قصة-الفكرة-من-الميناء-الحر-إلى-المنطقة-الحرة-الحديثة">قصة الفكرة: من الميناء الحر إلى المنطقة الحرة الحديثة</h3>
+<h3 class="chapter-subhead" id="قصة-الفكرة-من-الميناء-الحر-إلى-المنطقة-الحرة-الحديثة">قصة الفكرة: من الميناء الحر إلى المنطقة الحرة الحديثة</h3>
 <p>قبل ما نتكلم عن قانون 43 لسنة 1974، فيه سؤال أبسط: <strong>فكرة المنطقة الحرة نفسها بدأت منين؟</strong></p>
 <p>الفكرة أقدم بكتير من مصر الحديثة. في الأصل كان فيه مفهوم <strong>Free Port</strong>: ميناء يتمتع بمعاملة جمركية خاصة لتسهيل التجارة والتخزين وإعادة التصدير. ومع الوقت، تطورت الفكرة من مجرد مكان تمر فيه البضاعة إلى منطقة صناعية تستخدم الحوافز لجذب الاستثمار والتصنيع والتصدير.</p>
-<h3 class="sub-title" id="1959-شانون،-أيرلندا">1959 · شانون، أيرلندا</h3>
+<h3 class="chapter-subhead" id="1959-شانون،-أيرلندا">1959 · شانون، أيرلندا</h3>
 <p>تُعد منطقة شانون الحرة من أشهر نقاط التحول في تاريخ المناطق الحرة الحديثة، لأنها نقلت الفكرة من مجرد <strong>تجارة وتخزين</strong> إلى <strong>تصنيع واستثمار وتصدير وخلق وظائف</strong>.</p>
 <p>يعني الفكرة بدأت تتطور من:</p>
 <p><strong>Free Port</strong>
@@ -973,13 +1497,13 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>↓</p>
 <p><strong>Modern Free Zone</strong>
 تصنيع + استثمار + تصدير + وظائف</p>
-<h3 class="sub-title" id="ومصر-دخلت-القصة-إمتى؟">ومصر دخلت القصة إمتى؟</h3>
+<h3 class="chapter-subhead" id="ومصر-دخلت-القصة-إمتى؟">ومصر دخلت القصة إمتى؟</h3>
 <p>مصر لم تخترع الفكرة، لكنها كانت من أوائل الدول العربية التي تبنت النموذج الحديث. والأهم أن الخطوات المصرية لم تبدأ فجأة مع قانون 43 لسنة 1974؛ توجد ترتيبات وتشريعات سابقة في أوائل السبعينيات، ثم جاء <strong>قانون 43 لسنة 1974</strong> ليُرسّخ الإطار الحديث للمناطق الحرة في سياق سياسة الانفتاح الاقتصادي.</p>
 <p>لذلك الأدق أن نقول:</p>
 <blockquote>
 <p><strong>قانون 43 لسنة 1974 رسّخ نظام المناطق الحرة الحديث في مصر، لكنه لم يكن بداية الفكرة عالميًا ولا أول خطوة مصرية نحوها.</strong></p>
 </blockquote>
-<h3 class="sub-title" id="legal-history">قبل قانون 72: كان الأساس القانوني إيه؟</h3>
+<p><strong>قبل قانون 72: كان الأساس القانوني إيه؟</strong></p>
 <p>القانون اللي كان شغال قبل 72 لسنة 2017 مباشرة هو <strong>قانون رقم 8 لسنة 1997</strong> ("قانون ضمانات وحوافز الاستثمار"). وده كان بدوره خلف قانون أقدم منه، وأصله يرجع لقانون 43 لسنة 1974 نفسه.</p>
 <p><strong>ليه قانون 43/1974 بالذات مهم؟</strong> ده أول قانون استثمار في مصر بعد سنين من الاقتصاد المغلق والتأميم في عصر عبد الناصر. الرئيس السادات أصدره كجزء من سياسة "الانفتاح الاقتصادي" , وده معناه فتح الاقتصاد المصري تاني قدام رأس المال العربي والأجنبي بعد ما كانت الدولة بتسيطر على معظم النشاط الاقتصادي. القانون ده هو اللي جاب فكرة "المنطقة الحرة" الحديثة لمصر كأداة لجذب الاستثمار الأجنبي، وعليه بُني كل نظام المناطق الحرة اللي الملف ده بيتكلم عنه من الأساس.</p>
 <p>43 لسنة 1974
@@ -993,35 +1517,33 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>←</p>
 <p>72 لسنة 2017
 القانون الحالي</p>
-<h3 class="sub-title" id="أهم-الفروق-بين-81997-و722017">أهم الفروق بين 8/1997 و72/2017</h3>
+<h3 class="chapter-subhead" id="أهم-الفروق-بين-81997-و722017">أهم الفروق بين 8/1997 و72/2017</h3>
 <ul>
 <li><strong>الموافقة الواحدة:</strong> قانون 72 قدّم مبدأ موافقة واحدة تجمع الترخيص وتخصيص الأرض وتصريح البناء لمشروعات معينة، بدل موافقات منفصلة.</li>
 <li><strong>الخريطة الاستثمارية:</strong> أداة إلكترونية جديدة كليًا تعرض الفرص الاستثمارية المتاحة ببياناتها (نفس الخريطة اللي قطاع الترويج بيستخدمها).</li>
 <li><strong>حوافز نقدية إضافية:</strong> قانون 72 (بعد تعديل 2023) أضاف حافز نقدي بنسبة 35% إلى 55% من الضريبة المسددة لأنشطة صناعية معينة في مناطق محددة جغرافيًا.</li>
 <li><strong>ضمانات أقوى ضد سحب التراخيص:</strong> منع صريح لإلغاء أو وقف ترخيص المشروع إلا بعد إنذار المستثمر وسماع وجهة نظره وإدّاله مهلة لإزالة المخالفة.</li>
 </ul>
-<h3 class="sub-title" id="الشركات-القديمة-إيه-اللي-بيحصلها؟">الشركات القديمة إيه اللي بيحصلها؟</h3>
+<h3 class="chapter-subhead" id="الشركات-القديمة-إيه-اللي-بيحصلها؟">الشركات القديمة إيه اللي بيحصلها؟</h3>
 <p>الشركات اللي كانت قائمة وقت سريان قانون 72 (أُسست تحت قانون 8/1997) محتفظة بمزاياها وإعفاءاتها القديمة لحد ما تنتهي مدتها المقررة أصلًا , مش بتتحول تلقائيًا لأحكام القانون الجديد.</p>
 <p><strong>يعني عمليًا:</strong> ممكن تلاقي في المنطقة الحرة شركات قديمة لسه شغالة بشروط قانون 1997 جنب شركات جديدة خاضعة لقانون 2017، لحد ما تنتهي مدة مزايا الشركات القديمة.</p>
 <p>قانون 72 نفسه اتعدّل أكتر من مرة بعد صدوره , أبرزها تعديل 2019 (تيسيرات إجرائية زي حد أقصى لرسوم توثيق العقود)، وتعديل 2023 اللي أضاف الخريطة الاستثمارية والحوافز النقدية، وسمح بالأنشطة كثيفة الطاقة بموافقة خاصة (تفصيلها في جدول الأنشطة بالأسفل).</p>
-<h3 class="sub-title" id="نوعان-من-المناطق-الحرة">نوعان من المناطق الحرة</h3>
-<h3 class="sub-title" id="مناطق-حرة-عامة">مناطق حرة عامة</h3>
+<p><strong>نوعان من المناطق الحرة</strong></p>
+<h3 class="chapter-subhead" id="مناطق-حرة-عامة">مناطق حرة عامة</h3>
 <p>تديرها الهيئة مباشرة وتضم أكثر من مشروع، ومزودة ببنية تحتية متكاملة: طرق، كهرباء، محطات صرف صحي، شبكات مياه وتليفونات، بالإضافة لوحدة جمركية متكاملة، ووحدة شرطة أمن موانئ، ووحدة أمن تعمل على مدار 24 ساعة.</p>
 <p>يوجد حاليًا 9 مناطق حرة عامة موزعة على أنحاء الجمهورية.</p>
-<h3 class="sub-title" id="legal-private-zones">مناطق حرة خاصة</h3>
+<h3 class="chapter-subhead" id="legal-private-zones">مناطق حرة خاصة</h3>
 <p>كيان مستقل يمثل مشروعًا واحدًا (أو أكثر من مشروع بأنشطة متشابهة)، يقع خارج حدود المناطق العامة على أرض المستثمر نفسه (مملوكة أو مستأجرة) , زي أرض على الطريق الصحراوي، أو ساحات ومخازن كانت أصلًا مستأجرة داخل الميناء (غالبية الشركات اللي حوّلت لمنطقة حرة خاصة كانت شركات ملاحة).</p>
 <p><strong>نفس القانون، موافقات مختلفة:</strong> نفس الإعفاءات الجمركية والضريبية للمنطقة العامة بالظبط، لكن الموافقة المبدئية من رئيس الوزراء والنهائية من مجلس الوزراء (مش مجلس إدارة الهيئة)، والمساحة والرسوم والشروط أكبر عمومًا.</p>
-<h3 class="sub-title" id="فرع-منطقة-حرة-خاصة-لشركة-عامة">فرع منطقة حرة خاصة لشركة عامة</h3>
+<h3 class="chapter-subhead" id="فرع-منطقة-حرة-خاصة-لشركة-عامة">فرع منطقة حرة خاصة لشركة عامة</h3>
 <p>ممكن الشركة الأم تكون منطقة حرة عامة (هنا في الإسكندرية مثلًا)، وتفتح فرع منطقة حرة خاصة في أرض تانية , بس نشاط الفرع لازم يكون مشتق من نشاط الشركة الأم، ورأس مال الفرع بيتخصّص من رأس مال الشركة الأم نفسها.</p>
-<h3 class="sub-title" id="الأرض-من-غير-تحويل-مش-معفاة">الأرض من غير تحويل مش معفاة</h3>
+<h3 class="chapter-subhead" id="الأرض-من-غير-تحويل-مش-معفاة">الأرض من غير تحويل مش معفاة</h3>
 <p>لو المستثمر أخد أرض برا واستخدمها كمكتب إداري عادي (مش منطقة حرة رسمية)، الأرض دي مالهاش أي إعفاءات جمركية أو ضريبية , لازم يبقى الموقع محول رسميًا لمنطقة حرة عشان الإعفاءات تسري عليه.</p>
 <p>المناطق الحرة العامة التسع</p>
 <p>فيه 9 مناطق حرة عامة في مصر، وكل واحدة اتعملت في مكان مختلف ولسبب له علاقة بموقعها، والعمالة المتاحة حواليها، وقربها من الموانئ أو المطارات، أو بطبيعة النشاط اللي المنطقة تقدر تخدمه. وبحسب GAFI، المناطق العامة مش متخصصة في نشاط واحد، والاستثناء هو المنطقة الإعلامية الحرة، المتخصصة في الأنشطة الإعلامية.</p>
-<h3 class="sub-title" id="أولًا-نقارنهم-على-نفس-الأساس">أولًا: نقارنهم على نفس الأساس</h3>
+<h3 class="chapter-subhead" id="أولًا-نقارنهم-على-نفس-الأساس">أولًا: نقارنهم على نفس الأساس</h3>
 <p>عشان ما نحولش الجزء ده لـ9 قصص منفصلة من غير إطار، كل منطقة هنشوف فيها نفس العناصر:</p>
-<p>:::zone-label
-مكانها · مساحتها · عدد المشروعات · أهم الأنشطة · الميزة الأساسية · وإيه اللي يميز قصتها؟
-:::</p>
+<p><strong>مكانها · مساحتها · عدد المشروعات · أهم الأنشطة · الميزة الأساسية · وإيه اللي يميز قصتها؟</strong></p>
 <p><strong>مهم بخصوص عدد المشروعات:</strong> GAFI لا تنشر حاليًا رقمًا موحدًا ومحدثًا لعدد المشروعات في كل منطقة على صفحة واحدة. لذلك، لما يكون عندنا رقم موثق لكن قديم، هنذكر السنة بوضوح بدل ما نقدمه على إنه رقم حالي. أما المناطق اللي ما لقيتش لها رقم حديث موثوق في المصادر المتاحة، هنكتب ده صراحة.</p>
 <table>
 <thead>
@@ -1091,124 +1613,106 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </table>
 <p><strong>ملاحظة منهجية:</strong> الأرقام دي مش كلها من نفس السنة، وده مهم جدًا في المقارنة. الإسكندرية عندها رقم حديث من يونيو 2026، بينما مدينة نصر وبورسعيد والإسماعيلية والسويس وشبين الكوم عندها أرقام موثقة من سنوات سابقة، وقنا عندها متابعة حديثة. لذلك الجدول ده هدفه <strong>تعريفك بحجم كل منطقة كما يظهر في آخر رقم موثق وجدناه</strong>، مش عمل ترتيب رقمي بين المناطق.</p>
 <hr/>
-</section><section class="chapter chapter-8" data-chapter="8"><h2 class="chapter-title" id="1-الإسكندرية-العامرية">1 · الإسكندرية (العامرية)</h2>
+</div></section><section class="dossier" id="1-الإسكندرية-العامرية"><div class="wrap"><div class="sec-head"><div class="sec-badge">08</div><div><h2 class="chapter-md-title" id="1-الإسكندرية-العامرية">1 · الإسكندرية (العامرية)</h2></div></div>
 <p>لو عايز تبدأ تفهم المناطق الحرة من مكان واحد، الإسكندرية هي البداية الطبيعية.</p>
 <p>المنطقة الحرة العامة بالإسكندرية تستضيف <strong>416 مشروعًا</strong> بإجمالي استثمارات <strong>14.7 مليار دولار</strong>، وتوفر حوالي <strong>55 ألف فرصة عمل مباشرة</strong>. وفي 2025 سجلت مشروعاتها صادرات سلعية بقيمة <strong>5.3 مليار دولار</strong>، وهي الأعلى بين المناطق الحرة في مصر من حيث قيمة الصادرات وفق أحدث البيانات المنشورة من GAFI.</p>
 <p>وموقعها في العامرية جزء من القصة نفسها: المنطقة موجودة ضمن شبكة طرق وموانئ تسمح بدخول الخامات والمعدات وخروج المنتجات للأسواق الخارجية، وهو ما يناسب تنوع المشروعات الموجودة فيها.</p>
 <p><strong>أهم الأنشطة:</strong> صناعات متعددة إلى جانب الأنشطة التخزينية والخدمية، مع حضور قوي للمشروعات الموجهة للتصدير.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>الإسكندرية هي أوضح مثال على المنطقة الحرة باعتبارها <strong>منظومة استثمار وإنتاج وتصدير متكاملة</strong>، مش مجرد مجموعة مصانع منفصلة.</p>
 </blockquote>
 <p><strong>أهم أرقامها:</strong> 416 مشروعًا · 14.7 مليار دولار استثمارات · 5.3 مليار دولار صادرات في 2025 · 55 ألف فرصة عمل مباشرة.</p>
 <hr/>
-</section><section class="chapter chapter-9" data-chapter="9"><h2 class="chapter-title" id="2-القاهرة-مدينة-نصر">2 · القاهرة (مدينة نصر)</h2>
+</div></section><section class="dossier" id="2-القاهرة-مدينة-نصر"><div class="wrap"><div class="sec-head"><div class="sec-badge">09</div><div><h2 class="chapter-md-title" id="2-القاهرة-مدينة-نصر">2 · القاهرة (مدينة نصر)</h2></div></div>
 <p>القصة هنا مختلفة عن الإسكندرية.</p>
 <p>المنطقة الحرة في مدينة نصر موجودة داخل القاهرة نفسها، وده بيخلي ميزتها الأساسية مختلفة: قربها من العاصمة، والخدمات المالية والإدارية، ومراكز اتخاذ القرار، والمطار.</p>
 <p>في بيان رسمي عن تطوير المنطقة سنة 2019، كانت تضم <strong>211 مشروعًا</strong> برؤوس أموال 3.5 مليار دولار وتكاليف استثمارية 6.8 مليار دولار، وتوفر نحو 72.5 ألف فرصة عمل. بما إن الرقم ده من 2019، ما ينفعش نقدمه على إنه رقم حالي من غير تحديث رسمي جديد.</p>
 <p>وفي 2025 أعلنت GAFI عن تخصيص <strong>9 آلاف متر مربع</strong> داخل المنطقة لاستضافة مكاتب إدارية وتشغيلية لشركات ناشئة تعمل في <strong>تصدير البرمجيات وتطبيقات الذكاء الاصطناعي</strong>، مع توجه لتطبيق التجربة لاحقًا في مناطق حرة أخرى.</p>
 <p><strong>أهم الأنشطة:</strong> مشروعات صناعية وتخزينية وخدمية، ومع التطوير الحالي بدأ يظهر توجه أكبر نحو البرمجيات والشركات الناشئة.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>مدينة نصر بتوضح إن المنطقة الحرة مش لازم تكون جنب ميناء. أحيانًا <strong>القرب من العاصمة والخدمات والموارد البشرية</strong> بيكون هو الميزة الأساسية.</p>
 </blockquote>
 <hr/>
-</section><section class="chapter chapter-10" data-chapter="10"><h2 class="chapter-title" id="3-بورسعيد">3 · بورسعيد</h2>
+</div></section><section class="dossier" id="3-بورسعيد"><div class="wrap"><div class="sec-head"><div class="sec-badge">10</div><div><h2 class="chapter-md-title" id="3-بورسعيد">3 · بورسعيد</h2></div></div>
 <p>بورسعيد عندها واحدة من أغنى القصص في الملف، لأن المدينة نفسها اتبنت من البداية على الميناء والتجارة الدولية.</p>
 <p>المنطقة الحرة العامة الحالية مرتبطة بتاريخ طويل للمدينة مع الأنظمة الجمركية الخاصة، ثم تطورت لتصبح قاعدة للتصنيع والتخزين والتصدير.</p>
 <p>في بيان رسمي من 2017، كانت المنطقة الحرة العامة تضم <strong>69 مشروعًا</strong> بإجمالي رؤوس أموال 1.3 مليار دولار، وصادرات 390 مليون دولار في 2016، وتوفر حوالي 27 ألف فرصة عمل. وفي نفس البيان كان إجمالي المشروعات العامة والخاصة في بورسعيد 85 مشروعًا.</p>
 <p>لكن الرقم الأهم لفهم بورسعيد مش عدد المشروعات فقط، وإنما <strong>نوع النشاط</strong>. المنطقة ارتبطت بقوة بالملابس الجاهزة، إلى جانب الصناعات الكيماوية والهندسية ومستلزمات الإنتاج والتخزين والخدمات المرتبطة بالميناء.</p>
 <p><strong>أهم الأنشطة:</strong> الملابس الجاهزة، الصناعات الكيماوية والهندسية، التخزين، والخدمات اللوجستية والتجارة وإعادة التصدير.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>بورسعيد هي نموذج المنطقة الحرة اللي اتشكلت هويتها حول <strong>الميناء والتجارة الدولية والتصنيع الموجه للتصدير</strong>.</p>
 </blockquote>
 <hr/>
-</section><section class="chapter chapter-11" data-chapter="11"><h2 class="chapter-title" id="4-السويس-ثلاث-مناطق-في-منطقة-واحدة">4 · السويس: ثلاث مناطق في منطقة واحدة</h2>
+</div></section><section class="dossier" id="4-السويس-ثلاث-مناطق-في-منطقة-واحدة"><div class="wrap"><div class="sec-head"><div class="sec-badge">11</div><div><h2 class="chapter-md-title" id="4-السويس-ثلاث-مناطق-في-منطقة-واحدة">4 · السويس: ثلاث مناطق في منطقة واحدة</h2></div></div>
 <p>السويس مختلفة عن باقي المناطق لأن المنطقة الحرة هنا مش موقعًا واحدًا، وإنما <strong>3 مواقع: بورتوفيق، الأدبية، وعتاقة</strong>.</p>
 <p>وده معناه إن المستثمر مش بيستفيد من ميزة اسم المحافظة فقط، لكن من ميزة الموقع المحدد نفسه، وقربه من الميناء وشبكة النقل والخدمات المرتبطة بالنشاط.</p>
 <p>في بيان رسمي سابق للهيئة، كان عدد المشروعات في المواقع الثلاثة <strong>203 مشروعًا</strong> على مساحة إجمالية تقارب 1.216 مليون متر مربع، وكان يعمل بها أكثر من 7 آلاف عامل. الرقم ده يعود إلى 2015، لذلك بنتعامل معاه كسجل تاريخي وليس كرقم حالي.</p>
 <p>والبيانات التعريفية المنشورة من GAFI توضح تنوع الأنشطة بين الصناعات الهندسية والكهربائية والإلكترونية، والمنسوجات والأثاث والسجاد والملابس الجاهزة، والصناعات البتروكيماوية والمعدنية، والأدوية والمستلزمات الطبية، وخدمات النقل والشحن والخدمات البترولية.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>قوة السويس هنا مش في
 وجود 3 مواقع فقط، لكن في إن كل موقع بيخدم احتياج مختلف حسب قربه من الموانئ وشبكة النقل والنشاط الصناعي.</p>
 </blockquote>
 <hr/>
-</section><section class="chapter chapter-12" data-chapter="12"><h2 class="chapter-title" id="5-الإسماعيلية">5 · الإسماعيلية</h2>
+</div></section><section class="dossier" id="5-الإسماعيلية"><div class="wrap"><div class="sec-head"><div class="sec-badge">12</div><div><h2 class="chapter-md-title" id="5-الإسماعيلية">5 · الإسماعيلية</h2></div></div>
 <p>الإسماعيلية تتميز بموقعها في قلب ممر قناة السويس، وده بيخليها حلقة وصل طبيعية بين بورسعيد والسويس.</p>
 <p>البيانات التعريفية الرسمية للمنطقة تشير إلى مساحة <strong>464 ألف متر مربع</strong>، مع قربها من ميناء بورسعيد وميناء السويس بنحو <strong>85 كم لكل منهما</strong>، كما تذكر أن أهم أسواق التصدير تشمل دول الاتحاد الأوروبي والولايات المتحدة.</p>
 <p>وتضم المنطقة أنشطة مثل المنسوجات والملابس الجاهزة، والصناعات الهندسية والكهربائية والإلكترونية، والأغذية، والنقل والشحن والتصدير وإعادة التصدير.</p>
 <p>وفي 2017، كانت المنطقة تضم <strong>91 مشروعًا</strong> بتكلفة استثمارية بلغت نحو 1.144 مليار دولار، وتوفر قرابة 13 ألف فرصة عمل. وده رقم تاريخي، مش رقم حالي.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>لو بورسعيد مرتبطة ببوابة البحر المتوسط، والسويس مرتبطة بالموانئ الجنوبية، فالإسماعيلية تمثل <strong>المنطقة الموجودة في قلب الممر نفسه</strong>.</p>
 </blockquote>
 <p>وده يفسر ليه الموقع هنا جزء أساسي من جاذبية المنطقة، مش مجرد معلومة جغرافية على الخريطة.</p>
 <hr/>
-</section><section class="chapter chapter-13" data-chapter="13"><h2 class="chapter-title" id="6-دمياط">6 · دمياط</h2>
+</div></section><section class="dossier" id="6-دمياط"><div class="wrap"><div class="sec-head"><div class="sec-badge">13</div><div><h2 class="chapter-md-title" id="6-دمياط">6 · دمياط</h2></div></div>
 <p>دمياط مختلفة لأن الميناء هنا <strong>ملاصق للمنطقة الحرة</strong>، ودي ميزة مهمة لأي مشروع بيعتمد على حركة البضائع البحرية والاستيراد والتصدير.</p>
 <p>المنطقة تبلغ مساحتها نحو <strong>798 ألف متر مربع</strong>، والبيانات الرسمية المنشورة من GAFI تذكر متوسط صادرات سنوية للمشروع يبلغ <strong>7.25 مليون دولار</strong>، ومتوسط عمالة حوالي <strong>95 موظفًا للمشروع</strong>.</p>
 <p>وتتنوع الأنشطة بين المنسوجات والملابس الجاهزة، والأخشاب والأثاث، والصناعات الكيميائية والتعدينية والمعدنية، والصناعات الغذائية والدوائية، وخدمات إدارة الموانئ والحاويات والخدمات البترولية والبتروكيماوية.</p>
 <p>وفي السنوات الأخيرة ظهر توجه لتطوير مناطق حرة جديدة في دمياط بالشراكة مع مطور صناعي متخصص، مع خطة لإنشاء <strong>220 وحدة</strong> للتصنيع والتخزين والمقار الإدارية، وربطها بالموانئ والطريق الدولي الساحلي.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>دمياط هي نموذج <strong>المنطقة الحرة اللي الميناء فيها جزء أساسي من تصميم المنظومة نفسها</strong>، ومعه قاعدة متنوعة من الصناعات والخدمات المرتبطة بالنقل والتصدير.</p>
 </blockquote>
 <hr/>
-</section><section class="chapter chapter-14" data-chapter="14"><h2 class="chapter-title" id="7-شبين-الكوم">7 · شبين الكوم</h2>
+</div></section><section class="dossier" id="7-شبين-الكوم"><div class="wrap"><div class="sec-head"><div class="sec-badge">14</div><div><h2 class="chapter-md-title" id="7-شبين-الكوم">7 · شبين الكوم</h2></div></div>
 <p>شبين الكوم من المناطق الصغيرة نسبيًا في المساحة، لكن موقعها وسط الدلتا أعطاها ميزة مختلفة: <strong>عمالة كبيرة، وقاعدة صناعية قديمة، وقرب من سلاسل توريد مرتبطة بالغزل والنسيج والملابس</strong>.</p>
 <p>المنطقة اتأسست بقرار رئيس مجلس الوزراء رقم 1143 لسنة 2004، على مساحة حوالي <strong>20 فدانًا</strong>، ثم تطورت مع مبنى متعدد الأدوار. وGAFI تشير إلى إن وجودها بجوار شركة مصر شبين الكوم للغزل والنسيج يفتح فرصًا للاستفادة من الخبرات والعمالة وسلاسل التوريد في القطاع.</p>
 <p>في 2019 كانت المنطقة تضم <strong>18 مشروعًا</strong> بنسبة إشغال 96%، وتوفر نحو 1,872 عاملًا. وفي 2020 استمر مجلس إدارة المنطقة في الموافقة على مشروعات وتعديلات جديدة.</p>
 <p>وفي 2025 ظهر تطور مهم: شركة Fountain Set الصينية، المتخصصة في الأقمشة، ناقشت إنشاء مشروع للغزل والنسيج باستثمارات تقترب من <strong>100 مليون دولار</strong> وتوفير نحو <strong>1,500 فرصة عمل</strong>، بهدف التصدير إلى أوروبا وإفريقيا.</p>
 <p><strong>أهم الأنشطة:</strong> الغزل والنسيج والملابس الجاهزة، الصناعات الطبية، الكيماويات، والصناعات الهندسية والكهربائية والإلكترونية.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>شبين الكوم مثال على إن المنطقة الحرة مش لازم تعتمد على ميناء ملاصق. <strong>العمالة المتخصصة وقاعدة التصنيع الموجودة في المنطقة نفسها ممكن تكون سبب كافي لجذب المشروع.</strong></p>
 </blockquote>
 <hr/>
-</section><section class="chapter chapter-15" data-chapter="15"><h2 class="chapter-title" id="8-المنطقة-الحرة-الإعلامية-في-مدينة-الإنتاج-الإعلامي">8 · المنطقة الحرة الإعلامية في مدينة الإنتاج الإعلامي</h2>
+</div></section><section class="dossier" id="8-المنطقة-الحرة-الإعلامية-في-مدينة-الإنتاج-الإعلامي"><div class="wrap"><div class="sec-head"><div class="sec-badge">15</div><div><h2 class="chapter-md-title" id="8-المنطقة-الحرة-الإعلامية-في-مدينة-الإنتاج-الإعلامي">8 · المنطقة الحرة الإعلامية في مدينة الإنتاج الإعلامي</h2></div></div>
 <p>دي الحالة المختلفة فعلًا بين المناطق التسع.</p>
 <p>GAFI توضح إن المناطق الحرة العامة في مصر غير متخصصة عادةً، والاستثناء هو <strong>المنطقة الإعلامية</strong>.</p>
 <p>يعني لو باقي المناطق بتجمع صناعات وخدمات وتخزين وتصدير، المنطقة الإعلامية اتصممت لخدمة <strong>صناعة الإعلام نفسها</strong>.</p>
 <p>البيانات التعريفية للمنطقة تذكر مساحة تقارب <strong>2.5 مليون متر مربع</strong>، وأنشطة تشمل إنتاج البرامج والمحتوى الإعلامي، والبث الإذاعي والتلفزيوني، والاستوديوهات، والتصوير والخدمات المرتبطة بالإنتاج الإعلامي.</p>
 <p>وفي 2000 صدر قرار إنشاء المنطقة الحرة العامة الإعلامية، ثم تحولت مشروعات إعلامية للعمل بنظام المناطق الحرة داخلها.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>المنطقة الإعلامية بتثبت إن فكرة المنطقة الحرة مش مرتبطة بالمصنع والبضاعة فقط. <strong>نفس النظام ممكن يتبني حول صناعة خدمات ومحتوى، لو طبيعة النشاط محتاجة إطار مختلف للتشغيل والاستثمار.</strong></p>
 </blockquote>
 <hr/>
-</section><section class="chapter chapter-16" data-chapter="16"><h2 class="chapter-title" id="9-قنا-قفط">9 · قنا (قفط)</h2>
+</div></section><section class="dossier" id="9-قنا-قفط"><div class="wrap"><div class="sec-head"><div class="sec-badge">16</div><div><h2 class="chapter-md-title" id="9-قنا-قفط">9 · قنا (قفط)</h2></div></div>
 <p>لو باقي المناطق بتوضح علاقة المنطقة الحرة بالموانئ والمدن الكبرى، قفط بتضيف فصل تاني مهم: <strong>إزاي المنطقة الحرة ممكن تكون أداة لتنمية الصعيد وربطه بالتصدير؟</strong></p>
 <p>المنطقة الحرة العامة بقفط أُنشئت بقرار رئيس مجلس الوزراء رقم 321 لسنة 2005، وهي أول منطقة حرة عامة في صعيد مصر. موقعها قريب من المناطق الغنية بخامات التعدين، وعلى مسافة نحو <strong>150 كم من ميناء سفاجا</strong>، وهو ما يربطها بممر تصدير مباشر إلى البحر الأحمر.</p>
 <p>في متابعة رسمية حديثة، كانت المنطقة تضم <strong>7 مشروعات قائمة</strong>، برؤوس أموال تقترب من 9 ملايين دولار وتكاليف استثمارية تبلغ 15.4 مليون دولار، مع وجود مساحة مسلّمة للمشروعات تبلغ 441.6 ألف متر مربع ومساحة شاغرة قابلة للتخصيص بنحو 52.2 ألف متر مربع.</p>
 <p>والأهم إن القصة الحالية للمنطقة مش مجرد أرقام قديمة. في فبراير 2026 كانت الهيئة تتابع إجراءات تأسيس مشروع <strong>فوسكور</strong> لإنتاج الفوسفات عالي التركيز باستثمارات تقارب <strong>40 مليون دولار</strong> على مساحة 190 ألف متر مربع، مع خطة لإنتاج نحو 3 ملايين طن سنويًا من الفوسفات عالي التركيز، وتوجيه حوالي <strong>80% من إنتاج المرحلة الأولى للتصدير</strong>.</p>
 <p>ميزة المشروع هنا إن موقعه قريب من مناطق استخراج الفوسفات ومتصّل بميناء سفاجا، وبالتالي المنطقة مش بس بتوفّر نظامًا استثماريًا، لكنها بتقرب التصنيع من <strong>مصدر الخام نفسه ومن طريق التصدير</strong>.</p>
 <p><strong>أهم الأنشطة والفرص:</strong> الصناعات المرتبطة بالخامات التعدينية، الفوسفات، الصناعات الكيماوية، إلى جانب الأنشطة الصناعية الأخرى التي يمكن أن تستفيد من موقع قفط.</p>
-<p>:::story-label
-القصة اللي نفتكرها:
-:::</p>
+<p><strong>القصة اللي نفتكرها:</strong></p>
 <blockquote>
 <p>قفط هي نموذج المنطقة الحرة اللي بتستخدم <strong>الموقع والموارد الطبيعية وممر التصدير</strong> مع بعض، وبتحاول تحول الخام المحلي إلى منتج أعلى في القيمة قبل خروجه للأسواق الخارجية.</p>
 </blockquote>
 <hr/>
-<h3 class="sub-title" id="إيه-اللي-مشترك-بين-المناطق-التسع؟">إيه اللي مشترك بين المناطق التسع؟</h3>
+<h3 class="chapter-subhead" id="إيه-اللي-مشترك-بين-المناطق-التسع؟">إيه اللي مشترك بين المناطق التسع؟</h3>
 <p>رغم اختلاف القصص، كل المناطق العامة مبنية على نفس الفكرة الأساسية: الدولة بتختار موقعًا له ميزة واضحة، وتوفر فيه البنية الأساسية والخدمات الجمركية والأمنية، ثم تستقبل مجموعة من المشروعات داخل نفس النظام الاستثماري. GAFI توضح أن المناطق العامة مجهزة بالطرق والكهرباء والمياه والصرف والاتصالات، إلى جانب وحدة جمركية وخدمات أمنية، وأن اختيار المواقع يرتبط بالموانئ أو المطارات والعمالة المتاحة والقدرة على خدمة النشاط الاستثماري.</p>
 <p>لكن <strong>الميزة اللي بتتكرر مش معناها إن كل منطقة نسخة من التانية</strong>. الفرق الحقيقي في الموقع:</p>
 <p><strong>الإسكندرية →</strong> ميناء + قاعدة صناعية كبيرة + حجم استثمار وصادرات ضخم.</p>
@@ -1220,20 +1724,20 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p><strong>شبين الكوم →</strong> عمالة متخصصة + قاعدة غزل ونسيج + موقع وسط الدلتا.</p>
 <p><strong>المنطقة الإعلامية →</strong> تخصص إعلامي واضح لا يتكرر في باقي المناطق.</p>
 <p><strong>قفط →</strong> موارد تعدين + صعيد + اتصال بموانئ البحر الأحمر.</p>
-<h3 class="sub-title" id="الخلاصة">الخلاصة</h3>
+<h3 class="chapter-subhead" id="الخلاصة">الخلاصة</h3>
 <p>لو حاولت تحفظ المناطق التسع كأسماء، هتنسى جزءًا كبيرًا منها. لكن لو ربطت كل منطقة بالميزة التي دفعت إلى اختيار موقعها، الموضوع يبقى أسهل:</p>
 <blockquote>
 <p><strong>كل منطقة حرة بتحكي قصة العلاقة بين الموقع والاستثمار والتصدير.</strong></p>
 </blockquote>
 <p>وده هو السبب إن المناطق التسع مش متطابقة رغم خضوعها لنفس الإطار العام: <strong>النظام واحد، لكن الميزة الاقتصادية لكل موقع مختلفة.</strong></p>
-<h3 class="sub-title" id="مصادر-تحديث-هذا-الجزء">مصادر تحديث هذا الجزء</h3>
+<h3 class="chapter-subhead" id="مصادر-تحديث-هذا-الجزء">مصادر تحديث هذا الجزء</h3>
 <ul>
 <li>الهيئة العامة للاستثمار والمناطق الحرة: صفحة المناطق الحرة العامة، وبيانات الإسكندرية الحديثة.</li>
 <li>الهيئة العامة للاستثمار والمناطق الحرة: الملفات التعريفية الرسمية لمناطق السويس والإسماعيلية ودمياط وشبين الكوم وقِفط والمنطقة الإعلامية.</li>
 <li>بيانات وبيانات صحفية رسمية من GAFI عن مدينة نصر وبورسعيد والإسماعيلية والسويس وقِفط والتوسعات الحديثة في دمياط وشبين الكوم.</li>
 </ul>
 <p><strong>ملاحظة:</strong> تعمدنا عدم تحويل الأرقام القديمة إلى أرقام حالية. لو الرقم المتاح هو رقم 2017 مثلًا، مكتوب عليه 2017. ولو مفيش رقم حديث موثوق منشور، بنقول كده صراحة.</p>
-<h3 class="sub-title" id="الإعفاءات-الممنوحة-للمشروع">الإعفاءات الممنوحة للمشروع</h3>
+<p><strong>الإعفاءات الممنوحة للمشروع</strong></p>
 <p>الإعفاءات دي بتوضح المعاملة الجمركية والضريبية للمشروع وفقًا للنظام والقواعد المنظمة.</p>
 <ul>
 <li><p><strong>✓</strong></p>
@@ -1255,7 +1759,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>إعفاء المكوّن المحلي من السلع المصنَّعة في المنطقة الحرة من الرسوم الجمركية عند بيعها للسوق المحلي.</p>
 </li>
 </ul>
-<h3 class="sub-title" id="الضمانات-القانونية-للمشروع">الضمانات القانونية للمشروع</h3>
+<p><strong>الضمانات القانونية للمشروع</strong></p>
 <p>الضمانات دي بتوضح الحماية القانونية المقررة للمشروع أثناء مزاولة نشاطه، وبتختلف عن الإعفاءات اللي فوق لأنها مرتبطة بالحقوق والحماية القانونية، مش بالمعاملة الجمركية أو الضريبية.</p>
 <ul>
 <li><p><strong>⚖</strong></p>
@@ -1268,18 +1772,18 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>لا يجوز بالطريق الإداري فرض الحراسة على المشروعات، أو الحجز على أموالها، أو الاستيلاء عليها، أو تجميدها، أو مصادرتها إلا بحكم قضائي.</p>
 </li>
 </ul>
-<h3 class="sub-title" id="ميزة-الجهة-الإدارية-الواحدة">ميزة الجهة الإدارية الواحدة</h3>
+<p><strong>ميزة الجهة الإدارية الواحدة</strong></p>
 <p>أهم ميزة عملية للمنطقة الحرة إن الشركة بتتعامل مع جهة واحدة بس، هي إدارة المنطقة الحرة، وهي اللي بتتولى: إصدار كل الموافقات اللازمة لإقامة المشروع، إصدار ترخيص مزاولة النشاط (اللي بيغني عن القيد في السجل الصناعي)، تسليم الأرض واعتماد تراخيص البناء فور تقديم الطلب، إتمام كل إجراءات دخول وخروج البضائع عبر إقرارات الوارد والصادر، وصولًا لإجراءات تصفية المشروع لو الشركة قررت إنهاء نشاطها.</p>
-<h3 class="sub-title" id="legal-environment">البيئة شرط أساسي، مش إجراء شكلي</h3>
+<p><strong>البيئة شرط أساسي، مش إجراء شكلي</strong></p>
 <p>قرار المزاولة ما بيصدرش من غير استيفاء المتطلبات البيئية والحصول على الموافقة المطلوبة من جهاز شؤون البيئة. المستثمر بيعمل دراسة بيئية عن طريق مكتب معتمد، وبيقدمها لجهاز شؤون البيئة مع خريطة الأنشطة المحيطة بالموقع. والهدف من المراجعة إن تقييم الموقع ياخد في الاعتبار طبيعة الأنشطة المحيطة بالمشروع، إلى جانب مدى استيفاء المشروع نفسه للاشتراطات.</p>
 <p><strong>مثال واقعي:</strong> مشروع بتمويل من بنك أوروبي بمهلة سداد محددة، اتعطّل بسبب رفض جهاز شؤون البيئة رغم إن المبنى كان بمواصفات أوروبية عالية، لأن الأرض المجاورة كانت لشركات بترول وكيماويات. المهلة انتهت قبل ما توافق البيئة، فاضطر المستثمر يصفّي المشروع رغم الاستثمارات الكبيرة اللي كان دخلها فيه.</p>
 <p>05</p>
-</section><section class="chapter chapter-17" data-chapter="17"><h2 class="chapter-title" id="السياق-الاقتصادي-والاستراتيجي">السياق الاقتصادي والاستراتيجي</h2>
+</div></section><section class="dossier" id="السياق-الاقتصادي-والاستراتيجي"><div class="wrap"><div class="sec-head"><div class="sec-badge">17</div><div><h2 class="chapter-md-title" id="السياق-الاقتصادي-والاستراتيجي">السياق الاقتصادي والاستراتيجي</h2></div></div>
 <p>بعد ما مشينا مع المشروع من أول الفكرة لحد التشغيل والرقابة، نطلع خطوة لورا ونسأل السؤال الأكبر: <strong>ليه الدولة أصلًا بتدي النظام ده كل المزايا دي، ومصر بتستفيد إيه في المقابل؟</strong> هنا بنربط اللي شفناه داخل المنطقة الحرة بالصورة الأكبر للاقتصاد المصري.</p>
-<h3 class="sub-title" id="ليه-بعض-الرسوم-زادت-بعد-قانون-72؟">ليه بعض الرسوم زادت بعد قانون 72؟</h3>
+<h3 class="chapter-subhead" id="ليه-بعض-الرسوم-زادت-بعد-قانون-72؟">ليه بعض الرسوم زادت بعد قانون 72؟</h3>
 <p>تعديل الرسوم بيتفهم داخل محاولة تحقيق توازن بين هدفين: الحفاظ على قدرة النظام على جذب الاستثمار والتصدير، وفي نفس الوقت حصول الدولة على عائد مناسب مقابل الخدمات والمزايا اللي بيقدمها النظام.</p>
 <p>لذلك، أي زيادة في رسم معين لازم تتقري في إطار أوسع: <strong>قد إيه الدولة مستعدة تقدم من حوافز لجذب الاستثمار، وإزاي يكون المقابل المالي متناسبًا مع الخدمات والمزايا والتزامات النظام؟</strong></p>
-<h3 class="sub-title" id="context">ليه الدولة لسه متمسكة بالمناطق الحرة؟</h3>
+<h3 class="chapter-subhead" id="context">ليه الدولة لسه متمسكة بالمناطق الحرة؟</h3>
 <p>لو النظام بيوفر إعفاءات ومزايا للمستثمر، طبيعي نسأل: <strong>مصر بتكسب إيه في المقابل؟</strong></p>
 <p>الإجابة مش رقم واحد، وإنما مجموعة من النتائج بتشتغل مع بعض:</p>
 <ul>
@@ -1290,7 +1794,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <li>توطين جزء من القيمة المضافة داخل مصر.</li>
 </ul>
 <p>وبحسب GAFI، المناطق الحرة بتساهم بحوالي <strong>22% من إجمالي الصادرات السلعية المصرية</strong>، وده يوضح إن النظام له وزن فعلي داخل منظومة التصدير.</p>
-</section><section class="chapter chapter-18" data-chapter="18"><h2 class="chapter-title" id="مصادر-العملة-الأجنبية-في-مصر">مصادر العملة الأجنبية في مصر</h2>
+</div></section><section class="dossier" id="مصادر-العملة-الأجنبية-في-مصر"><div class="wrap"><div class="sec-head"><div class="sec-badge">18</div><div><h2 class="chapter-md-title" id="مصادر-العملة-الأجنبية-في-مصر">مصادر العملة الأجنبية في مصر</h2></div></div>
 <p>قبل ما نسأل: <strong>المناطق الحرة بتدخل عملة أجنبية إزاي؟</strong> لازم نشوف الصورة الأكبر. في السنة المالية <strong>2024/2025</strong>، كانت من أكبر بنود متحصلات الحساب الجاري: <strong>التحويلات الخاصة 32.5%، الصادرات غير البترولية 31.0%، السياحة 15.0%، والنقل 8.4%</strong>.</p>
 <p><strong>متحصلات الحساب الجاري:</strong> الأموال اللي دخلت الاقتصاد من معاملات الحساب الجاري خلال الفترة، زي الصادرات والسياحة والتحويلات والخدمات.</p>
 <p>والنسب دي تخص متحصلات الحساب الجاري، مش كل التدفقات المالية إلى مصر. الاستثمار الأجنبي المباشر مثلًا بيتسجل في الحساب الرأسمالي والمالي، لذلك ما ينفعش نضع كل التدفقات الأجنبية في ترتيب واحد من غير ما نحدد طريقة القياس.</p>
@@ -1355,27 +1859,27 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tbody>
 </table>
 <p><strong>المصدر:</strong> وزارة المالية اعتمادًا على بيانات البنك المركزي المصري.</p>
-<h3 class="sub-title" id="طب-وقناة-السويس-فين؟">طب وقناة السويس فين؟</h3>
+<h3 class="chapter-subhead" id="طب-وقناة-السويس-فين؟">طب وقناة السويس فين؟</h3>
 <p>هنا مثال مهم على طريقة قراءة الإحصاءات: قناة السويس مش بند منفصل في الجدول السابق، لكنها داخلة تحت بند <strong>النقل</strong>. وفي السنة المالية 2024/2025 بلغت متحصلات النقل نحو <strong>$9.4B</strong>، منها حوالي <strong>$3.6B لقناة السويس</strong>.</p>
 <p>يعني الإحصاءات أحيانًا بتجمع نشاطًا كبيرًا داخل بند أوسع منه، وده بالضبط اللي بيحصل مع المناطق الحرة.</p>
-<h3 class="sub-title" id="طيب-المناطق-الحرة-مكانها-فين؟">طيب المناطق الحرة مكانها فين؟</h3>
+<h3 class="chapter-subhead" id="طيب-المناطق-الحرة-مكانها-فين؟">طيب المناطق الحرة مكانها فين؟</h3>
 <p>المناطق الحرة <strong>مش مصدر مستقل للعملة الأجنبية</strong> بيتحط كبند خامس أو سادس جنب السياحة والتحويلات والصادرات. هي آلية بتدعم بعض المصادر الموجودة أصلًا، وخصوصًا <strong>الصادرات والاستثمار الأجنبي المباشر (FDI)</strong>.</p>
 <p><strong>منطقة حرة → إنتاج → تصدير → عملة أجنبية</strong></p>
 <p>وفي مسار تاني:</p>
 <p><strong>منطقة حرة → بيئة استثمارية وحوافز → مستثمر أجنبي → استثمار أجنبي مباشر (FDI)</strong></p>
-<h3 class="sub-title" id="ليه-المناطق-الحرة-مش-بتظهر-عادةً-ضمن-مصادر-الدولار؟">ليه المناطق الحرة مش بتظهر عادةً ضمن "مصادر الدولار"؟</h3>
+<h3 class="chapter-subhead" id="ليه-المناطق-الحرة-مش-بتظهر-عادةً-ضمن-مصادر-الدولار؟">ليه المناطق الحرة مش بتظهر عادةً ضمن "مصادر الدولار"؟</h3>
 <p>لأن الإحصاءات القومية بتصنف <strong>نوع التدفق</strong>، مش المكان أو النظام اللي تم من خلاله توليد التدفق. الصادرات من شركة داخل المنطقة الحرة تفضل إحصائيًا "صادرات"، وما بتتحولش إلى بند مستقل اسمه "المناطق الحرة".</p>
 <p>يعني ببساطة:</p>
 <p><strong>مصدر العملة الأجنبية:</strong> الصادرات.</p>
 <p><strong>النظام اللي ساعد على توليد جزء من هذه الصادرات:</strong> المنطقة الحرة.</p>
-<h3 class="sub-title" id="المناطق-الحرة-والصادرات">المناطق الحرة والصادرات</h3>
+<h3 class="chapter-subhead" id="المناطق-الحرة-والصادرات">المناطق الحرة والصادرات</h3>
 <p>دي أهم علاقة لازم تثبت:</p>
 <blockquote>
 <p><strong>المناطق الحرة → إنتاج للتصدير → عملة أجنبية</strong></p>
 </blockquote>
 <p>وبحسب GAFI، تساهم المناطق الحرة بحوالي <strong>22% من إجمالي الصادرات السلعية المصرية</strong>. وفي صفحة أخرى عن المناطق الحرة المستهدفة، تستخدم الهيئة مقياسًا مختلفًا وتذكر مساهمة تصل إلى <strong>25% من الصادرات الصناعية غير البترولية</strong>. والفرق هنا سببه اختلاف المقام، لذلك ما ينفعش نخلط الرقمين مع بعض.</p>
 <p><strong>مهم:</strong> الـ22% هي نسبة من الصادرات السلعية، وليست 22% من كل العملة الأجنبية التي تدخل مصر.</p>
-<h3 class="sub-title" id="مثال-سريع">مثال سريع</h3>
+<h3 class="chapter-subhead" id="مثال-سريع">مثال سريع</h3>
 <p>مصنع ملابس داخل المنطقة الحرة:</p>
 <p><strong>خامات من الخارج</strong></p>
 <p>←</p>
@@ -1385,14 +1889,14 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>←</p>
 <p><strong>إيراد أجنبي</strong></p>
 <p>المصنع هنا ما عملش "مصدرًا جديدًا" للعملة الأجنبية. هو ساهم في بند الصادرات، وفي نفس الوقت خلق قيمة مضافة وفرص عمل وجذب استثمار.</p>
-<h3 class="sub-title" id="أهمية-المنطقة-الحرة-بالإسكندرية">أهمية المنطقة الحرة بالإسكندرية</h3>
+<h3 class="chapter-subhead" id="أهمية-المنطقة-الحرة-بالإسكندرية">أهمية المنطقة الحرة بالإسكندرية</h3>
 <p>المنطقة الحرة العامة بالإسكندرية في العامرية تضم <strong>416 مشروعًا</strong> باستثمارات تتجاوز <strong>$14.7B</strong>، وتوفر نحو <strong>55 ألف فرصة عمل مباشرة</strong>، وسجلت مشروعاتها صادرات سلعية بقيمة <strong>$5.3B في 2025</strong>.</p>
 <p>وده يخلي الإسكندرية مثالًا عمليًا لفهم الصورة كلها:</p>
 <p><strong>استثمار → مشروعات → إنتاج وخدمات → تصدير → عملة أجنبية + وظائف + قيمة مضافة</strong></p>
 <p>06</p>
-</section><section class="chapter chapter-19" data-chapter="19"><h2 class="chapter-title" id="cases">حالات عملية</h2>
+</div></section><section class="dossier" id="cases"><div class="wrap"><div class="sec-head"><div class="sec-badge">19</div><div><h2 class="chapter-md-title" id="cases">حالات عملية</h2></div></div>
 <p>Case Studies · ثلاث حالات مبنية على معلومات موجودة فعلًا في الفصول اللي فاتت، بس بشكل قصة كاملة من الأول للآخر بدل معلومة مبعتّرة.</p>
-<h4 class="minor-title" id="حالة-1-مشروع-مستوفي-للاشتراطات،-لكن-موقعه-أصبح-عائقًا-أمام-استكماله">حالة 1 · مشروع مستوفي للاشتراطات، لكن موقعه أصبح عائقًا أمام استكماله</h4>
+<p><strong>حالة 1 · مشروع مستوفي للاشتراطات، لكن موقعه أصبح عائقًا أمام استكماله</strong></p>
 <p>مشروع بتمويل من بنك أوروبي وبمهلة سداد محددة، والمبنى نفسه كان مطابقًا لمواصفات عالية. لكن الموافقة البيئية ارتبطت أيضًا بملاءمة الموقع والأنشطة المحيطة به.</p>
 <p>تمويل بنكي بمهلة محددة</p>
 <p>←</p>
@@ -1407,7 +1911,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>إنهاء المشروع من خلال إجراءات التصفية</p>
 <p>السبب الرئيسي: الأرض المجاورة كانت لشركات بترول وكيماويات، رغم إن مصنع المستثمر نفسه كان مستوفيًا للاشتراطات. والسبب إن تقييم الموقع بياخد في الاعتبار طبيعة الأنشطة المحيطة بالمشروع، مش نشاط المستثمر وحده. راجع <a href="https://heshvm101.github.io/GAFI/#legal-environment">"البيئة شرط أساسي"</a> للتفاصيل.</p>
 <p><strong>الدرس المستفاد:</strong> موافقة البيئة مش إجراء شكلي بعد باقي الموافقات، ولازم تتفحص خريطة الأنشطة المحيطة بقطعة الأرض قبل التوقيع على أي التزام مالي بمهلة زمنية، مش بعده.</p>
-<h4 class="minor-title" id="حالة-2-نفس-قيمة-البضاعة،-رسم-مختلف-تمامًا-حسب-نوع-المشروع">حالة 2 · نفس قيمة البضاعة، رسم مختلف تمامًا حسب نوع المشروع</h4>
+<p><strong>حالة 2 · نفس قيمة البضاعة، رسم مختلف تمامًا حسب نوع المشروع</strong></p>
 <p>شركتان استوردتا بضاعة بنفس القيمة تقريبًا، لكن نوع النشاط مختلف , والفرق ده بيغيّر أساس حساب الرسم الجاري بالكامل (راجع <a href="https://heshvm101.github.io/GAFI/#procedures-incoterms">FOB وCIF</a> و<a href="https://heshvm101.github.io/GAFI/#procedures-fees">الرسم الجاري</a>).</p>
 <table>
 <thead>
@@ -1441,7 +1945,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tbody>
 </table>
 <p><strong>الدرس المستفاد:</strong> النسبة الأعلى (2% تخزيني) مش عقوبة، هي انعكاس لكون المشروع التخزيني ملوش قيمة مضافة زي التصنيع , والفرق في الأساس (FOB مقابل CIF) هو اللي بيحدد التوقيت والقيمة الفعلية في النهاية.</p>
-<h4 class="minor-title" id="حالة-3-دورة-تصفية-كاملة،-من-قرار-الشركاء-لاسترداد-الضمان">حالة 3 · دورة تصفية كاملة، من قرار الشركاء لاسترداد الضمان</h4>
+<p><strong>حالة 3 · دورة تصفية كاملة، من قرار الشركاء لاسترداد الضمان</strong></p>
 <p>شركة قررت إنهاء نشاطها اختياريًا بعد ما استقر السوق على عدم جدوى الاستمرار. الخطوات دي ملخصة من فصل <a href="https://heshvm101.github.io/GAFI/#research-liquidation">تصفية المشروع</a> بالكامل.</p>
 <p><strong>جمعية الشركاء بتقرر التصفية وتعيّن مصفٍّ قانوني</strong></p>
 <p>الشركاء</p>
@@ -1459,9 +1963,9 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>خطاب الضمان</p>
 <p><strong>الدرس المستفاد:</strong> استرداد خطاب الضمان بيجي بعد الشطب من السجل التجاري مباشرة، مش قبله , وده اللي بيخلي حتى الشركات المتعثرة تفضّل تكمّل إجراءات التصفية الرسمية بدل ما تسيب المشروع من غير تصفية.</p>
 <p>07</p>
-</section><section class="chapter chapter-20" data-chapter="20"><h2 class="chapter-title" id="المرجع-السريع">المرجع السريع</h2>
+</div></section><section class="dossier" id="المرجع-السريع"><div class="wrap"><div class="sec-head"><div class="sec-badge">20</div><div><h2 class="chapter-md-title" id="المرجع-السريع">المرجع السريع</h2></div></div>
 <p>مسرد المصطلحات، وجدول شامل لكل الرسوم، أساس الحساب، وتوقيت الاستحقاق، في مكان واحد.</p>
-<h4 class="minor-title" id="table-glossary">مسرد المصطلحات</h4>
+<p><strong>مسرد المصطلحات</strong></p>
 <table>
 <thead>
 <tr>
@@ -1576,7 +2080,7 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 </tr>
 </tbody>
 </table>
-<h4 class="minor-title" id="table-fees-full">الجدول الشامل للرسوم</h4>
+<p><strong>الجدول الشامل للرسوم</strong></p>
 <table>
 <thead>
 <tr>
@@ -1655,26 +2159,36 @@ footer{background:var(--navy);color:rgba(245,240,229,.45);text-align:center;padd
 <p>ملف تدريب شخصي</p>
 <p>المنطقة الحرة، الإسكندرية · مُجمَّع من قانون الاستثمار رقم 72 لسنة 2017 ولوائحه وملاحظات عملية من الميدان، لتسهيل المراجعة</p>
 <p>إعداد: <a href="https://www.linkedin.com/in/hesham101">Hesham Mohammed</a></p>
-</section></main><footer><strong>GAFI · ALEX 2026</strong><br>ملف تدريب المنطقة الحرة بالإسكندرية</footer></div></div>
-
+</div></section></div>
+<footer>
+<div class="brand">ملف تدريب شخصي</div>
+  المنطقة الحرة، الإسكندرية · مُجمَّع من قانون الاستثمار رقم 72 لسنة 2017 ولوائحه وملاحظات عملية من الميدان، لتسهيل المراجعة
+  <div style="margin-top:10px;">إعداد: <a href="https://www.linkedin.com/in/hesham101" rel="noopener" style="color:var(--brass-light); border-bottom:1px dotted var(--brass-light); text-decoration:none;" target="_blank">Hesham Mohammed</a></div>
+</footer>
 <script>
-(function(){
-  const links = [...document.querySelectorAll('.toc a')];
-  const headings = [...document.querySelectorAll('h2[id], h3[id]')];
-  const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(!entry.isIntersecting) return;
-      links.forEach(a => a.classList.remove('active'));
-      const direct = byId.get(entry.target.id);
-      if(direct) direct.classList.add('active');
-      const parent = direct ? direct.closest('.toc-chapter')?.querySelector('.toc-main') : null;
-      if(parent) parent.classList.add('active');
-    });
-  }, {rootMargin:'-18% 0px -70% 0px', threshold:0});
-  headings.forEach(h => io.observe(h));
-})();
-</script>
+  const links = Array.from(document.querySelectorAll('#sidebar a'));
+  const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+  const setActive = () => {
+    let idx = 0;
+    const pos = window.scrollY + 140;
+    sections.forEach((sec, i) => { if (sec && sec.offsetTop <= pos) idx = i; });
+    links.forEach((a, i) => a.classList.toggle('active', i === idx));
+  };
+  window.addEventListener('scroll', setActive, { passive: true });
+  setActive();
 
+  const sidebar = document.getElementById('sidebar');
+  const toggle = document.getElementById('sidebarToggle');
+  const backdrop = document.getElementById('sidebarBackdrop');
+  const openSidebar = () => { sidebar.classList.add('open'); backdrop.classList.add('open'); };
+  const closeSidebar = () => { sidebar.classList.remove('open'); backdrop.classList.remove('open'); };
+  toggle.addEventListener('click', () => {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  });
+  backdrop.addEventListener('click', closeSidebar);
+  links.forEach(a => a.addEventListener('click', () => {
+    if (window.innerWidth <= 1099) closeSidebar();
+  }));
+</script>
 </body>
 </html>
