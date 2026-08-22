@@ -340,14 +340,6 @@
   .list-check.on-dark li b{color:var(--paper);}
   .list-check.on-dark .ico{background:rgba(231,192,105,0.12); color:var(--brass-light);}
 
-  .toc-group h3{display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; font-size:15.5px;}
-  .toc-en{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:600; letter-spacing:.03em; color:var(--teal); direction:ltr;}
-  .toc-list{list-style:none; margin:12px 0 0; padding:0; display:grid; gap:5px;}
-  .toc-list li a{
-    display:block; font-size:13.6px; color:var(--ink-soft); text-decoration:none;
-    padding:7px 10px; border-radius:7px; transition:background .15s ease, color .15s ease;
-  }
-  .toc-list li a:hover{background:var(--paper-deep); color:var(--ink);}
 
   .committee{display:flex; gap:16px; flex-wrap:wrap; margin:20px 0;}
   .committee .member{
@@ -479,30 +471,7 @@
   section#context table.fees tbody td{color:rgba(243,238,225,0.72); border-bottom:1px solid var(--line-navy);}
   section#context table.fees tbody td:first-child{color:var(--paper);}
 
-  .supply-chain{
-    display:flex; align-items:center; justify-content:center; gap:10px;
-    flex-wrap:wrap; margin:26px 0; padding:26px;
-    background:rgba(243,238,225,0.03);
-    border:1px solid var(--line-navy);
-    border-radius:14px;
-  }
-  .supply-chain .node{
-    background:var(--navy); border:1px solid var(--brass-light);
-    color:var(--paper);
-    border-radius:10px; padding:16px 22px; text-align:center;
-    font-size:14.5px; min-width:120px;
-  }
-  .supply-chain .node span{display:block; font-size:11.5px; color:var(--brass-light); margin-top:4px; font-family:'IBM Plex Mono',monospace;}
-  .supply-chain .connector{color:var(--brass-light); font-size:20px;}
 
-  .stat-row{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:26px 0;}
-  @media (max-width:820px){.stat-row{grid-template-columns:repeat(2,1fr);}}
-  .stat-row .box{
-    background:rgba(243,238,225,0.04); border:1px solid var(--line-navy);
-    border-radius:10px; padding:16px; text-align:center;
-  }
-  .stat-row .box .n{font-family:'IBM Plex Mono',monospace; font-size:22px; color:var(--brass-light); direction:ltr;}
-  .stat-row .box .l{font-size:12.3px; color:rgba(243,238,225,0.6); margin-top:4px;}
 
   /* table */
   table.fees{
@@ -590,18 +559,32 @@
     <div class="sidebar-group-title">02 &middot; الإدارات</div>
     <ul class="sidebar-list">
       <li><a href="#departments-journey">رحلة المستثمر الكاملة</a></li>
-      <li><a href="#research-licensing">2.1 البحوث والتراخيص</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">2.1 &middot; البحوث والتراخيص</div>
+    <ul class="sidebar-list">
+      <li><a href="#research-licensing">نظرة عامة</a></li>
       <li><a href="#research-feasibility-study" class="sub">دراسة الجدوى</a></li>
       <li><a href="#research-amendments" class="sub">تعديل بيانات المشروع</a></li>
       <li><a href="#research-liquidation" class="sub">تصفية المشروع</a></li>
-      <li><a href="#procedures">2.2 التنفيذ</a></li>
-      <li><a href="#procedures-incoterms" class="sub">FOB وCIF</a></li>
-      <li><a href="#procedures-direct-supply" class="sub">التوريد المباشر</a></li>
-      <li><a href="#procedures-private-zone-fees" class="sub">الرسم في المنطقة الحرة الخاصة</a></li>
-      <li><a href="#procedures-qiz" class="sub">اتفاقية الكويز (QIZ)</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">2.2 &middot; التنفيذ</div>
+    <ul class="sidebar-list">
+      <li><a href="#procedures">نظرة عامة</a></li>
       <li><a href="#procedures-waste" class="sub">الهالك</a></li>
       <li><a href="#procedures-mistakes" class="sub">أهم الأخطاء الشائعة</a></li>
-      <li><a href="#post-approval">2.3 المتابعة المالية</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-group">
+    <div class="sidebar-group-title">2.3 &middot; المتابعة المالية</div>
+    <ul class="sidebar-list">
+      <li><a href="#post-approval">نظرة عامة</a></li>
       <li><a href="#post-old-law" class="sub">القانون القديم وتكلفة المستحدث</a></li>
       <li><a href="#post-annual-inventory" class="sub">الجرد السنوي</a></li>
       <li><a href="#post-violations" class="sub">المخالفات والإجراءات</a></li>
@@ -612,6 +595,10 @@
     <div class="sidebar-group-title">03 &middot; النظام المالي</div>
     <ul class="sidebar-list">
       <li><a href="#fees">الانتفاع، الخدمات، الضمان</a></li>
+      <li><a href="#procedures-incoterms" class="sub">FOB وCIF</a></li>
+      <li><a href="#procedures-direct-supply" class="sub">التوريد المباشر</a></li>
+      <li><a href="#procedures-private-zone-fees" class="sub">الرسم في المنطقة الحرة الخاصة</a></li>
+      <li><a href="#procedures-qiz" class="sub">اتفاقية الكويز (QIZ)</a></li>
       <li><a href="#fees-guarantee-letter" class="sub">خطاب الضمان</a></li>
       <li><a href="#fees-revenue-sources" class="sub">مصادر إيرادات الهيئة</a></li>
     </ul>
@@ -1262,144 +1249,12 @@
 
     <div class="phase-divider">
       <span class="p-num">2</span>
-      <span class="p-title">الحساب والرسوم</span>
+      <span class="p-title">الرقابة على الالتزام</span>
       <span class="p-line"></span>
     </div>
 
-    <div class="kicker" id="procedures-incoterms"><span class="kicker-label">مصطلحات التجارة الدولية: FOB وCIF</span></div>
-    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">لحد هنا الكلام كله عن حركة البضاعة نفسها. لكن كل عملية استيراد أو تصدير محتاجة كمان يتحدد مين بيدفع الشحن والتأمين ومتى تنتقل المسؤولية من البائع للمشتري، وده اللي بيبني عليه حساب الرسوم بعد شوية. الإجابة موجودة في قواعد <b>Incoterms</b> الصادرة عن غرفة التجارة الدولية، وأكتر مصطلحين مستخدمين في شغل المنطقة الحرة هما FOB وCIF.</p>
-    <div class="side-note"><b>ماتلخبطش بين شروط الشحن وشروط السداد:</b> Incoterms (زي EXW أو FOB أو CIF) بتحدد مين يتحمل النقل والتأمين ومتى تنتقل المسؤولية، ومالهاش علاقة بإمتى المشتري هيدفع للمورد. شروط السداد (Payment Terms) موضوع منفصل تمامًا: دفع مقدم بالكامل، أو ائتمان 30 أو 60 يوم، أو جزء مقدم والباقي عند الاستلام. ممكن جدًا تلاقي صفقة واحدة "CIF + ائتمان 30 يوم"، CIF بتحدد الشحن، والـ30 يوم بيحدد ميعاد السداد، وكل واحد فيهم بيقرأ لوحده في المستندات.</div>
-    <div class="table-scroll">
-      <table class="fees">
-        <thead><tr><th>العنصر</th><th>FOB (Free On Board)</th><th>CIF (Cost, Insurance &amp; Freight)</th></tr></thead>
-        <tbody>
-          <tr><td>يتحمل الشحن البحري</td><td>المشتري</td><td>البائع</td></tr>
-          <tr><td>يتحمل التأمين</td><td>المشتري</td><td>البائع</td></tr>
-          <tr><td>تنتهي مسؤولية البائع</td><td>عند تحميل البضاعة على السفينة</td><td>عند وصولها لميناء الوصول</td></tr>
-          <tr><td>قيمة العقد تشمل</td><td>التصنيع + النقل للميناء + التحميل فقط</td><td>البضاعة + التأمين + الشحن</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="side-note" style="margin-top:10px;"><b>قاعدة سهلة للحفظ:</b> FOB = "البائع يوصّل البضاعة للسفينة بس". CIF = "البائع يوصّل، ويؤمّن، ويدفع الشحن كمان".</div>
-    <p style="color:var(--ink-soft); font-size:13.6px; max-width:740px; margin-top:10px;">وده اللي بيربطها بالرسم الجاري (تحت): المشروع الصناعي بيتحاسب على أساس FOB لأنه صنّع منتج جديد فعلًا، والمشروع التخزيني بيتحاسب على أساس CIF لأنه بيتعامل مع البضاعة زي ما وصلت للميناء بالظبط.</p>
-
-    <div class="kicker" id="procedures-incoterms-full" style="margin-top:22px;"><span class="kicker-label">السلسلة الكاملة: من EXW لحد DDP</span></div>
-    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">FOB وCIF مجرد نقطتين في سلسلة أطول من شروط التسليم. كل ما البائع يلتزم بمراحل أكتر من الرحلة، كل ما شرط التسليم "أعلى" وقيمة الفاتورة بتزيد معاه:</p>
-    <div class="grid grid-2">
-      <div class="card">
-        <h3>EXW &middot; Ex Works</h3>
-        <p>أقل التزام على البائع في السلسلة كلها، البضاعة عند باب المصنع بس. الفاتورة هنا بتساوي سعر التصنيع فقط، من غير أي مصاريف نقل. المشتري (الشركة المستوردة هنا) مسؤول عن كل حاجة بعد كده: النقل للميناء، الشحن، التأمين، التفريغ.</p>
-      </div>
-      <div class="card">
-        <h3>CFR / C&amp;F &middot; Cost and Freight</h3>
-        <p>زي CIF، لكن من غير التأمين. البائع بيدفع تكلفة الشحن البحري لحد ميناء الوصول، لكن التأمين على البضاعة أثناء الرحلة بيفضل مسؤولية المشتري لوحده.</p>
-      </div>
-      <div class="card">
-        <h3>DDP &middot; Delivered Duty Paid</h3>
-        <p>أعلى مستوى التزام من البائع في السلسلة كلها، البضاعة توصل لباب الشركة المستوردة نفسها، والبائع بيتحمل كل حاجة لحد كده، بما فيها إجراءات الاستيراد والرسوم الجمركية في بلد الوصول.</p>
-      </div>
-      <div class="card">
-        <h3>ليه الفرق مهم في الحساب؟</h3>
-        <p>لو الفاتورة اللي وصلتلك EXW أو FOB، أساس الرسم (CIF أو ما يعادله) لسه ناقصه بنود: نقل، تأمين، تفريغ، ولازم تتضاف قبل الحساب. لو الفاتورة أصلًا CIF أو DDP، القيمة غالبًا شاملة، فمتضيفش نفس البنود مرة تانية.</p>
-      </div>
-    </div>
-    <div class="side-note" style="margin-top:12px;"><b>مهم:</b> مفيش نسبة ثابتة عالميًا لتحويل EXW لـFOB أو FOB لـCIF (زي "5%" أو "15%")، الفرق الفعلي بيتحدد حسب تكلفة النقل والتأمين الحقيقية لكل شحنة، مش معامل واحد بيتكرر في كل الحالات.</div>
-
-    <div class="kicker" id="procedures-customs-valuation" style="margin-top:22px;"><span class="kicker-label">قيمة الفاتورة مقابل التقييم الجمركي</span></div>
-    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">القيمة المكتوبة في فاتورة الشركة مش دايمًا هي القيمة اللي بيتحسب عليها الرسم. مأمور التقييم في الجمارك بيراجع الفاتورة، وممكن "يحسّن" السعر لو شاف إنه أقل من القيمة الحقيقية للبضاعة وهي واصلة (زائد مصاريف تفريغ ونولون وغيرها لسه مش مضافة في الفاتورة الأصلية).</p>
-    <div class="example">
-      مثال: فاتورة الشركة بقيمة <span class="mono">$100,000</span> (أساس EXW أو FOB)، لكن مأمور التقييم حسّن السعر ووصله لـ<span class="mono">$115,000</span> بعد إضافة مصاريف لم تكن مذكورة في الفاتورة الأصلية.<br>
-      الإدارة بتاخد <b>القيمة الأعلى بين الاتنين</b> كأساس لحساب الرسم، يعني هنا <span class="mono">$115,000</span> مش $100,000.
-    </div>
-    <div class="side-note" style="margin-top:10px;"><b>ليه الفرق ممكن يحصل؟</b> لأن التقييم الجمركي بياخد في الاعتبار عناصر زي تكلفة التفريغ والنولون والمصاريف المرتبطة بالوصول، اللي ممكن ماتكونش ظاهرة صراحةً في فاتورة البائع، خصوصًا لو الفاتورة أساسها EXW أو FOB مش CIF من الأساس.</div>
-
-    <div class="card" style="margin-top:14px;">
-      <h3>مصطلحات تانية هتقابلها في المستندات</h3>
-      <ul style="margin:6px 0 0; padding-right:18px; font-size:13.6px; color:var(--ink-soft); columns:2; column-gap:24px;">
-        <li><b style="color:var(--ink);">Consignor / Shipper:</b> الشاحن أو المصدّر</li>
-        <li><b style="color:var(--ink);">Consignee:</b> المستورد المستلم</li>
-        <li><b style="color:var(--ink);">Freight Forwarder:</b> وكيل الشحن</li>
-        <li><b style="color:var(--ink);">Customs Clearance:</b> التخليص الجمركي</li>
-        <li><b style="color:var(--ink);">HS Code:</b> الكود الجمركي للسلعة</li>
-        <li><b style="color:var(--ink);">Manifest:</b> بيان الشحنة كاملة</li>
-        <li><b style="color:var(--ink);">Transit:</b> مرور البضاعة عبر دولة من غير دخولها للاستهلاك المحلي</li>
-      </ul>
-    </div>
-
-    <div class="kicker" id="procedures-qiz"><span class="kicker-label">اتفاقية الكويز (QIZ)</span></div>
-    <div class="card">
-      <p><b>مصطلح إضافي هتقابله في نفس السياق: اتفاقية الكويز.</b> اتفاقية "المناطق الصناعية المؤهلة" (Qualifying Industrial Zones) وقّعتها مصر مع أمريكا وإسرائيل في ديسمبر 2004. بتسمح لمنتجات مصرية معينة (غالبًا ملابس ومنسوجات) تدخل السوق الأمريكي بدون جمارك ومن غير سقف كمية (كوتا)، بشرط إن نسبة معينة من مكونات المنتج مصدرها إسرائيل (كانت 11.7% وقت التوقيع، وقلّت بعد تعديلات لاحقة لحد حوالي 8.5%). عدد المناطق المؤهلة وصل لأكتر من 27 منطقة في 14 محافظة.</p>
-      <div class="side-note"><b>مهم تفهمها صح:</b> الكويز مش نفس نظام المنطقة الحرة العادي، هي مسار تفضيلي منفصل خاص بالتصدير لأمريكا تحديدًا، وشركة ممكن تكون داخل منطقة حرة عادية وتستفيد بمزايا الكويز كمان لو نشاطها وموقعها مؤهلين، مش بديل عن نظام المناطق الحرة.</div>
-    </div>
-
-    <div class="kicker" id="procedures-fees"><span class="kicker-label">الرسم الجاري (Running Fee)، حسب نوع المشروع</span></div>
-    <p style="color:var(--ink-soft); font-size:14.8px; max-width:740px; margin-bottom:10px;">وهنا بنرجع لأساس FOB وCIF اللي فات، لأن نوع المشروع هو اللي بيحدد أساس حساب الرسم الجاري:</p>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="kicker"><span class="kicker-label">صناعي</span></div>
-        <p><b style="color:var(--ink)">1%</b> من قيمة الصادرات (أساس فوب FOB)، يُحصَّل وقت التصدير، لأن المصنع صنّع منتج جديد فعلًا. البضائع العابرة (ترانزيت) المحددة الوجهة مُعفاة من هذا الرسم.</p>
-      </div>
-      <div class="card">
-        <div class="kicker"><span class="kicker-label">تخزيني</span></div>
-        <p><b style="color:var(--ink)">2%</b> من قيمة البضاعة الواردة (أساس سيف CIF)، يُحصَّل وقت دخول البضاعة، لأنه لم يصنّع شيئًا.</p>
-      </div>
-      <div class="card">
-        <div class="kicker"><span class="kicker-label">خدمي</span></div>
-        <p><b style="color:var(--ink)">1%</b> من إجمالي الإيراد السنوي، قبل أي خصومات، من واقع قوائم مالية معتمدة من محاسب قانوني.</p>
-      </div>
-    </div>
-    <div class="side-note"><b>الأساس القانوني:</b> المادة 41 من قانون الاستثمار رقم 72 لسنة 2017، بالنسبة لمشروعات المناطق الحرة العامة (ومنها منطقة الإسكندرية).</div>
-
-    <div class="kicker" id="procedures-direct-supply" style="margin-top:22px;"><span class="kicker-label">التوريد المباشر (Direct Supply)</span></div>
-    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">حالة مختلفة عن التخزين العادي: الشركة بتدخل في عملية شراء وبيع مباشرة للبضاعة، مش مجرد استقبالها وتخزينها لحد ما تتصرف فيها لاحقًا. الفرق في المعالجة مهم:</p>
-    <div class="grid grid-2">
-      <div class="card">
-        <h3>توريد مباشر (شراء وبيع)</h3>
-        <p><b style="color:var(--ink)">2%</b> من قيمة المشتريات، نفس منطق الرسم التخزيني تقريبًا، لأن الشركة فعليًا اشترت وباعت البضاعة.</p>
-      </div>
-      <div class="card">
-        <h3>وساطة وتحصيل عمولة بس</h3>
-        <p><b style="color:var(--ink)">1%</b> من قيمة العمولة نفسها، مش من قيمة البضاعة كاملة، لأن الشركة هنا مجرد وسيط ومبتملكش البضاعة في أي لحظة.</p>
-      </div>
-    </div>
-    <div class="side-note" style="margin-top:12px;"><b>ليه الفرق مهم؟</b> نفس الشركة ممكن يكون عندها الحالتين في نفس الوقت، عمليات شراء وبيع مباشرة، وعمليات وساطة بعمولة. لازم تفصل بينهم في الفحص وماتحطهمش في نفس الوعاء.</div>
-
-    <div class="kicker" id="procedures-private-zone-fees" style="margin-top:22px;"><span class="kicker-label">الرسم الجاري في المنطقة الحرة الخاصة</span></div>
-    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">الأرقام اللي فاتت (1% صناعي / 2% تخزيني / 1% خدمي) خاصة بالمنطقة الحرة <b>العامة</b>. المنطقة الحرة <b>الخاصة</b> ليها جدول مختلف تمامًا:</p>
-    <div class="table-scroll">
-      <table class="fees">
-        <thead><tr><th>الحالة</th><th>الأساس</th><th>النسبة</th></tr></thead>
-        <tbody>
-          <tr><td>تصنيع وتجميع، عند تصدير السلع</td><td>إجمالي الإيرادات</td><td>1%</td></tr>
-          <tr><td>تصنيع وتجميع، عند دخول السلع للبلاد</td><td>إجمالي إيرادات المشروع</td><td>2%</td></tr>
-          <tr><td>تخزين، عند تصدير السلع</td><td>إجمالي الإيرادات</td><td>2%</td></tr>
-          <tr><td>نشاط خدمي لا يقتضي دخول أو خروج سلع</td><td>إجمالي الإيرادات دون خصم الأعباء</td><td>2%</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="side-note" style="margin-top:10px;"><b>فرق أساسي:</b> المنطقة العامة بتحسب على أساس قيمة البضاعة (FOB/CIF)، لكن المنطقة الخاصة بتحسب على أساس <b>إجمالي الإيرادات</b> في كل الحالات تقريبًا. وحصيلة الرسوم في المنطقة الحرة الخاصة بتتقسم مناصفةً بين الهيئة ووزارة المالية على أساس نصف سنوي، عكس المنطقة العامة اللي الحصيلة فيها بتروح للهيئة بالكامل.</div>
-
-    <div class="ledger" style="margin-top:22px;">
-      <div class="lg-title">مثال: ليه الرسم بيتحسب قبل الخصم؟ (مشروع خدمي)</div>
-      <div class="row"><span class="k">قيمة الفاتورة الأصلية</span><span class="v">$100,000</span></div>
-      <div class="row"><span class="k">خصم مُقدَّم للعميل</span><span class="v">$20,000</span></div>
-      <div class="row"><span class="k">المبلغ الذي دفعه العميل فعليًا</span><span class="v">$80,000</span></div>
-      <div class="row total"><span class="k">أساس حساب الرسم لدى الهيئة</span><span class="v">$100,000</span></div>
-    </div>
-
-    <div class="grid grid-2" style="margin-top:6px;">
-      <div class="card">
-        <h3>تقديم بيان الإيرادات</h3>
-        <p>الشركات الخدمية تقدّم بيان الإيرادات مرتين في السنة، مرفق معاه الفواتير والشيك المستحق. التأخير في التقديم يترتب عليه غرامات تأخير.</p>
-      </div>
-      <div class="card">
-        <h3 id="procedures-exclusive-agent">الوكيل الحصري (Exclusive Agent)</h3>
-        <p>كتير من شركات المنطقة الحرة مش بالضرورة هي المصنّعة، وإنما وكيل توزيع حصري لمنتج معين في أكتر من سوق: مصر، شمال أفريقيا، أوروبا، غرب آسيا.</p>
-      </div>
-    </div>
-
     <div class="kicker" id="procedures-waste"><span class="kicker-label">الهالك: نسبة الفقد الطبيعي أثناء التصنيع</span></div>
-    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">وطالما بنتكلم عن حساب الرسوم بدقة، فيه عنصر تاني بيأثر في الحساب لازم تعرفه: أي عملية تصنيع بتفقد جزء من الخامة الأصلية بشكل طبيعي (خامة بتتحول لمخلفات مش منتج نهائي)، النسبة دي اسمها "الهالك"، وهي مش نفس "الأخطاء" أو "التلاعب"، لكنها لازم تكون ضمن حدود منطقية ومقبولة فنيًا.</p>
+    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">بعد ما البضاعة بتتحرك وتتراجع في المعاينة، فيه عنصر تاني موظف التنفيذ لازم يتابعه في المشروع الصناعي بالذات: أي عملية تصنيع بتفقد جزء من الخامة الأصلية بشكل طبيعي (خامة بتتحول لمخلفات مش منتج نهائي)، النسبة دي اسمها "الهالك"، وهي مش نفس "الأخطاء" أو "التلاعب"، لكنها لازم تكون ضمن حدود منطقية ومقبولة فنيًا.</p>
     <div class="grid grid-2">
       <div class="card">
         <h3>مين بيحدد النسبة؟</h3>
@@ -1421,7 +1276,7 @@
       <li><span class="ico">5</span><div><b>التأخير في تقديم الإقرارات:</b> كل عملية لازم تتسجّل في موعدها، والتأخير بيعطّل باقي الإجراءات.</div></li>
     </ul>
 
-    <div class="side-note" style="margin-top:18px;"><b>مفاهيم هتتغطى بالتفصيل لاحقًا:</b> تصريح الخروج، بيان المعاينة، "التشغيل بين المشروعات"، و"الرسائل المؤقتة والمرتدة"، دول أسماء اتذكرت في التدريب بس البحث عنهم (حتى على الإنترنت) مأدّاش تفاصيل موثوقة تستاهل الكتابة، لأنهم مصطلحات إجرائية داخلية للهيئة مش موثّقة في مصادر عامة، فمستنيين تفاصيلهم من زميل في الإدارة بدل ما نخمّن.</div>
+    <div class="side-note" style="margin-top:18px;"><b>مصطلحات لسه مش موثّقة بما يكفي:</b> تصريح الخروج، بيان المعاينة، "التشغيل بين المشروعات"، و"الرسائل المؤقتة والمرتدة"، دول أسماء اتذكرت في التدريب بس البحث عنهم (حتى على الإنترنت) مأدّاش تفاصيل موثوقة تستاهل الكتابة، لأنهم مصطلحات إجرائية داخلية للهيئة مش موثّقة في مصادر عامة، فمستنيين تفاصيلهم من زميل في الإدارة بدل ما نخمّن.</div>
     <div class="side-note" style="margin-top:10px;"><b>ملحوظة عامة على الإدارة الهندسية والقانونية:</b> الدور العام بتاعهم معروف (اعتماد تراخيص البناء فور تقديم الرسومات الهندسية / مراجعة الشكل القانوني والعقود، زي الموضح في جدول الإدارات فوق) لكن تفاصيل سير العمل اليومي جواهم لسه مش موثقة في أي مصدر عام، خصوصًا الإدارة القانونية، ومحتاجة معلومة من جوه الهيئة نفسها.</div>
   </div>
 </section>
@@ -1758,6 +1613,140 @@
       <div class="side-note"><b>معلومة إضافية:</b> قانون الاستثمار يشترط ألا يقل رأس المال المصدر عن 250,000 جنيه مصري عند تأسيس الشركة، وهو نفس الرقم (رأس المال المصدر) اللي بيتبنى عليه حساب مقابل الخدمات كل سنة.</div>
     </div>
 
+    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin:30px 0 10px;">الرسوم اللي فاتت (الانتفاع والخدمات) بتتحصّل بغض النظر عن نشاط الشركة الفعلي خلال السنة. لكن فيه رسم تالت، الأهم من ناحية الحجم، بيتحصّل على كل عملية استيراد أو تصدير أو خدمة على حدة، اسمه <b>الرسم الجاري</b>. وأساس حسابه بيرجع لمصطلحات التجارة الدولية اللي بتحدد قيمة البضاعة نفسها:</p>
+
+    <div class="kicker" id="procedures-incoterms"><span class="kicker-label">مصطلحات التجارة الدولية: FOB وCIF</span></div>
+    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">لحد هنا الكلام كله عن حركة البضاعة نفسها. لكن كل عملية استيراد أو تصدير محتاجة كمان يتحدد مين بيدفع الشحن والتأمين ومتى تنتقل المسؤولية من البائع للمشتري، وده اللي بيبني عليه حساب الرسوم بعد شوية. الإجابة موجودة في قواعد <b>Incoterms</b> الصادرة عن غرفة التجارة الدولية، وأكتر مصطلحين مستخدمين في شغل المنطقة الحرة هما FOB وCIF.</p>
+    <div class="side-note"><b>ماتلخبطش بين شروط الشحن وشروط السداد:</b> Incoterms (زي EXW أو FOB أو CIF) بتحدد مين يتحمل النقل والتأمين ومتى تنتقل المسؤولية، ومالهاش علاقة بإمتى المشتري هيدفع للمورد. شروط السداد (Payment Terms) موضوع منفصل تمامًا: دفع مقدم بالكامل، أو ائتمان 30 أو 60 يوم، أو جزء مقدم والباقي عند الاستلام. ممكن جدًا تلاقي صفقة واحدة "CIF + ائتمان 30 يوم"، CIF بتحدد الشحن، والـ30 يوم بيحدد ميعاد السداد، وكل واحد فيهم بيقرأ لوحده في المستندات.</div>
+    <div class="table-scroll">
+      <table class="fees">
+        <thead><tr><th>العنصر</th><th>FOB (Free On Board)</th><th>CIF (Cost, Insurance &amp; Freight)</th></tr></thead>
+        <tbody>
+          <tr><td>يتحمل الشحن البحري</td><td>المشتري</td><td>البائع</td></tr>
+          <tr><td>يتحمل التأمين</td><td>المشتري</td><td>البائع</td></tr>
+          <tr><td>تنتهي مسؤولية البائع</td><td>عند تحميل البضاعة على السفينة</td><td>عند وصولها لميناء الوصول</td></tr>
+          <tr><td>قيمة العقد تشمل</td><td>التصنيع + النقل للميناء + التحميل فقط</td><td>البضاعة + التأمين + الشحن</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="side-note" style="margin-top:10px;"><b>قاعدة سهلة للحفظ:</b> FOB = "البائع يوصّل البضاعة للسفينة بس". CIF = "البائع يوصّل، ويؤمّن، ويدفع الشحن كمان".</div>
+    <p style="color:var(--ink-soft); font-size:13.6px; max-width:740px; margin-top:10px;">وده اللي بيربطها بالرسم الجاري (تحت): المشروع الصناعي بيتحاسب على أساس FOB لأنه صنّع منتج جديد فعلًا، والمشروع التخزيني بيتحاسب على أساس CIF لأنه بيتعامل مع البضاعة زي ما وصلت للميناء بالظبط.</p>
+
+    <div class="kicker" id="procedures-incoterms-full" style="margin-top:22px;"><span class="kicker-label">السلسلة الكاملة: من EXW لحد DDP</span></div>
+    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">FOB وCIF مجرد نقطتين في سلسلة أطول من شروط التسليم. كل ما البائع يلتزم بمراحل أكتر من الرحلة، كل ما شرط التسليم "أعلى" وقيمة الفاتورة بتزيد معاه:</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>EXW &middot; Ex Works</h3>
+        <p>أقل التزام على البائع في السلسلة كلها، البضاعة عند باب المصنع بس. الفاتورة هنا بتساوي سعر التصنيع فقط، من غير أي مصاريف نقل. المشتري (الشركة المستوردة هنا) مسؤول عن كل حاجة بعد كده: النقل للميناء، الشحن، التأمين، التفريغ.</p>
+      </div>
+      <div class="card">
+        <h3>CFR / C&amp;F &middot; Cost and Freight</h3>
+        <p>زي CIF، لكن من غير التأمين. البائع بيدفع تكلفة الشحن البحري لحد ميناء الوصول، لكن التأمين على البضاعة أثناء الرحلة بيفضل مسؤولية المشتري لوحده.</p>
+      </div>
+      <div class="card">
+        <h3>DDP &middot; Delivered Duty Paid</h3>
+        <p>أعلى مستوى التزام من البائع في السلسلة كلها، البضاعة توصل لباب الشركة المستوردة نفسها، والبائع بيتحمل كل حاجة لحد كده، بما فيها إجراءات الاستيراد والرسوم الجمركية في بلد الوصول.</p>
+      </div>
+      <div class="card">
+        <h3>ليه الفرق مهم في الحساب؟</h3>
+        <p>لو الفاتورة اللي وصلتلك EXW أو FOB، أساس الرسم (CIF أو ما يعادله) لسه ناقصه بنود: نقل، تأمين، تفريغ، ولازم تتضاف قبل الحساب. لو الفاتورة أصلًا CIF أو DDP، القيمة غالبًا شاملة، فمتضيفش نفس البنود مرة تانية.</p>
+      </div>
+    </div>
+    <div class="side-note" style="margin-top:12px;"><b>مهم:</b> مفيش نسبة ثابتة عالميًا لتحويل EXW لـFOB أو FOB لـCIF (زي "5%" أو "15%")، الفرق الفعلي بيتحدد حسب تكلفة النقل والتأمين الحقيقية لكل شحنة، مش معامل واحد بيتكرر في كل الحالات.</div>
+
+    <div class="kicker" id="procedures-customs-valuation" style="margin-top:22px;"><span class="kicker-label">قيمة الفاتورة مقابل التقييم الجمركي</span></div>
+    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">القيمة المكتوبة في فاتورة الشركة مش دايمًا هي القيمة اللي بيتحسب عليها الرسم. مأمور التقييم في الجمارك بيراجع الفاتورة، وممكن "يحسّن" السعر لو شاف إنه أقل من القيمة الحقيقية للبضاعة وهي واصلة (زائد مصاريف تفريغ ونولون وغيرها لسه مش مضافة في الفاتورة الأصلية).</p>
+    <div class="example">
+      مثال: فاتورة الشركة بقيمة <span class="mono">$100,000</span> (أساس EXW أو FOB)، لكن مأمور التقييم حسّن السعر ووصله لـ<span class="mono">$115,000</span> بعد إضافة مصاريف لم تكن مذكورة في الفاتورة الأصلية.<br>
+      الإدارة بتاخد <b>القيمة الأعلى بين الاتنين</b> كأساس لحساب الرسم، يعني هنا <span class="mono">$115,000</span> مش $100,000.
+    </div>
+    <div class="side-note" style="margin-top:10px;"><b>ليه الفرق ممكن يحصل؟</b> لأن التقييم الجمركي بياخد في الاعتبار عناصر زي تكلفة التفريغ والنولون والمصاريف المرتبطة بالوصول، اللي ممكن ماتكونش ظاهرة صراحةً في فاتورة البائع، خصوصًا لو الفاتورة أساسها EXW أو FOB مش CIF من الأساس.</div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>مصطلحات تانية هتقابلها في المستندات</h3>
+      <ul style="margin:6px 0 0; padding-right:18px; font-size:13.6px; color:var(--ink-soft); columns:2; column-gap:24px;">
+        <li><b style="color:var(--ink);">Consignor / Shipper:</b> الشاحن أو المصدّر</li>
+        <li><b style="color:var(--ink);">Consignee:</b> المستورد المستلم</li>
+        <li><b style="color:var(--ink);">Freight Forwarder:</b> وكيل الشحن</li>
+        <li><b style="color:var(--ink);">Customs Clearance:</b> التخليص الجمركي</li>
+        <li><b style="color:var(--ink);">HS Code:</b> الكود الجمركي للسلعة</li>
+        <li><b style="color:var(--ink);">Manifest:</b> بيان الشحنة كاملة</li>
+        <li><b style="color:var(--ink);">Transit:</b> مرور البضاعة عبر دولة من غير دخولها للاستهلاك المحلي</li>
+      </ul>
+    </div>
+
+    <div class="kicker" id="procedures-qiz"><span class="kicker-label">اتفاقية الكويز (QIZ)</span></div>
+    <div class="card">
+      <p><b>مصطلح إضافي هتقابله في نفس السياق: اتفاقية الكويز.</b> اتفاقية "المناطق الصناعية المؤهلة" (Qualifying Industrial Zones) وقّعتها مصر مع أمريكا وإسرائيل في ديسمبر 2004. بتسمح لمنتجات مصرية معينة (غالبًا ملابس ومنسوجات) تدخل السوق الأمريكي بدون جمارك ومن غير سقف كمية (كوتا)، بشرط إن نسبة معينة من مكونات المنتج مصدرها إسرائيل (كانت 11.7% وقت التوقيع، وقلّت بعد تعديلات لاحقة لحد حوالي 8.5%). عدد المناطق المؤهلة وصل لأكتر من 27 منطقة في 14 محافظة.</p>
+      <div class="side-note"><b>مهم تفهمها صح:</b> الكويز مش نفس نظام المنطقة الحرة العادي، هي مسار تفضيلي منفصل خاص بالتصدير لأمريكا تحديدًا، وشركة ممكن تكون داخل منطقة حرة عادية وتستفيد بمزايا الكويز كمان لو نشاطها وموقعها مؤهلين، مش بديل عن نظام المناطق الحرة.</div>
+    </div>
+
+    <div class="kicker" id="procedures-fees"><span class="kicker-label">الرسم الجاري (Running Fee)، حسب نوع المشروع</span></div>
+    <p style="color:var(--ink-soft); font-size:14.8px; max-width:740px; margin-bottom:10px;">وهنا بنرجع لأساس FOB وCIF اللي فات، لأن نوع المشروع هو اللي بيحدد أساس حساب الرسم الجاري:</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="kicker"><span class="kicker-label">صناعي</span></div>
+        <p><b style="color:var(--ink)">1%</b> من قيمة الصادرات (أساس فوب FOB)، يُحصَّل وقت التصدير، لأن المصنع صنّع منتج جديد فعلًا. البضائع العابرة (ترانزيت) المحددة الوجهة مُعفاة من هذا الرسم.</p>
+      </div>
+      <div class="card">
+        <div class="kicker"><span class="kicker-label">تخزيني</span></div>
+        <p><b style="color:var(--ink)">2%</b> من قيمة البضاعة الواردة (أساس سيف CIF)، يُحصَّل وقت دخول البضاعة، لأنه لم يصنّع شيئًا.</p>
+      </div>
+      <div class="card">
+        <div class="kicker"><span class="kicker-label">خدمي</span></div>
+        <p><b style="color:var(--ink)">1%</b> من إجمالي الإيراد السنوي، قبل أي خصومات، من واقع قوائم مالية معتمدة من محاسب قانوني.</p>
+      </div>
+    </div>
+    <div class="side-note"><b>الأساس القانوني:</b> المادة 41 من قانون الاستثمار رقم 72 لسنة 2017، بالنسبة لمشروعات المناطق الحرة العامة (ومنها منطقة الإسكندرية).</div>
+
+    <div class="kicker" id="procedures-direct-supply" style="margin-top:22px;"><span class="kicker-label">التوريد المباشر (Direct Supply)</span></div>
+    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">حالة مختلفة عن التخزين العادي: الشركة بتدخل في عملية شراء وبيع مباشرة للبضاعة، مش مجرد استقبالها وتخزينها لحد ما تتصرف فيها لاحقًا. الفرق في المعالجة مهم:</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>توريد مباشر (شراء وبيع)</h3>
+        <p><b style="color:var(--ink)">2%</b> من قيمة المشتريات، نفس منطق الرسم التخزيني تقريبًا، لأن الشركة فعليًا اشترت وباعت البضاعة.</p>
+      </div>
+      <div class="card">
+        <h3>وساطة وتحصيل عمولة بس</h3>
+        <p><b style="color:var(--ink)">1%</b> من قيمة العمولة نفسها، مش من قيمة البضاعة كاملة، لأن الشركة هنا مجرد وسيط ومبتملكش البضاعة في أي لحظة.</p>
+      </div>
+    </div>
+    <div class="side-note" style="margin-top:12px;"><b>ليه الفرق مهم؟</b> نفس الشركة ممكن يكون عندها الحالتين في نفس الوقت، عمليات شراء وبيع مباشرة، وعمليات وساطة بعمولة. لازم تفصل بينهم في الفحص وماتحطهمش في نفس الوعاء.</div>
+
+    <div class="kicker" id="procedures-private-zone-fees" style="margin-top:22px;"><span class="kicker-label">الرسم الجاري في المنطقة الحرة الخاصة</span></div>
+    <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">الأرقام اللي فاتت (1% صناعي / 2% تخزيني / 1% خدمي) خاصة بالمنطقة الحرة <b>العامة</b>. المنطقة الحرة <b>الخاصة</b> ليها جدول مختلف تمامًا:</p>
+    <div class="table-scroll">
+      <table class="fees">
+        <thead><tr><th>الحالة</th><th>الأساس</th><th>النسبة</th></tr></thead>
+        <tbody>
+          <tr><td>تصنيع وتجميع، عند تصدير السلع</td><td>إجمالي الإيرادات</td><td>1%</td></tr>
+          <tr><td>تصنيع وتجميع، عند دخول السلع للبلاد</td><td>إجمالي إيرادات المشروع</td><td>2%</td></tr>
+          <tr><td>تخزين، عند تصدير السلع</td><td>إجمالي الإيرادات</td><td>2%</td></tr>
+          <tr><td>نشاط خدمي لا يقتضي دخول أو خروج سلع</td><td>إجمالي الإيرادات دون خصم الأعباء</td><td>2%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="side-note" style="margin-top:10px;"><b>فرق أساسي:</b> المنطقة العامة بتحسب على أساس قيمة البضاعة (FOB/CIF)، لكن المنطقة الخاصة بتحسب على أساس <b>إجمالي الإيرادات</b> في كل الحالات تقريبًا. وحصيلة الرسوم في المنطقة الحرة الخاصة بتتقسم مناصفةً بين الهيئة ووزارة المالية على أساس نصف سنوي، عكس المنطقة العامة اللي الحصيلة فيها بتروح للهيئة بالكامل.</div>
+
+    <div class="ledger" style="margin-top:22px;">
+      <div class="lg-title">مثال: ليه الرسم بيتحسب قبل الخصم؟ (مشروع خدمي)</div>
+      <div class="row"><span class="k">قيمة الفاتورة الأصلية</span><span class="v">$100,000</span></div>
+      <div class="row"><span class="k">خصم مُقدَّم للعميل</span><span class="v">$20,000</span></div>
+      <div class="row"><span class="k">المبلغ الذي دفعه العميل فعليًا</span><span class="v">$80,000</span></div>
+      <div class="row total"><span class="k">أساس حساب الرسم لدى الهيئة</span><span class="v">$100,000</span></div>
+    </div>
+
+    <div class="grid grid-2" style="margin-top:6px;">
+      <div class="card">
+        <h3>تقديم بيان الإيرادات</h3>
+        <p>الشركات الخدمية تقدّم بيان الإيرادات مرتين في السنة، مرفق معاه الفواتير والشيك المستحق. التأخير في التقديم يترتب عليه غرامات تأخير.</p>
+      </div>
+      <div class="card">
+        <h3 id="procedures-exclusive-agent">الوكيل الحصري (Exclusive Agent)</h3>
+        <p>كتير من شركات المنطقة الحرة مش بالضرورة هي المصنّعة، وإنما وكيل توزيع حصري لمنتج معين في أكتر من سوق: مصر، شمال أفريقيا، أوروبا، غرب آسيا.</p>
+      </div>
+    </div>
+
     <div class="kicker" id="fees-guarantee-letter"><span class="kicker-label">خطاب الضمان (Letter of Guarantee)، مش نفس مقابل الضمان</span></div>
     <p style="color:var(--ink-soft); font-size:14.8px; max-width:760px; margin-bottom:10px;">خطاب الضمان مختلف تمامًا عن "مقابل الضمان" اللي فوق (اللي هو 1‰ من قيمة وثيقة التأمين). خطاب الضمان مش رسم بيتحصّل وينتهي، وإنما ضمان مالي بتحتفظ بيه الهيئة طول عمر المشروع، عشان تضمن سداد أي التزامات مالية يتأخر المستثمر فيها، وبيتقدَّم إما كخطاب ضمان بنكي أو كإيداع نقدي في حساب الهيئة.</p>
     <div class="table-scroll">
@@ -2015,14 +2004,6 @@
 
     <p style="color:rgba(243,238,225,0.72); font-size:14.6px; max-width:760px; margin-bottom:10px;">لما الاقتصاديون بيتكلموا عن مصادر العملة الأجنبية، بيصنّفوها حسب <b style="color:var(--paper);">نوع المعاملة</b>، صادرات، سياحة، تحويلات، مش حسب <b style="color:var(--paper);">النظام اللي المعاملة اتمت من خلاله</b>. يعني مصنع بيصدّر من منطقة حرة وشركة بتصدّر من برّه المنطقة الحرة، الاتنين صادراتهم بتتحسب مع بعض تحت بند "الصادرات غير البترولية" اللي فوق، مش في عمود منفصل اسمه "صادرات المناطق الحرة".</p>
     <p style="color:rgba(243,238,225,0.72); font-size:14.6px; max-width:760px;">وده بالظبط سبب المفارقة: المناطق الحرة بتسهم بحوالي 22% من إجمالي الصادرات السلعية المصرية حسب الهيئة نفسها، نسبة كبيرة جدًا، لكنها مدمجة جوه رقم الصادرات الكلي مش ظاهرة كبند مستقل. وهي مش بتأثر في الصادرات بس، هي كمان بتجذب استثمار أجنبي مباشر (مستثمر بيدخل يبني مصنع بسبب مزايا المنطقة الحرة)، وبتخلق قيمة مضافة محلية (عمالة وتصنيع وخدمات جوه مصر قبل ما المنتج يتصدّر)، يعني أثرها مش بس "دولار بيدخل"، هو أعمق من كده.</p>
-
-    <h3 style="font-size:17px; margin:30px 0 4px; color:var(--paper);">أهمية المنطقة الحرة بالإسكندرية</h3>
-    <div class="stat-row">
-      <div class="box"><div class="n">55%</div><div class="l">من إجمالي إيرادات الهيئة</div></div>
-      <div class="box"><div class="n">#1</div><div class="l">أكبر منطقة حرة في مصر</div></div>
-      <div class="box"><div class="n">Hub</div><div class="l">شمال أفريقيا وجنوب أوروبا وغرب آسيا</div></div>
-      <div class="box"><div class="n">Max</div><div class="l">أكبر تنوع أنشطة وعدد شركات</div></div>
-    </div>
   </div>
 </section>
 
